@@ -16,6 +16,8 @@ class WikiController < ApplicationController
     @project = Project.find('orehata_tori')
     @wiki = @project.wiki
     @page = @wiki.find_or_new_page('wiki')
+    params[:project_id] = 'orehata_tori'
+    params[:id] = 'wiki'
 
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
