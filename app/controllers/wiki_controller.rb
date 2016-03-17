@@ -1,46 +1,62 @@
-# Redmine - project management software
-# Copyright (C) 2006-2016  Jean-Philippe Lang
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-
-# The WikiController follows the Rails REST controller pattern but with
-# a few differences
-#
-# * index - shows a list of WikiPages grouped by page or date
-# * new - not used
-# * create - not used
-# * show - will also show the form for creating a new wiki page
-# * edit - used to edit an existing or new page
-# * update - used to save a wiki page update to the database, including new pages
-# * destroy - normal
-#
-# Other member and collection methods are also used
-#
-# TODO: still being worked on
 class WikiController < ApplicationController
   default_search_scope :wiki_pages
   before_filter :find_wiki, :authorize
-  before_filter :find_existing_or_new_page, :only => [:show, :edit, :update]
+  before_filter :find_existing_or_new_page, :only => [:show, :edit, :update, :root]
   before_filter :find_existing_page, :only => [:rename, :protect, :history, :diff, :annotate, :add_attachment, :destroy, :destroy_version]
-  accept_api_auth :index, :show, :update, :destroy
+  accept_api_auth :index, :show, :root, :update, :destroy
   before_filter :find_attachments, :only => [:preview]
 
   helper :attachments
   include AttachmentsHelper
   helper :watchers
   include Redmine::Export::PDF
+
+  # TOP ページ
+  def root
+    @project = Project.find('orehata_tori')
+    @wiki = @project.wiki
+    @page = @wiki.find_or_new_page('wiki')
+
+    if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
+      deny_access
+      return
+    end
+    @content = @page.content_for_version(params[:version])
+    if @content.nil?
+      if User.current.allowed_to?(:edit_wiki_pages, @project) && editable? && !api_request?
+        edit
+        render :action => 'edit'
+      else
+        render_404
+      end
+      return
+    end
+    if User.current.allowed_to?(:export_wiki_pages, @project)
+      if params[:format] == 'pdf'
+        send_file_headers! :type => 'application/pdf', :filename => "#{@page.title}.pdf"
+        return
+      elsif params[:format] == 'html'
+        export = render_to_string :action => 'export', :layout => false
+        send_data(export, :type => 'text/html', :filename => "#{@page.title}.html")
+        return
+      elsif params[:format] == 'txt'
+        send_data(@content.text, :type => 'text/plain', :filename => "#{@page.title}.txt")
+        return
+      end
+    end
+    @editable = editable?
+    @sections_editable = @editable && User.current.allowed_to?(:edit_wiki_pages, @page.project) &&
+      @content.current_version? &&
+      Redmine::WikiFormatting.supports_section_edit?
+
+    render 'show'
+=begin
+    respond_to do |format|
+      format.html
+      format.api
+    end
+=end
+  end
 
   # List of pages, sorted alphabetically and by parent (hierarchy)
   def index
