@@ -1,4 +1,4 @@
-- if admin?
+- if User.current.admin?
   .tabs
     %ul
       - tabs.each do |tab|
