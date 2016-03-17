@@ -1,0 +1,29 @@
+%meta(charset="utf-8")
+%meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+%meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+-# デスクリプションを不用意に変更されないようにする
+%META{CONTENT: 'NOYDIR', NAME: 'ROBOTS'}
+%META{CONTENT: 'NOODP', NAME: 'ROBOTS'}
+
+%meta{content: 'summary', name: 'twitter:card'}
+%meta{content: '@kappa_ikemen', name: 'twitter:site'}/
+
+- set_meta_tags description: '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
+- set_meta_tags keywords: ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ']
+/= display_meta_tags open_graph: { title: 'カッパの俳句' }
+/- set_meta_tags canonical: canonical_url
+
+:ruby
+  opg = {
+    title: '新人賞データベース',
+    type: 'website',
+    url: root_url,
+    #image: '/images/nomi.png',
+    site_name: '新人賞データベース',
+    description: '新人賞のデータまとめ。検索機能',
+    locale: 'ja_JP'
+  }
+- set_meta_tags open_graph: opg
+= display_meta_tags
+

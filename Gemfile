@@ -16,8 +16,8 @@ gem "actionpack-action_caching"
 gem "actionpack-xml_parser"
 gem "roadie-rails"
 
-#gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'haml'
+gem 'meta-tags', :require => 'meta_tags'
 
 # Request at least nokogiri 1.6.7.2 because of security advisories
 gem "nokogiri", ">= 1.6.7.2"
