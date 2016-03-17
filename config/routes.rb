@@ -16,7 +16,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 Rails.application.routes.draw do
-  root :to => '/projects/wiki/wiki/Wiki'
+  root :to => '/projects/orehata_tori/wiki/Wiki'
 
   #root :to => 'welcome#index', :as => 'home'
 
