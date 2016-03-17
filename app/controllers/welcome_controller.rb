@@ -19,6 +19,7 @@ class WelcomeController < ApplicationController
   caches_action :robots
 
   def index
+    return redirect_to project_wiki_page_path(id: 'wiki', project_id: 'orehata_tori')
     @news = News.latest User.current
   end
 
