@@ -1,9 +1,9 @@
 class WikiController < ApplicationController
   default_search_scope :wiki_pages
   before_filter :find_wiki, :authorize
-  before_filter :find_existing_or_new_page, :only => [:show, :edit, :update, :root]
+  before_filter :find_existing_or_new_page, :only => [:show, :edit, :update]
   before_filter :find_existing_page, :only => [:rename, :protect, :history, :diff, :annotate, :add_attachment, :destroy, :destroy_version]
-  accept_api_auth :index, :show, :root, :update, :destroy
+  accept_api_auth :index, :show, :update, :destroy
   before_filter :find_attachments, :only => [:preview]
 
   helper :attachments
