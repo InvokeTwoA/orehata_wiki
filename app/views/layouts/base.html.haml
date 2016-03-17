@@ -16,6 +16,9 @@
     = heads_for_theme
     = call_hook :view_layouts_base_html_head
     = yield :header_tags
+    :javascript
+      var nend_params = {"media":27178,"site":200373,"spot":563685,"type":2,"oriented":1};
+      %script{:src => "https://js1.nend.net/js/nendAdLoader.js", :type => "text/javascript"}
   %body{:class => body_css_classes}
     = call_hook :view_layouts_base_body_top
     #wrapper
@@ -59,11 +62,12 @@
                 = render_project_jump_box
             %h1= page_header_title
             - if display_main_menu?(@project)
-              #main-menu.tabs
-                = render_main_menu(@project)
-                .tabs-buttons{:style => "display:none;"}
-                  %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
-                  %button.tab-right{:onclick => "moveTabRight(this); return false;"}
+              - if User.current.admin?
+                #main-menu.tabs
+                  = render_main_menu(@project)
+                  .tabs-buttons{:style => "display:none;"}
+                    %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
+                    %button.tab-right{:onclick => "moveTabRight(this); return false;"}
           #main{:class => "#{sidebar_content? ? '' : 'nosidebar'}"}
             #sidebar
               = yield :sidebar
