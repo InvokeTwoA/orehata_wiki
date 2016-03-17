@@ -66,12 +66,12 @@
                     %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
                     %button.tab-right{:onclick => "moveTabRight(this); return false;"}
           #main{:class => "#{sidebar_content? ? '' : 'nosidebar'}"}
-            #right_sidebar
-              = render partial: 'layouts/right_box'
             - unless action_name == 'edit'
-              #sidebar
-                = yield :sidebar
-                = view_layouts_base_sidebar_hook_response
+              #right_sidebar
+                = render partial: 'layouts/right_box'
+            #sidebar
+              = yield :sidebar
+              = view_layouts_base_sidebar_hook_response
             #content
               = render_flash_messages
               = yield
