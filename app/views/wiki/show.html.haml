@@ -39,7 +39,7 @@
   名前
   = f.input :title
   = f.input :body
-  = f.hidden :page, params[:id]
+  = f.hidden_field :page, value: params[:id]
   = f.submit 'コメント'
 - if @editable && authorize_for('wiki', 'add_attachment')
   #wiki_add_attachment
