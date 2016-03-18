@@ -165,7 +165,7 @@ Rails.application.routes.draw do
 
   end
 
-  resource :wiki_comments, only: [:create, :index]
+  resources :wiki_comments, only: [:create, :index]
 
   resources :issues do
     member do
