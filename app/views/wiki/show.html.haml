@@ -34,6 +34,13 @@
   %hr/
 = render(:partial => "wiki/content", :locals => {:content => @content})
 = link_to_attachments @page
+%h2 コメント
+= simple_form_for WikiComment.new do |f|
+  名前
+  = f.input :title
+  = f.input :body
+  = f.hidden :page, params[:id]
+  = f.submit 'コメント'
 - if @editable && authorize_for('wiki', 'add_attachment')
   #wiki_add_attachment
     %p= link_to l(:label_attachment_new), {}, :onclick => "$('#add_attachment_form').show(); return false;", 
@@ -54,13 +61,3 @@
 - content_for :sidebar do
   = render :partial => 'sidebar'
 - html_title @page.pretty_title
-
-
-%h2 コメント
-
-= simple_form_for WikiComment.new do |f|
-  名前
-  = f.input :title
-  = f.input :body
-  = f.hidden :page, params[:id]
-  = f.submit 'コメント'
