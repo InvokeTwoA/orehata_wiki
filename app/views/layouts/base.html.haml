@@ -69,8 +69,8 @@
           #main{:class => "#{sidebar_content? ? '' : 'nosidebar'}"}
             - unless User.current.admin?
               - unless request.mobile?
-              #right_sidebar
-                = render partial: 'layouts/right_box'
+                #right_sidebar
+                  = render partial: 'layouts/right_box'
             #sidebar
               = yield :sidebar
               = view_layouts_base_sidebar_hook_response
