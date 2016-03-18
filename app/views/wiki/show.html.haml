@@ -54,3 +54,13 @@
 - content_for :sidebar do
   = render :partial => 'sidebar'
 - html_title @page.pretty_title
+
+
+%h2 コメント
+
+= simple_form_for WikiComment.new do |f|
+  名前
+  = f.input :title
+  = f.input :body
+  = f.hidden :page, params[:id]
+  = f.submit 'コメント'

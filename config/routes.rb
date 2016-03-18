@@ -162,7 +162,10 @@ Rails.application.routes.draw do
     delete 'wiki/:id/:version', :to => 'wiki#destroy_version'
     get 'wiki/:id/:version/annotate', :to => 'wiki#annotate'
     get 'wiki/:id/:version/diff', :to => 'wiki#diff'
+
   end
+
+  resource :wiki_comments, only: [:create, :index]
 
   resources :issues do
     member do

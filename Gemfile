@@ -15,6 +15,7 @@ gem "protected_attributes"
 gem "actionpack-action_caching"
 gem "actionpack-xml_parser"
 gem "roadie-rails"
+gem 'simple_form', '~> 3.0.2'
 
 gem 'haml'
 gem 'meta-tags', :require => 'meta_tags'

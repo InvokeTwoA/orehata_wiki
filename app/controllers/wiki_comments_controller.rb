@@ -1,5 +1,9 @@
 class WikiCommentsController < ApplicationController
 
+  def index
+    @wiki_comments = WikiComment.all
+  end
+
   def create
     WikiComment.create(
       title: params[:wiki_comment][:title],
