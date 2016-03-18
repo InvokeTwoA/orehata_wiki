@@ -1,2 +1,6 @@
-- @wiki_comments.each do |wiki_comment|
-  = wiki_comment.body
+%table
+  - @wiki_comments.each do |wiki_comment|
+    %tr
+      %td= wiki_comment.page
+      %td= wiki_comment.title
+      %td= wiki_comment.body
