@@ -47,11 +47,10 @@
   .form-actions
     = f.hidden_field :page, value: params[:id]
     = f.submit 'コメント'
-
-- if WikiComment.active.where(page: params[:id]).any?
+- if WikiComment.where(page: params[:id]).any?
   %h2 コメント 一覧
   %table
-    - WikiComment.active.where(page: params[:id]).each do |wiki_comment|
+    - WikiComment.where(page: params[:id]).each do |wiki_comment|
       %tr
         %td= wiki_comment.body
         %td= wiki_comment.created_at
