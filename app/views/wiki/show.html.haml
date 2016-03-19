@@ -50,10 +50,16 @@
 - if WikiComment.where(page: params[:id]).any?
   %h2 コメント 一覧
   %table
-    - WikiComment.where(page: params[:id]).each do |wiki_comment|
+    - if params[:id] == 'Wiki'
+      - WikiComment.where(page: 'wiki').each do |wiki_comment|
       %tr
         %td= wiki_comment.body
         %td= wiki_comment.created_at
+    - else
+      - WikiComment.where(page: params[:id]).each do |wiki_comment|
+        %tr
+          %td= wiki_comment.body
+          %td= wiki_comment.created_at
 
 - if @editable && authorize_for('wiki', 'add_attachment')
   #wiki_add_attachment
