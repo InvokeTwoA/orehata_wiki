@@ -52,9 +52,9 @@
   %table
     - if params[:id] == 'Wiki'
       - WikiComment.where(page: 'wiki').each do |wiki_comment|
-      %tr
-        %td= wiki_comment.body
-        %td= wiki_comment.created_at
+        %tr
+          %td= wiki_comment.body
+          %td= wiki_comment.created_at
     - else
       - WikiComment.where(page: params[:id]).each do |wiki_comment|
         %tr
