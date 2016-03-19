@@ -31,9 +31,10 @@
             - if Setting.gravatar_enabled?
               = link_to(avatar(User.current, :size => "80"), user_path(User.current))
             = link_to_user(User.current, :format => :username)
-        /- if display_main_menu?(@project)
-        /  %h3= l(:label_project)
-        /  %span.js-project-menu
+        - if User.current.admin?
+          - if display_main_menu?(@project)
+            %h3= l(:label_project)
+            %span.js-project-menu
         /%h3= l(:label_general)
         /%span.js-general-menu
         %span.js-sidebar.flyout-menu__sidebar
