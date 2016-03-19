@@ -13,6 +13,12 @@ class WikiCommentsController < ApplicationController
     redirect_to :back,  notice: 'コメントを投稿しました。承認され次第、wikiに反映されますのでお待ちください。'
   end
 
+  def destroy
+    wiki_comment = WikiComment.find params[:id]
+    wiki_comment.destroy
+    redirect_to :back
+  end
+
   # PUT 有効にする
   def to_active
     wiki_comment = WikiComment.find params[:id]

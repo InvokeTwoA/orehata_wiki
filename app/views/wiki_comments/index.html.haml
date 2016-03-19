@@ -12,4 +12,6 @@
             = link_to '無効にする', to_inactive_wiki_comment_path(wiki_comment), method: :put, class: 'btn btn-success'
           - else
             = link_to '有効にする', to_active_wiki_comment_path(wiki_comment), method: :put, class: 'btn btn-info'
+        %td
+          = link_to '削除する', wiki_comment_path(wiki_comment), method: :delete
 
