@@ -165,7 +165,12 @@ Rails.application.routes.draw do
 
   end
 
-  resources :wiki_comments, only: [:create, :index]
+  resources :wiki_comments, only: [:create, :index] do
+    member do
+      put :to_active
+      put :to_inactive
+    end
+  end
 
   resources :issues do
     member do
