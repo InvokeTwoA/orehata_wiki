@@ -5,12 +5,17 @@ class WikiCommentsController < ApplicationController
   end
 
   def create
+    if params[:wiki_comment][:page] == ''
+      page = 'wiki'
+    else
+      page = params[:wiki_comment][:page]
+    end
     WikiComment.create(
       title: params[:wiki_comment][:title],
       body: params[:wiki_comment][:body],
-      page: params[:wiki_comment][:page],
+      page: page,
     )
-    redirect_to :back,  notice: 'コメントを投稿しました。承認され次第、wikiに反映されますのでお待ちください。'
+    redirect_to :back,  notice: 'コメントを投稿しました。'
   end
 
   def destroy
