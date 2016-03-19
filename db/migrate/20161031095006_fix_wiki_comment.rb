@@ -1,4 +1,4 @@
-class CreateWikiComment < ActiveRecord::Migration
+class FixWikiComment < ActiveRecord::Migration
   def self.change
     add_column :wiki_comments, :active_flag
   end
