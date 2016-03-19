@@ -35,18 +35,19 @@
           - if display_main_menu?(@project)
             %h3= l(:label_project)
             %span.js-project-menu
-        /%h3= l(:label_general)
-        /%span.js-general-menu
+          %h3= l(:label_general)
+          %span.js-general-menu
         %span.js-sidebar.flyout-menu__sidebar
         %h3= l(:label_profile)
         %span.js-profile-menu
       #wrapper2
         #wrapper3
-          /#top-menu
-          /  /#account
-          /  /  = render_menu :account_menu
-          /  = content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged?
-          /  = render_menu :top_menu if User.current.logged? || !Setting.login_required?
+          - if User.current.admin?
+            #top-menu
+              /#account
+              /  = render_menu :account_menu
+              = content_tag('div', "#{l(:label_logged_as)} #{link_to_user(User.current, :format => :username)}".html_safe, :id => 'loggedas') if User.current.logged?
+              = render_menu :top_menu if User.current.logged? || !Setting.login_required?
           #header
             %a.mobile-toggle-button.js-flyout-menu-toggle-button{:href => "#"}
             - if User.current.logged? || !Setting.login_required?
