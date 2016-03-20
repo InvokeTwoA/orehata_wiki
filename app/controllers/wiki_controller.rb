@@ -80,9 +80,6 @@ class WikiController < ApplicationController
 
   # display a page (in editing mode if it doesn't exist)
   def show
-    load_pages_for_index
-    @pages_by_date = @pages.group_by {|p| p.updated_on.to_date}
-
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
       return
