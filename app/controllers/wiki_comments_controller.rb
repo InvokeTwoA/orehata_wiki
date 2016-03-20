@@ -5,7 +5,7 @@ class WikiCommentsController < ApplicationController
   end
 
   def create
-    if params[:wiki_comment][:page] == ''
+    if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
     else
       page = params[:wiki_comment][:page]
