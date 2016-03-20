@@ -51,12 +51,12 @@
   %h2 コメント 一覧
   %table
     - if params[:id] == 'Wiki'
-      - WikiComment.where(page: 'wiki').each do |wiki_comment|
+      - WikiComment.where(page: 'wiki').recent.each do |wiki_comment|
         %tr
           %td= wiki_comment.body
           %td= wiki_comment.created_at
     - else
-      - WikiComment.where(page: params[:id]).each do |wiki_comment|
+      - WikiComment.where(page: params[:id]).recent.each do |wiki_comment|
         %tr
           %td= wiki_comment.body
           %td= wiki_comment.created_at
