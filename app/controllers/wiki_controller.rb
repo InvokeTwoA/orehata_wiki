@@ -80,6 +80,9 @@ class WikiController < ApplicationController
 
   # display a page (in editing mode if it doesn't exist)
   def show
+    load_pages_for_index
+    @pages_by_date = @pages.group_by {|p| p.updated_on.to_date}
+
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
       return
@@ -170,7 +173,7 @@ class WikiController < ApplicationController
     @content.author = User.current
 
     if @page.save_with_content(@content)
-      attachments = Attachment.attach_files(@page, params[:attachments])
+      Attachment.attach_files(@page, params[:attachments])
       render_attachment_warning_if_needed(@page)
       call_hook(:controller_wiki_edit_after_save, { :params => params, :page => @page})
 
@@ -323,7 +326,7 @@ class WikiController < ApplicationController
 
   def add_attachment
     return render_403 unless editable?
-    attachments = Attachment.attach_files(@page, params[:attachments])
+    Attachment.attach_files(@page, params[:attachments])
     render_attachment_warning_if_needed(@page)
     redirect_to :action => 'show', :id => @page.title, :project_id => @project
   end
