@@ -18,7 +18,7 @@
 %h3 最近編集されたページ
 
 %table
-  - WikiPage.all.order("updated_at DESC").limit(5).each |page|
+  - WikiPage.all.order("updated_at DESC").limit(5).each do |page|
     %tr
       %td= page.title
       %td= time_ago_in_words page.updated_at
