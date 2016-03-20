@@ -5,8 +5,8 @@
 %h3 新着コメント
 
 %table
-  - WikiComment.recent.limit(5).each do |wiki_comment|
+  - WikiComment.recent.limit(10).each do |wiki_comment|
     %tr
       %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
-      %td #{time_ago_in_words wiki_comment.created_at} 前
+      %td #{time_ago_in_words wiki_comment.created_at}前
 
