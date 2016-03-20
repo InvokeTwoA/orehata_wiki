@@ -15,11 +15,3 @@
         %td
           = link_to '削除する', wiki_comment_path(wiki_comment), method: :delete
 
-%h3 新着コメント
-
-%table
-  - WikiComment.recent.limit(5).each do |wiki_comment|
-    %tr
-      %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
-      %td= l wiki_comment.created_at
-

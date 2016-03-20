@@ -1,3 +1,12 @@
 - if @wiki && @wiki.sidebar
   .wiki
     = textilizable @wiki.sidebar.content, :text
+
+%h3 新着コメント
+
+%table
+  - WikiComment.recent.limit(5).each do |wiki_comment|
+    %tr
+      %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
+      %td= wiki_comment.created_at
+
