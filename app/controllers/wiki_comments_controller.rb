@@ -1,7 +1,7 @@
 class WikiCommentsController < ApplicationController
 
   def index
-    @wiki_comments = WikiComment.all
+    @wiki_comments = WikiComment.recent
   end
 
   def create
