@@ -1,12 +1,18 @@
-- if User.current.admin?
-  %table
-    - @wiki_comments.each do |wiki_comment|
-      %tr
-        %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
-        %td= wiki_comment.title
-        %td= wiki_comment.body
+%h1 コメント一覧
+
+%table
+  %tr
+    %th ページ
+    %th コメント内容
+    %th 日時
+  - @wiki_comments.each do |wiki_comment|
+    %tr
+      %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
+      %td= wiki_comment.title
+      %td= wiki_comment.body
+      %td #{time_ago_in_words wiki_comment.created_at} 前
+      - if User.current.admin?
         %td= wiki_comment.active_flag
-        %td #{time_ago_in_words wiki_comment.created_at} 前
         %td
           - if wiki_comment.active_flag?
             = link_to '無効にする', to_inactive_wiki_comment_path(wiki_comment), method: :put, class: 'btn btn-success'
@@ -14,12 +20,3 @@
             = link_to '有効にする', to_active_wiki_comment_path(wiki_comment), method: :put, class: 'btn btn-info'
         %td
           = link_to '削除する', wiki_comment_path(wiki_comment), method: :delete
-
-%h3 最近編集されたページ
-
-/%table
-/  - WikiPage.all.order("created_on DESC").limit(5).each do |page|
-/    %tr
-/      %td= page.title
-/      %td= time_ago_in_words page.created_on
-  
