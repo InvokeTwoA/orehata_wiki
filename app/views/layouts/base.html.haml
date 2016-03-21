@@ -3,7 +3,11 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{ name: "google-site-verification", content: "8AghetCaAVHVIWGfv00VWktBPymY8k97E2fPaWs5Rkc"} 
-    %title= html_title
+    %title
+      - if html_title == 'Redmine'
+        俺に働けと言われても　酉　攻略Wiki
+      - else
+        = html_title
     = render partial: 'layouts/meta_tags'
     = csrf_meta_tag
     = favicon
