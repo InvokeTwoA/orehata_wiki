@@ -18,3 +18,4 @@
       %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
       %td #{time_ago_in_words wiki_comment.created_at}前
 
+= link_to '全てのコメント', wiki_comments_path
