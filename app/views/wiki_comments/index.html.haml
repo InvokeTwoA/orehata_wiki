@@ -11,7 +11,7 @@
     %tr
       %td.center= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
       /%td= wiki_comment.title
-      %td.center= wiki_comment.body
+      %td= wiki_comment.body
       %td.center #{time_ago_in_words wiki_comment.created_at} 前
       - if User.current.admin?
         %td= wiki_comment.active_flag
