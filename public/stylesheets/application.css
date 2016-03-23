@@ -85,7 +85,6 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 /* #sidebar{ float: left; width: 15%; position: relative; z-index: 9; padding: 0; margin: 0; display: table-cell; }*/
 #sidebar{ 
   float: left; width: 15%; position: relative; z-index: 9; padding: 0; margin: 0; display: table-cell; 
-  border-right: 1px solid #bbb;
 }
 * html #sidebar{ width: 22%; }
 #sidebar h3{ font-size: 14px; margin-top:14px; color: #666;  }
@@ -98,7 +97,10 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #sidebar div.wiki ul {margin:inherit; padding-left:40px;}
 #sidebar div.wiki ul li {list-style-type:inherit;}
 
-#content { background-color: #fff; margin: 0px; padding: 6px 10px 10px 10px; z-index: 10; display: table-cell; }
+#content { 
+  background-color: #fff; margin: 0px; padding: 6px 10px 10px 10px; z-index: 10; display: table-cell; 
+  border-left: 1px solid #bbb;
+}
 * html #content{ padding-left: 0; margin-top: 0px; padding: 6px 10px 10px 10px;}
 html>body #content { min-height: 600px; min-width: 400px;  }
 * html body #content { height: 600px; } /* IE */
