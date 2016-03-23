@@ -30,6 +30,8 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 
 #account {float:right;}
 
+#main {background-color:#EEEEEE;}
+
 /* #header {min-height:3.0em;margin:0;background-color:#628DB6;color:#f8f8f8; padding: 4px 8px 10px 6px; position:relative;} */
 #header {min-height:3.0em;margin:0;background-color:#000000;color:#f8f8f8; padding: 4px 8px 10px 6px; position:relative;}
 #header a {color:#f8f8f8;}
@@ -99,7 +101,6 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 
 #content { 
   background-color: #fff; margin: 0px; padding: 6px 10px 10px 10px; z-index: 10; display: table-cell; 
-  border-left: 1px solid #bbb;
 }
 * html #content{ padding-left: 0; margin-top: 0px; padding: 6px 10px 10px 10px;}
 html>body #content { min-height: 600px; min-width: 400px;  }
