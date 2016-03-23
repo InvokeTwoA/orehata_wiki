@@ -1,16 +1,18 @@
 %h1 コメント一覧
 
+全#{ @wiki_comments.count }件
+
 %table
   %tr
-    %th ページ
-    %th コメント内容
-    %th 日時
+    %th.center ページ
+    %th.center コメント内容
+    %th.center 日時
   - @wiki_comments.each do |wiki_comment|
     %tr
-      %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
+      %td.center= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
       /%td= wiki_comment.title
-      %td= wiki_comment.body
-      %td #{time_ago_in_words wiki_comment.created_at} 前
+      %td.center= wiki_comment.body
+      %td.center #{time_ago_in_words wiki_comment.created_at} 前
       - if User.current.admin?
         %td= wiki_comment.active_flag
         %td
