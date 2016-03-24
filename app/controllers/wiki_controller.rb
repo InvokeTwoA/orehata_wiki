@@ -12,9 +12,6 @@ class WikiController < ApplicationController
   helper :watchers
   include Redmine::Export::PDF
 
-  # activities
-  include ActivitiesHelper
-
   # TOP ページ
   def root
     @project = Project.find('orehata_tori')
