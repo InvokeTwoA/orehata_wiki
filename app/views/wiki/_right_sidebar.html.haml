@@ -5,14 +5,8 @@
   - @events_by_day.keys.sort.reverse.each do |day|
     - i = i + 1
     - break if i > 5
-    - events_by_group = @events_by_day.group_by(&:event_group)
-    - sorted_events = []
-    - @events_by_day.sort {|x, y| y.event_datetime <=> x.event_datetime}.each do |event|
-      - if group_events = events_by_group.delete(event.event_group)
-        - group_events.sort {|x, y| y.event_datetime <=> x.event_datetime}.each_with_index do |e, i|
-          - sorted_events << [e, i > 0]
     %dl
-      - sorted_events.each do |e, in_group|
+      - sort_activity_events_for_right_bar(@events_by_day[day]).each do |e, in_group|
         %dt{:class => "#{e.event_type} #{"grouped" if in_group} #{User.current.logged? &&  e.respond_to?(:event_author) && User.current == e.event_author ? 'me' : nil}"}
           = avatar(e.event_author, :size => "24") if e.respond_to?(:event_author)
           %span.time= format_time(e.event_datetime, false)
