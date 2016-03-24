@@ -9,6 +9,7 @@
       - j = 0
       - sort_activity_events_for_right_bar(@events_by_day[day]).each do |e, in_group|
         - next if in_group
+        - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Wiki/).present?
         - j = j + 1
         - break if j > 5
         %li
