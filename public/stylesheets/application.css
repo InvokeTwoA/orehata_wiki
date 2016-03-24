@@ -86,7 +86,6 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #admin-menu a.server_authentication { background-image: url(../images/server_key.png); }
 
 #right_sidebar{ 
-  width: 15%; 
   z-index: 9; padding: 20px; margin: 0;
 }
 
@@ -107,7 +106,9 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #sidebar div.wiki ul li {list-style-type:inherit;}
 
 #content { 
-  background-color: #fff; margin: 0px; padding: 6px 10px 10px 10px; z-index: 10; display: table-cell; 
+  width: 70%;
+  background-color: #fff; margin: 0px; padding: 6px 10px 10px 10px; z-index: 10; 
+  display: table-cell; 
 }
 * html #content{ padding-left: 0; margin-top: 0px; padding: 6px 10px 10px 10px;}
 html>body #content { min-height: 600px; min-width: 400px;  }

@@ -1,4 +1,3 @@
-
 class ActivitiesController < ApplicationController
   menu_item :activity
   before_filter :find_optional_project
