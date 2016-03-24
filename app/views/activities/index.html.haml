@@ -10,10 +10,10 @@
           %span.time= format_time(e.event_datetime, false)
           = content_tag('span', e.project, :class => 'project') if @project.nil? || @project != e.project
           = link_to format_activity_title(e.event_title), e.event_url
-          - if in_group
-            - url = e.event_url
-            - url[:action] = 'diff'
-            = link_to '差分', url
+          - # 差分表示
+          - url = e.event_url
+          - url[:action] = 'diff'
+          = link_to '差分', url
         %dd{:class => "#{"grouped" if in_group}"}
           %span.description= format_activity_description(e.event_description)
           - if User.current.admin?
