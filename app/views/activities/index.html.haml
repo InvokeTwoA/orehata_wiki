@@ -10,6 +10,8 @@
           %span.time= format_time(e.event_datetime, false)
           = content_tag('span', e.project, :class => 'project') if @project.nil? || @project != e.project
           = link_to format_activity_title(e.event_title), e.event_url
+          - if in_group
+            = link_to '差分', "#{e.event_url}/diff"
         %dd{:class => "#{"grouped" if in_group}"}
           %span.description= format_activity_description(e.event_description)
           - if User.current.admin?

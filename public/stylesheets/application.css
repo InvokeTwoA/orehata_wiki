@@ -13,6 +13,8 @@ h4, .wiki h3 {font-size: 13px;}
 h4 {border-bottom: 1px dotted #bbb;}
 pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 
+#main {background-color:#EEEEEE;}
+
 /***** Layout *****/
 #wrapper {background: white;overflow: hidden;}
 

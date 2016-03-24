@@ -1,14 +1,6 @@
-- if @wiki && @wiki.sidebar
-  .wiki
-    = textilizable @wiki.sidebar.content, :text
+%h3 Wiki編集履歴
 
-/%h3 更新されたページ
-/- if @pages_by_date.present?
-/  - @pages_by_date.keys.sort.reverse.each do |date|
-/    /%h3= format_date(date)
-/    %ul
-/      - @pages_by_date[date].limit(10).each do |page|
-/        %li= link_to page.pretty_title, :action => 'show', :id => page.title, :project_id => page.project
+= project_activities_path(@page.project, show_wiki_edits: '1')
 
 %h3 新着コメント
 
