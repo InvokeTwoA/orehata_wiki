@@ -4,14 +4,17 @@
   - i = 0
   - @events_by_day.keys.sort.reverse.each do |day|
     - i = i + 1
-    - break if i > 5
+    - break if i > 1
     %dl
+      - j = 0
       - sort_activity_events_for_right_bar(@events_by_day[day]).each do |e, in_group|
-        %dt{:class => "#{e.event_type} #{"grouped" if in_group} #{User.current.logged? &&  e.respond_to?(:event_author) && User.current == e.event_author ? 'me' : nil}"}
-          = avatar(e.event_author, :size => "24") if e.respond_to?(:event_author)
+        - j = j + 1
+        - break if j > 5
+        %dt{:class => "#{e.event_type} #{User.current.logged? &&  e.respond_to?(:event_author) && User.current == e.event_author ? 'me' : nil}"}
+          /= avatar(e.event_author, :size => "24") if e.respond_to?(:event_author)
           %span.time= format_time(e.event_datetime, false)
           = content_tag('span', e.project, :class => 'project') if @project.nil? || @project != e.project
-          = link_to format_activity_title(e.event_title), e.event_url
+          = link_to format_activity_title(e.event_title).gsub(/Wiki編集:/,'').gsub(/\(.*\)/, ''), e.event_url
         %dd{:class => "#{"grouped" if in_group}"}
           %span.description= format_activity_description(e.event_description)
           - if User.current.admin?
