@@ -78,8 +78,9 @@
               = yield
               = call_hook :view_layouts_base_content
               %div{:style => "clear:both;"}
-            #right_sidebar
-              = yield :right_sidebar
+            - if yield(:right_sidebar).present?
+              #right_sidebar
+                = yield :right_sidebar
         #ajax-indicator{:style => "display:none;"}
           %span= l(:label_loading)
         #ajax-modal{:style => "display:none;"}
