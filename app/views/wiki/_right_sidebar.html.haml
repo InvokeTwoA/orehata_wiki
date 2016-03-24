@@ -5,7 +5,7 @@
   - @events_by_day.keys.sort.reverse.each do |day|
     - i = i + 1
     - break if i > 5
-    - events_by_group = events.group_by(&:event_group)
+    - events_by_group = @events_by_day.group_by(&:event_group)
     - sorted_events = []
     - @events_by_day.sort {|x, y| y.event_datetime <=> x.event_datetime}.each do |event|
       - if group_events = events_by_group.delete(event.event_group)
