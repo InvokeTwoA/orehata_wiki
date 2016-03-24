@@ -70,9 +70,6 @@
                     %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
                     %button.tab-right{:onclick => "moveTabRight(this); return false;"}
           #main{:class => "#{sidebar_content? ? '' : 'nosidebar'}"}
-            #right_sidebar
-              = yield :right_sidebar
-              /= render partial: 'layouts/right_box'
             #sidebar
               = yield :sidebar
               = view_layouts_base_sidebar_hook_response
@@ -81,6 +78,8 @@
               = yield
               = call_hook :view_layouts_base_content
               %div{:style => "clear:both;"}
+            #right_sidebar
+              = yield :right_sidebar
         #ajax-indicator{:style => "display:none;"}
           %span= l(:label_loading)
         #ajax-modal{:style => "display:none;"}

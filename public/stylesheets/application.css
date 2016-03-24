@@ -13,7 +13,10 @@ h4, .wiki h3 {font-size: 13px;}
 h4 {border-bottom: 1px dotted #bbb;}
 pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 
-#main {background-color:#EEEEEE;}
+#main {
+  display: table;
+  background-color:#EEEEEE;
+}
 
 /***** Layout *****/
 #wrapper {background: white;overflow: hidden;}
@@ -82,11 +85,15 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #admin-menu a.info { background-image: url(../images/help.png); }
 #admin-menu a.server_authentication { background-image: url(../images/server_key.png); }
 
-#right_sidebar{ float: right; width: 15%; position: relative; z-index: 9; padding: 20px; margin: 0;}
+#right_sidebar{ 
+  width: 15%; 
+  z-index: 9; padding: 20px; margin: 0;
+}
 
-/* #sidebar{ float: left; width: 15%; position: relative; z-index: 9; padding: 0; margin: 0; display: table-cell; }*/
 #sidebar{ 
-  float: left; width: 15%; position: relative; z-index: 9; padding: 0; margin: 0; display: table-cell; 
+  width: 15%; 
+  z-index: 9; padding: 0; margin: 0; 
+  display: table-cell; 
 }
 * html #sidebar{ width: 22%; }
 #sidebar h3{ font-size: 14px; margin-top:14px; color: #666;  }
