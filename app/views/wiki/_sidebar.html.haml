@@ -2,20 +2,3 @@
   .wiki
     = textilizable @wiki.sidebar.content, :text
 
-/%h3 更新されたページ
-/- if @pages_by_date.present?
-/  - @pages_by_date.keys.sort.reverse.each do |date|
-/    /%h3= format_date(date)
-/    %ul
-/      - @pages_by_date[date].limit(10).each do |page|
-/        %li= link_to page.pretty_title, :action => 'show', :id => page.title, :project_id => page.project
-
-%h3 新着コメント
-
-%table
-  - WikiComment.recent.limit(10).each do |wiki_comment|
-    %tr
-      %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
-      %td #{time_ago_in_words wiki_comment.created_at}前
-
-= link_to '全てのコメント', wiki_comments_path

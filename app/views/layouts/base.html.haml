@@ -70,10 +70,9 @@
                     %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
                     %button.tab-right{:onclick => "moveTabRight(this); return false;"}
           #main{:class => "#{sidebar_content? ? '' : 'nosidebar'}"}
-            - unless User.current.admin?
-              - unless request.mobile? && request.smart_phone?
-                /#right_sidebar
-                /  = render partial: 'layouts/right_box'
+            #right_sidebar
+              = yield :right_sidebar
+              /= render partial: 'layouts/right_box'
             #sidebar
               = yield :sidebar
               = view_layouts_base_sidebar_hook_response
