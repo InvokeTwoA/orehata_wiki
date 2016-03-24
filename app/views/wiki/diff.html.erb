@@ -3,8 +3,6 @@
             :class => 'icon icon-history') %>
 </div>
 
-<%= # wiki_page_breadcrumb(@page) %>
-
 <%= title [@page.pretty_title, project_wiki_page_path(@page.project, @page.title, :version => nil)],
       [l(:label_history), history_project_wiki_page_path(@page.project, @page.title)],
       "#{l(:label_version)} #{@diff.content_to.version}" %>
