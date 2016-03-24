@@ -81,6 +81,8 @@ class WikiController < ApplicationController
 
   # display a page (in editing mode if it doesn't exist)
   def show
+    return redirect_to home_path if params[:id] == 'Wiki'
+
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
       return
@@ -341,8 +343,6 @@ private
 
   # Finds the requested page or a new page if it doesn't exist
   def find_existing_or_new_page
-    return redirect_to home_path if params[:id] == 'Wiki'
-
     @page = @wiki.find_or_new_page(params[:id])
     if @wiki.page_found_with_redirect?
       redirect_to_page @page
