@@ -1,3 +1,4 @@
+$('.comment_note').hide()
 - if params[:page] == 'Wiki'
   - comments = WikiComment.where(page: 'wiki').recent
 - else

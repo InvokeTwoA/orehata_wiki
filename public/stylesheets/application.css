@@ -1380,3 +1380,9 @@ color: #555; text-shadow: 1px 1px 0 #fff;
 .wiki_comment_submit {
   float: right;
 }
+
+.comment_note {
+  margin-bottom: 10px;
+}
+
+

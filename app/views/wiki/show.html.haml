@@ -56,7 +56,8 @@
       - comments = WikiComment.where(page: params[:id]).recent.limit(10)
     - if params[:all] == 1
     - elsif comments.count >= 10
-      最新10件のみを表示してます。全て表示したい場合は#{ link_to 'こちら', wiki_comments_path(page: params[:id]), remote: true}
+      .comment_note
+        最新10件のみを表示してます。全て表示したい場合は#{ link_to 'こちら', wiki_comments_path(page: params[:id]), remote: true}
     #comments
       = render("/wiki_comments/list", comments: comments)
 
