@@ -1,5 +1,5 @@
 class WikiCommentsController < ApplicationController
-  respond_to :index
+  respond_to :js, only: [:index]
 
   def index
     @wiki_comments = WikiComment.recent
