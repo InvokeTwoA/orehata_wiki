@@ -1,4 +1,5 @@
 class WikiCommentsController < ApplicationController
+  respond_to :index
 
   def index
     @wiki_comments = WikiComment.recent

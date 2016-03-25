@@ -51,15 +51,14 @@
   %h2 コメント 一覧
   %table
     - if params[:id] == 'Wiki'
-      - WikiComment.where(page: 'wiki').older.each do |wiki_comment|
-        %tr
-          %td{ style: 'width: 90%' }= wiki_comment.body
-          %td{ style: 'width: 10%' } #{time_ago_in_words wiki_comment.created_at} 前
-    - else
-      - WikiComment.where(page: params[:id]).older.each do |wiki_comment|
-        %tr
-          %td{ style: 'width: 90%' }= wiki_comment.body
-          %td{ style: 'width: 10%' } #{time_ago_in_words wiki_comment.created_at} 前
+      - comments = WikiComment.where(page: 'wiki').recent.limit(10)
+    - else 
+      - comments = WikiComment.where(page: params[:id]).recent.limit(10)
+    - if params[:all] == 1
+    - elsif comments.count >= 10
+      最新10件のみを表示してます。全て表示したい場合は#{ link_to 'こちら', wiki_comments_path(page: params[:id]), remote: true}
+    #comments
+      = render("/wiki_comments/list", comments: comments)
 
 - if @editable && authorize_for('wiki', 'add_attachment')
   #wiki_add_attachment

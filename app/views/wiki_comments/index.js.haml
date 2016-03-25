@@ -1,0 +1,5 @@
+- if params[:page] == 'Wiki'
+  - comments = WikiComment.where(page: 'wiki').recent
+- else
+  - comments = WikiComment.where(page: params[:page]).recent
+$("#comments").html("#{ j render('/wiki_comments/list', comments: comments)}")

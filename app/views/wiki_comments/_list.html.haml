@@ -1,0 +1,4 @@
+- comments.reverse_each do |wiki_comment|
+  %tr
+    %td{ style: 'width: 90%' }= wiki_comment.body
+    %td{ style: 'width: 10%' } #{time_ago_in_words wiki_comment.created_at} 前
