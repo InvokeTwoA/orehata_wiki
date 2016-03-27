@@ -3,7 +3,7 @@
 #activity
   - i = 0
   - @events_by_day.keys.sort.reverse.each do |day|
-    - date == User.current.today ? l(:label_today).titleize : format_date(day)
+    - date = User.current.today ? l(:label_today).titleize : format_date(day)
     %h3= date
     %ul{style: "list-style-type: none"}
       - sort_activity_events_for_right_bar(@events_by_day[day]).each do |e, in_group|
