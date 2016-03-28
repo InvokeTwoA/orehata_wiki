@@ -4,6 +4,9 @@ class WikiCommentsController < ApplicationController
   end
 
   def create
+    return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
+
+
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
     else
