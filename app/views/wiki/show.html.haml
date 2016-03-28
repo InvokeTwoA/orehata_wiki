@@ -43,7 +43,7 @@
   .form-group
     %label.col-sm-2.control-label 内容
     .col
-      = f.input_field :body, class: 'wiki_comment_text_area', tabindex: "-1"
+      = f.input_field :body, class: 'wiki_comment_text_area', tabindex: "-1", required: true
       /%textarea{class: 'wiki_comment_text_area', name: 'wiki_comment[body]', id: 'wiki_comment[body]'} 
   .form-actions
     = f.hidden_field :page, value: params[:id]
