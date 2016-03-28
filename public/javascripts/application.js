@@ -662,7 +662,7 @@ function addFormObserversForDoubleSubmit() {
 
 function defaultFocus(){
   if (($('#content :focus').length == 0) && (window.location.hash == '')) {
-    $('#content input[type=text], #content textarea').first().focus();
+//    $('#content input[type=text], #content textarea').first().focus();
   }
 }
 
