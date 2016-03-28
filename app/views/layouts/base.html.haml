@@ -18,6 +18,9 @@
       %script{:src => "https://js1.nend.net/js/nendAdLoader.js", :type => "text/javascript"}
   %body{:class => body_css_classes}
     = call_hook :view_layouts_base_body_top
+    %div{style: "display: none;"}
+      %button
+      %input{type: "hidden", autofocus: true
     #wrapper
       .flyout-menu.js-flyout-menu
         - if User.current.logged? || !Setting.login_required?
