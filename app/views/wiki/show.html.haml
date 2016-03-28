@@ -43,8 +43,8 @@
   .form-group
     %label.col-sm-2.control-label 内容
     .col
-      /= f.input_field :body, class: 'wiki_comment_text_area', autofocus: false
-      %textarea{class: 'wiki_comment_text_area', name: 'wiki_comment[body]', id: 'wiki_comment[body]'} 
+      = f.input_field :body, class: 'wiki_comment_text_area', tabindex: "-1"
+      /%textarea{class: 'wiki_comment_text_area', name: 'wiki_comment[body]', id: 'wiki_comment[body]'} 
   .form-actions
     = f.hidden_field :page, value: params[:id]
     = f.submit 'コメント', class: 'wiki_comment_submit'
