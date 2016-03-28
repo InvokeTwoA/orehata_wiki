@@ -1372,6 +1372,7 @@ color: #555; text-shadow: 1px 1px 0 #fff;
 }
 
 .wiki_comment_text_area {
+  -webkit-appearance:none
   margin: 0px;
   width: 100%;
   height: 52px;
