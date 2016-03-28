@@ -412,7 +412,7 @@ function showModal(id, width, title) {
   }).on('dialogclose', function(){
     $(".modal").zIndex(101);
   });
-  el.find("input[type=text], input[type=submit]").first().focus();
+  //el.find("input[type=text], input[type=submit]").first().focus();
 }
 
 function hideModal(el) {
