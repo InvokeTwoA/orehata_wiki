@@ -1,5 +1,5 @@
-= Redmine
+= 俺に働けって言われても　攻略Wiki
 
-Redmine is a flexible project management web application written using Ruby on Rails framework.
+Redmineを元に一般公開のWikiにカスタマイズしたもの
 
-More details can be found in the doc directory or on the official website http://www.redmine.org
+http://www.orehata-wiki.xyz
