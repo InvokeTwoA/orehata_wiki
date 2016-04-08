@@ -1,29 +1,3 @@
-#                                vim:ts=4:sw=4:
-# = RedCloth - Textile and Markdown Hybrid for Ruby
-#
-# Homepage::  http://whytheluckystiff.net/ruby/redcloth/
-# Author::    why the lucky stiff (http://whytheluckystiff.net/)
-# Copyright:: (cc) 2004 why the lucky stiff (and his puppet organizations.)
-# License::   BSD
-#
-# (see http://hobix.com/textile/ for a Textile Reference.)
-#
-# Based on (and also inspired by) both:
-#
-# PyTextile: http://diveintomark.org/projects/textile/textile.py.txt
-# Textism for PHP: http://www.textism.com/tools/textile/
-#
-#
-
-# = RedCloth
-#
-# RedCloth is a Ruby library for converting Textile and/or Markdown
-# into HTML.  You can use either format, intermingled or separately.
-# You can also extend RedCloth to honor your own custom text stylings.
-#
-# RedCloth users are encouraged to use Textile if they are generating
-# HTML and to use Markdown if others will be viewing the plain text.
-#
 # == What is Textile?
 #
 # Textile is a simple formatting style for text
@@ -1203,7 +1177,8 @@ class RedCloth3 < String
     ALLOWED_TAGS = %w(redpre pre code notextile br)
     
     def escape_html_tags(text)
-      text.gsub!(%r{<(\/?([!\w]+)[^<>\n]*)(>?)}) {|m| ALLOWED_TAGS.include?($2) ? "<#{$1}#{$3}" : "&lt;#{$1}#{'&gt;' unless $3.blank?}" }
+      #text.gsub!(%r{<(\/?([!\w]+)[^<>\n]*)(>?)}) {|m| ALLOWED_TAGS.include?($2) ? "<#{$1}#{$3}" : "&lt;#{$1}#{'&gt;' unless $3.blank?}" }
+      text.gsub!(%r{<(\/?([\w]+)[^<>\n]*)(>?)}) {|m| ALLOWED_TAGS.include?($2) ? "<#{$1}#{$3}" : "&lt;#{$1}#{'&gt;' unless $3.blank?}" }
     end
 end
 
