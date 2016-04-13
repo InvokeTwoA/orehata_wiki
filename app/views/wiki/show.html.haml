@@ -62,7 +62,8 @@
       - comments = WikiComment.where(page: 'wiki').recent.page(params[:kaminari_page]).per(10)
     - else 
       - comments = WikiComment.where(page: params[:id]).recent.page(params[:kaminari_page]).per(10)
-    = render("/wiki_comments/list", comments: comments)
+    #comments
+      = render("/wiki_comments/list", comments: comments)
 - other_formats_links do |f|
   = f.link_to 'PDF', :url => {:id => @page.title, :version => params[:version]}
   = f.link_to 'HTML', :url => {:id => @page.title, :version => params[:version]}
