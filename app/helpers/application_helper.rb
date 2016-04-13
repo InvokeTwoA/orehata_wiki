@@ -1148,9 +1148,9 @@ module ApplicationHelper
                      "selectOtherMonths: true, changeMonth: true, changeYear: true, " +
                      "beforeShow: beforeShowDatePicker};")
         jquery_locale = l('jquery.locale', :default => current_language.to_s)
-        unless jquery_locale == 'en'
-          tags << javascript_include_tag("i18n/datepicker-#{jquery_locale}.js")
-        end
+        #unless jquery_locale == 'en'
+        #  tags << javascript_include_tag("i18n/datepicker-#{jquery_locale}.js")
+        #end
         tags
       end
     end
@@ -1195,6 +1195,7 @@ module ApplicationHelper
   #   javascript_include_tag('scripts') # => picks scripts.js from defaults
   #   javascript_include_tag('scripts', :plugin => 'foo) # => picks scripts.js from plugin's assets
   #
+=begin
   def javascript_include_tag(*sources)
     options = sources.last.is_a?(Hash) ? sources.pop : {}
     if plugin = options.delete(:plugin)
@@ -1208,6 +1209,7 @@ module ApplicationHelper
     end
     super *sources, options
   end
+=end
 
   def sidebar_content?
     content_for?(:sidebar) || view_layouts_base_sidebar_hook_response.present?

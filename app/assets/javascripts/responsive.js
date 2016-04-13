@@ -25,6 +25,7 @@ function setupFlyout() {
 
   /* click handler for mobile menu toggle */
   $('.js-flyout-menu-toggle-button').on('click', function(e) {
+    alert("clicked");
     e.preventDefault();
     e.stopPropagation();
     if($('html').hasClass('flyout-is-active')) {
