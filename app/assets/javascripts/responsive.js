@@ -2,6 +2,7 @@
 
 function openFlyout() {
   $('html').addClass('flyout-is-active');
+  $('.flyout-menu').show();
   $('#wrapper2').on('click', function(e){
     e.preventDefault();
     e.stopPropagation();
@@ -25,7 +26,6 @@ function setupFlyout() {
 
   /* click handler for mobile menu toggle */
   $('.js-flyout-menu-toggle-button').on('click', function(e) {
-    alert("clicked");
     e.preventDefault();
     e.stopPropagation();
     if($('html').hasClass('flyout-is-active')) {

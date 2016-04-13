@@ -276,7 +276,8 @@
     position: absolute;
     right: -250px;
 
-    display: block; /* remove display: none; of non-mobile version */
+    /* display: block; */  /* remove display: none; of non-mobile version */
+    display: none;
     overflow-x: hidden;
 
     width: 250px;
@@ -286,6 +287,10 @@
 
     color: white;
     background-color: #3e5b76;
+  }
+
+  .flyout-menu h2 {
+    color: white !important;
   }
 
   /* avoid zoom on search input focus for ios devices */
