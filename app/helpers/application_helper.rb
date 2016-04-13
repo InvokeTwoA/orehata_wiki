@@ -1115,11 +1115,13 @@ module ApplicationHelper
         javascript_include_tag('context_menu') +
           stylesheet_link_tag('context_menu')
       end
+=begin
       if l(:direction) == 'rtl'
         content_for :header_tags do
           stylesheet_link_tag('context_menu_rtl')
         end
       end
+=end
       @context_menu_included = true
     end
     javascript_tag "contextMenuInit('#{ url_for(url) }')"
