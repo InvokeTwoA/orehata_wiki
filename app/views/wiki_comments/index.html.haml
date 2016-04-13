@@ -6,11 +6,11 @@
   %ul
     - @wiki_comments.each do |wiki_comment|
       %li
-        .header
+        .comment-header
           %span.page
             ページ:
             = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
-          %span.pull-right.lighter
+          %span.pull-right
             = I18n.l(wiki_comment.created_at)
             - if User.current.admin?
               = wiki_comment.active_flag
@@ -21,4 +21,5 @@
               = link_to '削除する', wiki_comment_path(wiki_comment), method: :delete
         .body
           =wiki_comment.body
-= paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index'}
+%div{style: 'text-align:center;'}
+  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index'}
