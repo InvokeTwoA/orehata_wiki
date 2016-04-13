@@ -1,6 +1,6 @@
 class WikiCommentsController < ApplicationController
   def index
-    @wiki_comments = WikiComment.recent.page(params[:kaminari_page]).per(10)
+    @wiki_comments = WikiComment.recent.page(params[:kaminari_page]).per(20)
   end
 
   def create
