@@ -34,6 +34,18 @@
   %hr/
 = render(:partial => "wiki/content", :locals => {:content => @content})
 = link_to_attachments @page
+- if @editable && authorize_for('wiki', 'add_attachment')
+  #wiki_add_attachment
+    %p= link_to l(:label_attachment_new), {}, :onclick => "$('#add_attachment_form').show(); return false;", 
+        :id => 'attach_files_link'                                                                           
+    = form_tag({:controller => 'wiki', :action => 'add_attachment', 
+       :project_id => @project, :id => @page.title},                
+      :multipart => true, :id => "add_attachment_form",             
+      :style => "display:none;") do                                 
+      .box
+        %p= render :partial => 'attachments/form'
+      = submit_tag l(:button_add)
+      = link_to l(:button_cancel), {}, :onclick => "$('#add_attachment_form').hide(); return false;"
 %h2 コメント
 = simple_form_for WikiComment.new do |f|
   .form-group
@@ -51,18 +63,6 @@
     - else 
       - comments = WikiComment.where(page: params[:id]).recent.page(params[:comment_page]).per(10)
     = render("/wiki_comments/list", comments: comments)
-- if @editable && authorize_for('wiki', 'add_attachment')
-  #wiki_add_attachment
-    %p= link_to l(:label_attachment_new), {}, :onclick => "$('#add_attachment_form').show(); return false;", 
-        :id => 'attach_files_link'                                                                           
-    = form_tag({:controller => 'wiki', :action => 'add_attachment', 
-       :project_id => @project, :id => @page.title},                
-      :multipart => true, :id => "add_attachment_form",             
-      :style => "display:none;") do                                 
-      .box
-        %p= render :partial => 'attachments/form'
-      = submit_tag l(:button_add)
-      = link_to l(:button_cancel), {}, :onclick => "$('#add_attachment_form').hide(); return false;"
 - other_formats_links do |f|
   = f.link_to 'PDF', :url => {:id => @page.title, :version => params[:version]}
   = f.link_to 'HTML', :url => {:id => @page.title, :version => params[:version]}

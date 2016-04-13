@@ -4,5 +4,6 @@
       - comments.reverse_each do |wiki_comment|
         %li
           .pull-right= I18n.l(wiki_comment.created_at)
-          = wiki_comment.body
-    = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
+          .body
+            = wiki_comment.body
+  = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true

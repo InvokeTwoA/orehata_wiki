@@ -1400,3 +1400,7 @@ color: #555; text-shadow: 1px 1px 0 #fff;
   border-bottom:1px solid #CCC;
   margin-top: -1px;
 }
+
+#wiki-comments .body {
+  padding: 5px 5px;
+}
