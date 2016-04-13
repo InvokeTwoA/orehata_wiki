@@ -1421,3 +1421,23 @@ color: #555; text-shadow: 1px 1px 0 #fff;
 .pagination li {
   display: inline
 }
+
+.pagination a {
+  position: relative;
+  float: left;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.5;
+  color: #0275d8;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.pagination .active a {
+  cursor: default;
+  background-color: #0275d8;
+  border-color: #0275d8
+}
+
+
