@@ -21,4 +21,4 @@
               = link_to '削除する', wiki_comment_path(wiki_comment), method: :delete
         .body
           =wiki_comment.body
-= paginate comments, params: {controller: 'wiki_comments', action: 'index'}
+= paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index'}
