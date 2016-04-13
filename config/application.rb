@@ -15,7 +15,7 @@ module RedmineApp
     config.assets.initialize_on_precompile = true
 
     config.assets.precompile += %w( attachments.js context_menu.js jquery-1.11.1-ui-1.11.0-ujs-3.1.4.js raphael.js project_identifier.js revision_graph.js repository_navigation.js gantt.js responsive.js )
-    config.assets.precompile += %w( context_menu.css context_menu_rtl.css custom_red.css responsive.css rtl.css scm.css )
+    config.assets.precompile += %w( context_menu.css context_menu_rtl.css custom_red.css responsive.css rtl.css scm.css jstoolbar.css )
 
     config.autoload_paths += %W(#{config.root}/lib)
 
