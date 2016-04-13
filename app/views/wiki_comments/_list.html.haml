@@ -5,4 +5,4 @@
         %li
           .pull-right= I18n.l(wiki_comment.created_at)
           = wiki_comment.body
-    = paginate comments, params: {controller: 'wiki_comments', action: 'index', page_method_name: 'comment_page'}, remote: true
+    = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
