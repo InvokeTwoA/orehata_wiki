@@ -1,4 +1,7 @@
 /*
- *= require_self
- *= require_tree .
+ *= require context_menu.css      
+ *= require context_menu_rtl.css 
+ *= require custom_red.css
+ *= require jstoolbar.css
+ *= require responsive.css 
 */
