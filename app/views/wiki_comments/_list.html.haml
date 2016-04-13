@@ -1,11 +1,8 @@
 - if comments.present?
-  %ul
-    - comments.reverse_each do |wiki_comment|
-      %li
-        .pull-right= I18n.l(wiki_comment.created_at)
-        = wiki_comment.body
-  = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
-
-  /%tr
-  /  %td{ style: 'width: 90%; padding: 10px;' }= wiki_comment.body
-  /  %td{ style: 'width: 10%' } #{time_ago_in_words wiki_comment.created_at} 前
+  #wiki-comments
+    %ul
+      - comments.reverse_each do |wiki_comment|
+        %li
+          .pull-right= I18n.l(wiki_comment.created_at)
+          = wiki_comment.body
+    = paginate comments, params: {controller: 'wiki_comments', action: 'index', page_method_name: 'comment_page'}, remote: true

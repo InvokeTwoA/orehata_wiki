@@ -1390,3 +1390,13 @@ color: #555; text-shadow: 1px 1px 0 #fff;
   text-align: right;
 }
 
+#wiki-comments ul {
+  list-style: none;
+}
+
+#wiki-comments li {
+  padding: 10px 5px;
+  border-top:1px solid #CCC;
+  border-bottom:1px solid #CCC;
+  margin-top: -1px;
+}

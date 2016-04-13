@@ -50,8 +50,7 @@
       - comments = WikiComment.where(page: 'wiki').recent.page(params[:comment_page]).per(10)
     - else 
       - comments = WikiComment.where(page: params[:id]).recent.page(params[:comment_page]).per(10)
-    #comments
-      = render("/wiki_comments/list", comments: comments)
+    = render("/wiki_comments/list", comments: comments)
 - if @editable && authorize_for('wiki', 'add_attachment')
   #wiki_add_attachment
     %p= link_to l(:label_attachment_new), {}, :onclick => "$('#add_attachment_form').show(); return false;", 
