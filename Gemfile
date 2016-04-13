@@ -17,6 +17,7 @@ gem "actionpack-xml_parser"
 gem "roadie-rails"
 gem 'simple_form', '~> 3.0.2'
 gem 'jpmobile'
+gem 'kaminari'
 
 gem 'haml'
 gem 'meta-tags', :require => 'meta_tags'

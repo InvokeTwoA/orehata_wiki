@@ -36,15 +36,10 @@
 = link_to_attachments @page
 %h2 コメント
 = simple_form_for WikiComment.new do |f|
-  /.form-group
-  /  %label.col-sm-2.control-label 名前
-  /  .col
-  /    = text_field(:wiki_comment, :title)
   .form-group
     %label.col-sm-2.control-label 内容
     .col
       = f.input_field :body, class: 'wiki_comment_text_area'
-      /%textarea{class: 'wiki_comment_text_area', name: 'wiki_comment[body]', id: 'wiki_comment[body]'} 
   .form-actions
     = f.hidden_field :page, value: params[:id]
     = f.submit 'コメント', class: 'wiki_comment_submit'
@@ -52,19 +47,11 @@
   %h2 コメント 一覧
   %table
     - if params[:id] == 'Wiki'
-      - comments = WikiComment.where(page: 'wiki').recent.limit(10)
-      - comments_count = WikiComment.where(page: 'wiki').count
+      - comments = WikiComment.where(page: 'wiki').recent.page(params[:comment_page]).per(10)
     - else 
-      - comments = WikiComment.where(page: params[:id]).recent.limit(10)
-      - comments_count = WikiComment.where(page: params[:id]).count
-    - if params[:all] == 1
-    - elsif comments.count >= 10
-      .comment_note
-        最新10件のみを表示してます。全て表示したい場合は#{ link_to 'こちら', wiki_comments_path(page: params[:id]), remote: true}
-        全#{ comments_count }件
+      - comments = WikiComment.where(page: params[:id]).recent.page(params[:comment_page]).per(10)
     #comments
       = render("/wiki_comments/list", comments: comments)
-
 - if @editable && authorize_for('wiki', 'add_attachment')
   #wiki_add_attachment
     %p= link_to l(:label_attachment_new), {}, :onclick => "$('#add_attachment_form').show(); return false;", 

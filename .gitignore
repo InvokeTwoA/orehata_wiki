@@ -31,3 +31,4 @@
 
 /.bundle
 /vendor/bundle
+.rbenv-version
