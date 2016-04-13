@@ -11,7 +11,8 @@ module RedmineApp
     config.active_record.default_timezone = :local
     config.encoding = 'utf-8'
 
-    config.assets.initialize_on_precompile = false
+    #config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
 
     config.autoload_paths += %W(#{config.root}/lib)
 
