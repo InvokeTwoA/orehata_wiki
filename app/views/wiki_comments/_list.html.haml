@@ -1,9 +1,10 @@
 - if comments.present?
-  #wiki-comments
-    %ul
-      - comments.reverse_each do |wiki_comment|
-        %li
-          .pull-right.lighter= I18n.l(wiki_comment.created_at)
-          .body
-            = wiki_comment.body
-  = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
+  #comments
+    #wiki-comments
+      %ul
+        - comments.reverse_each do |wiki_comment|
+          %li
+            .pull-right.lighter= I18n.l(wiki_comment.created_at)
+            .body
+              = wiki_comment.body
+    = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true

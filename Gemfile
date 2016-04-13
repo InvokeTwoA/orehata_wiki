@@ -19,6 +19,14 @@ gem 'simple_form', '~> 3.0.2'
 gem 'jpmobile'
 gem 'kaminari'
 
+gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootswatch-rails', '3.2.0'
+#gem 'twitter-bootswatch-rails-helpers'
+#gem 'execjs'
+#gem 'less-rails'
+#gem 'therubyracer'
+#gem 'libv8', '3.16.14.13'
+
 gem 'haml'
 gem 'meta-tags', :require => 'meta_tags'
 
