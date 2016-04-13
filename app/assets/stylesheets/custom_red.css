@@ -1388,6 +1388,7 @@ color: #555; text-shadow: 1px 1px 0 #fff;
 
 .pull-right {
   text-align: right;
+  float: right;
 }
 
 #wiki-comments ul {
