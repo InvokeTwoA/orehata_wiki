@@ -1,4 +1,6 @@
 - if comments.present?
+  %div{style: 'text-align:center;'}
+    = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
   #wiki-comments
     %ul
       - comments.reverse_each do |wiki_comment|

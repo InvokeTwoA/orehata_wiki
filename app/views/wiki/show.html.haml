@@ -59,9 +59,9 @@
   %h2 コメント 一覧
   %table
     - if params[:id] == 'Wiki'
-      - comments = WikiComment.where(page: 'wiki').recent.page(params[:kaminari_page]).per(5)
+      - comments = WikiComment.where(page: 'wiki').recent.page(params[:kaminari_page]).per(10)
     - else 
-      - comments = WikiComment.where(page: params[:id]).recent.page(params[:kaminari_page]).per(5)
+      - comments = WikiComment.where(page: params[:id]).recent.page(params[:kaminari_page]).per(10)
     #comments
       = render("/wiki_comments/list", comments: comments)
 - other_formats_links do |f|
