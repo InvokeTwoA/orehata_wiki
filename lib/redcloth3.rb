@@ -517,7 +517,8 @@ class RedCloth3 < String
                 ratts = shelve( ratts ) if ratts
                 rows << "\t\t<tr#{ ratts }>\n#{ cells.join( "\n" ) }\n\t\t</tr>"
             end
-            "\t<table#{ tatts }>\n#{ rows.join( "\n" ) }\n\t</table>\n\n"
+            # "\t<table#{ tatts }>\n#{ rows.join( "\n" ) }\n\t</table>\n\n"
+            "\t<div class='scroll-table'><table#{ tatts }>\n#{ rows.join( "\n" ) }\n\t</table></div>\n\n"
         end
     end
 

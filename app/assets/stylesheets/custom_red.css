@@ -1455,3 +1455,7 @@ color: #555; text-shadow: 1px 1px 0 #fff;
   color: #ffffff
 }
 
+#content table {
+  width: 100%;
+}
+

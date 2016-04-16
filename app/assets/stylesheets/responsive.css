@@ -783,5 +783,20 @@
   .pagination ul.pages li.current,
   .pagination ul.pages li.previous,
   .pagination ul.pages li.next {display:inline-block; width:32%; overflow:hidden;}
-}
 
+  .scroll-table {
+    width: 400px;
+    overflow: auto;　　　　/*tableをスクロールさせる*/
+    white-space: nowrap;
+  }
+  .scroll-table::-webkit-scrollbar {　　/*tableにスクロールバーを追加*/
+   height: 5px;
+  }
+  .scroll-table::-webkit-scrollbar-track {　　/*tableにスクロールバーを追加*/
+   background: #F1F1F1;
+  }
+  .scroll-table::-webkit-scrollbar-thumb {　　/*tableにスクロールバーを追加*/
+   background: #BCBCBC;
+  }
+
+}
