@@ -15,7 +15,7 @@
     = yield :header_tags
     :javascript
       var nend_params = {"media":27178,"site":200373,"spot":563685,"type":2,"oriented":1};
-      %script{:src => "https://js1.nend.net/js/nendAdLoader.js", :type => "text/javascript"}
+    %script{:src => "https://js1.nend.net/js/nendAdLoader.js", :type => "text/javascript"}
   %body{:class => body_css_classes}
     = call_hook :view_layouts_base_body_top
     #wrapper
