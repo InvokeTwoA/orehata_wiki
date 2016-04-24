@@ -25,22 +25,8 @@
             = form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do
               = hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope
               = label_tag 'flyout-search', '⚲'.html_safe, :class => 'search-magnifier search-magnifier--flyout'
-              /= text_field_tag 'q', @question, :id => 'flyout-search', :class => 'small js-search-input', :placeholder => l(:label_search)
               %input#q{ type: "text", name: "q", size: "20", class: "small", accesskey: "f", autofocus: true }
-        - if User.current.logged?
-          %div{:class => "flyout-menu__avatar  if !Setting.gravatar_enabled? flyout-menu__avatar--no-avatar"}
-            - if Setting.gravatar_enabled?
-              = link_to(avatar(User.current, :size => "80"), user_path(User.current))
-            = link_to_user(User.current, :format => :username)
-        - if User.current.admin?
-          - if display_main_menu?(@project)
-            %h3= l(:label_project)
-            %span.js-project-menu
-          %h3= l(:label_general)
-          %span.js-general-menu
         %span.js-sidebar.flyout-menu__sidebar
-        /%h3= l(:label_profile)
-        /%span.js-profile-menu
       #wrapper2
         #wrapper3
           - if User.current.admin?
@@ -60,16 +46,12 @@
                     \:
                   = text_field_tag 'q', @question, :size => 20, :class => 'small', :accesskey => accesskey(:quick_search)
                 = render_project_jump_box
-            %h1
-              = link_to '俺に働けって言われても　酉　攻略', home_path
-              /= link_to page_header_title, home_path
-            - if display_main_menu?(@project)
-              - if User.current.admin?
-                #main-menu.tabs
-                  = render_main_menu(@project)
-                  .tabs-buttons{:style => "display:none;"}
-                    %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
-                    %button.tab-right{:onclick => "moveTabRight(this); return false;"}
+            %h1= wiki_page_title_link
+            #main-menu.tabs
+              = render partial: 'layouts/menu_bar'
+              .tabs-buttons{:style => "display:none;"}
+                %button.tab-left{:onclick => "moveTabLeft(this); return false;"}
+                %button.tab-right{:onclick => "moveTabRight(this); return false;"}
           #main{:class => "#{sidebar_content? ? '' : 'nosidebar'}"}
             #sidebar
               = yield :sidebar

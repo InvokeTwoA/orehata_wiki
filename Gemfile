@@ -5,8 +5,10 @@ if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('1.5.0')
   abort "Redmine requires Bundler 1.5.0 or higher (you're using #{Bundler::VERSION}).\nPlease update with 'gem update bundler'."
 end
 
+#gem 'sass-rails', '~> 5.0'
 gem "rails", "4.2.5.2"
 gem "jquery-rails", "~> 3.1.4"
+gem 'jquery-ui-rails'
 gem "coderay", "~> 1.1.0"
 gem "builder", ">= 3.0.4"
 gem "request_store", "1.0.5"
@@ -18,13 +20,18 @@ gem "roadie-rails"
 gem 'simple_form', '~> 3.0.2'
 gem 'jpmobile'
 gem 'kaminari'
+gem 'css2sass'
+
+#gem 'twitter-bootswatch-rails', '3.2.0'
+#gem 'therubyracer'
+
+#gem 'bootstrap-sass'
 
 #gem 'twitter-bootstrap-rails'
 #gem 'twitter-bootswatch-rails', '3.2.0'
 #gem 'twitter-bootswatch-rails-helpers'
 #gem 'execjs'
 #gem 'less-rails'
-#gem 'therubyracer'
 #gem 'libv8', '3.16.14.13'
 
 gem 'haml'
@@ -74,6 +81,9 @@ group :production do
   gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw, :x64_mingw]
   gem 'rails_12factor'
   gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
+
+  # 高速化
+  gem 'heroku-deflater'
 end
 
 group :development do

@@ -1,11 +1,10 @@
 class WikiCommentsController < ApplicationController
   def index
-    @wiki_comments = WikiComment.recent.page(params[:kaminari_page]).per(20)
+    @wiki_comments = WikiComment.recent.where(project_id: params[:project_id]).page(params[:kaminari_page]).per(20)
   end
 
   def create
     return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
-
 
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
@@ -13,6 +12,7 @@ class WikiCommentsController < ApplicationController
       page = params[:wiki_comment][:page]
     end
     WikiComment.create(
+      project_id: params[:wiki_comment][:project_id],
       title: params[:wiki_comment][:title],
       body: params[:wiki_comment][:body],
       page: page,

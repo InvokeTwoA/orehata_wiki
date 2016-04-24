@@ -1,5 +1,5 @@
 - content_for :sidebar do
-  = link_to 'TOPに戻る', home_path
+  = link_to 'TOPに戻る', root_project_wiki_page_index_path(project_id: params[:project_id])
 %h1 コメント一覧
 
 全#{ @wiki_comments.total_count }件
@@ -24,4 +24,4 @@
         .body
           =wiki_comment.body
 %div{style: 'text-align:center;'}
-  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index'}
+  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index', project_id: params[:project_id]}

@@ -14,11 +14,19 @@ class WikiController < ApplicationController
 
   # TOP ページ
   def root
-    @project = Project.find('orehata_tori')
-    @wiki = @project.wiki
-    @page = @wiki.find_or_new_page('wiki')
-    params[:project_id] = 'orehata_tori'
-    params[:id] = 'wiki'
+    if params[:project_id] == 'cl_dungeon_sengoku'
+      @project = Project.find('cl_dungeon_sengoku')
+      @wiki = @project.wiki
+      @page = @wiki.find_or_new_page('top')
+      params[:project_id] = 'cl_dungeon_sengoku'
+      params[:id] = 'top'
+    else
+      @project = Project.find('orehata_tori')
+      @wiki = @project.wiki
+      @page = @wiki.find_or_new_page('wiki')
+      params[:project_id] = 'orehata_tori'
+      params[:id] = 'wiki'
+    end
 
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
@@ -81,7 +89,8 @@ class WikiController < ApplicationController
 
   # display a page (in editing mode if it doesn't exist)
   def show
-    return redirect_to home_path if params[:id] == 'Wiki'
+    return redirect_to home_path if params[:id] == 'Wiki' && params[:project_id] == 'orehata_tori'
+    return redirect_to root_path(params) if params[:id] == 'root'
 
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access

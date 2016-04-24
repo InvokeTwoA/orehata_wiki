@@ -1,6 +1,6 @@
 $('.comment_note').hide()
 - if params[:page] == 'Wiki'
-  - comments = WikiComment.where(page: 'wiki').recent.page(params[:kaminari_page]).per(10)
+  - comments = WikiComment.where(page: 'wiki', project_id: @page.project.identifier).recent.page(params[:kaminari_page]).per(10)
 - else
-  - comments = WikiComment.where(page: params[:id]).recent.page(params[:kaminari_page]).per(10)
+  - comments = WikiComment.where(page: params[:id], project_id: @page.project.identifier).recent.page(params[:kaminari_page]).per(10)
 $("#comments").html("#{ j render('/wiki_comments/list', comments: comments)}")

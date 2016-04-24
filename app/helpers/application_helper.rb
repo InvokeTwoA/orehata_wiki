@@ -896,7 +896,8 @@ module ApplicationHelper
         anchor = "#{anchor}-#{idx}"
       end
       @parsed_headings << [level, anchor, item]
-      "<a name=\"#{anchor}\"></a>\n<h#{level} #{attrs}>#{content}<a href=\"##{anchor}\" class=\"wiki-anchor\">&para;</a></h#{level}>"
+      # "<a name=\"#{anchor}\"></a>\n<h#{level} #{attrs}>#{content}<a href=\"##{anchor}\" class=\"wiki-anchor\">&para;</a></h#{level}>"
+      "<a name=\"#{anchor}\"></a>\n<h#{level} #{attrs}>#{content}</h#{level}>"
     end
   end
 
@@ -1323,5 +1324,14 @@ module ApplicationHelper
 
   def link_to_content_update(text, url_params = {}, html_options = {})
     link_to(text, url_params, html_options)
+  end
+
+  # 手動でタイトル出し分け
+  def wiki_page_title_link
+    if params[:project_id] == 'cl_dungeon_sengoku'
+      link_to 'クラシックダンジョン戦国　攻略', root_project_wiki_page_index_path(project_id: params[:project_id])
+    else
+      link_to '俺に働けって言われても　酉　攻略', home_path
+    end
   end
 end

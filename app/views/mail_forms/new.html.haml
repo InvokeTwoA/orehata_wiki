@@ -1,0 +1,26 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+  
+%h1 管理人への連絡
+
+#mail_form
+  = simple_form_for MailForm.new, html: { class: 'form form-horizontal'} do |f|
+    .form-group
+      = hidden_field_tag :project_id, params[:project_id]
+      %label.col-sm-2.control-label= f.label :name, '氏名:'
+      .col-sm-5= f.text_field :name, class: 'form-control'
+    .form-group
+      %label.col-sm-2.control-label= f.label :title, '件名:'
+      .col-sm-5= f.input_field :title, class: 'form-control'
+    .form-group
+      %label.col-sm-2.control-label= f.label :body, '本文:'
+      .col-sm-5= f.text_field :body, as: :text, class: 'form-control'
+    .form-group
+      %label.col-sm-2.control-label= f.label :from_mail, 'from:'
+      .col-sm-5= f.text_field :from_mail, class: 'form-control'
+    .form-action
+      = f.submit '送信する', class: 'btn btn-primary'
+%ul
+  %li サイト改善のためのご意見などありましたら気軽にご連絡お願いします
+  %li 必要あれば返信用のメールアドレスを from に記載してください（メールアドレスが公開される事はございません）
+  %li 管理人twitter  @kappa_ikemen に連絡していただいても結構です
