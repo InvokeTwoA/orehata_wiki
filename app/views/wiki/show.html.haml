@@ -1,4 +1,4 @@
-- unless action_name == 'root' || @page.title == 'top'
+- unless action_name == 'root' || @page.title == 'top' || @page.title == 'Top'
   .contextual
     - if @editable
       - if @content.current_version?
