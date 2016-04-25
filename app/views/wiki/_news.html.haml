@@ -12,6 +12,7 @@
         - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Wiki/).present?
         - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Sidebar/).present?
         - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Sandbox/).present?
+        - next if  @project.nil? || @project != e.project
         - i = i + 1
         - break if i > 10
         %li
