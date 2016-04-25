@@ -19,7 +19,11 @@ Rails.application.routes.draw do
   #match 'game/:id/wiki', :to => 'wikis#edit', :via => :post, as: 'game_wiki'
   match 'game/:project_id/wiki/:id', :to => 'wiki#show', via: :get, as: 'game_wiki'
 
-  resources :games, only: [:index]
+  resources :games, only: [:index] do
+    collection do
+      get :explain
+    end
+  end
   resources :mail_forms, only: [:new, :create]
 
   resources :journals, :only => [:edit, :update] do
