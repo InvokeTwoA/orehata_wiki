@@ -12,7 +12,7 @@ class MailFormsController < ApplicationController
     ActionMailer::Base.mail(from: from_address, to: to_address, subject: params[:mail_form][:title], body: body).deliver_now!
     redirect_to new_mail_form_path(project_id: params[:project_id]),  notice: 'メールの送信が完了しました'
   rescue => e
-    redirect_to :back, flash: { error: "メール送信に失敗しました。間をおいて試すか、@kappa_ikemen まで連絡をください。" }
+    redirect_to :back, flash: { error: "メール送信に失敗しました。間をおいて試すか、@kappa_ikemen まで連絡をください。#{e}" }
   end
 
 end
