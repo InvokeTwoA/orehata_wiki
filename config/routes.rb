@@ -17,7 +17,8 @@ Rails.application.routes.draw do
 
   # custom
   #match 'game/:id/wiki', :to => 'wikis#edit', :via => :post, as: 'game_wiki'
-  match 'game/:project_id/wiki/:id', :to => 'wiki#show', via: :get, as: 'game_wiki'
+  match 'game/:project_id/wiki/:id', to: 'wiki#show', via: :get, as: 'game_wiki'
+  match 'game/:project_id/wiki/:id/edit', to: 'wiki#edit', via: :get, as: 'edit_game_wiki'
 
   resources :games, only: [:index] do
     collection do

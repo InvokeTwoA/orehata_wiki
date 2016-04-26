@@ -189,11 +189,13 @@ class WikiController < ApplicationController
       respond_to do |format|
         format.html {
           anchor = @section ? "section-#{@section}" : nil
-          redirect_to project_wiki_page_path(@project, @page.title, :anchor => anchor)
+          #redirect_to project_wiki_page_path(@project, @page.title, :anchor => anchor)
+          redirect_to game_wiki_path(project_id: @project.identifier, id: @page.title)
         }
         format.api {
           if was_new_page
-            render :action => 'show', :status => :created, :location => project_wiki_page_path(@project, @page.title)
+            #render :action => 'show', :status => :created, :location => project_wiki_page_path(@project, @page.title)
+            render action: 'show', status: :created, location: game_wiki_path(project_id: @project.identifier, id: @page.title) 
           else
             render_api_ok
           end

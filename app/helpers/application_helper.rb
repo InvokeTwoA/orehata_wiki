@@ -1329,9 +1329,43 @@ module ApplicationHelper
   # 手動でタイトル出し分け
   def wiki_page_title_link
     if params[:project_id] == 'cl_dungeon_sengoku'
-      link_to 'クラシックダンジョン戦国　攻略', root_project_wiki_page_index_path(project_id: params[:project_id])
+      link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     else
-      link_to '俺に働けって言われても　酉　攻略', home_path
+      link_to '俺に働けって言われても　酉　徹底攻略wiki', home_path
+    end
+  end
+
+  # wikiのdescription
+  def wiki_meta_description
+    case params[:project_id]
+    when 'cl_dungeon_sengoku' then
+      '「クラシックダンジョン戦国」の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
+    when 'orehata_tori' then
+      '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
+    else
+      '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
+    end
+  end
+
+  def wiki_meta_tags
+    case params[:project_id]
+    when 'cl_dungeon_sengoku' then
+      ['クラシックダンジョン', 'クラダン', '戦国', 'クラシックダンジョン戦国', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
+    when 'orehata_tori' then
+      ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
+    else
+      ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
+    end
+  end
+
+  def wiki_og_title
+    case params[:project_id]
+    when 'cl_dungeon_sengoku' then
+      'クラシックダンジョン戦国　徹底攻略wiki'
+    when 'orehata_tori' then
+      '俺に働けって言われても酉　徹底攻略wiki'
+    else
+      '俺に働けって言われても酉　徹底攻略wiki'
     end
   end
 end

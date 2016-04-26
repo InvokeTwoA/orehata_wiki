@@ -10,17 +10,17 @@
 %meta{content: 'summary', name: 'twitter:card'}
 %meta{content: '@kappa_ikemen', name: 'twitter:site'}/
 
-- set_meta_tags description: '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
-- set_meta_tags keywords: ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察']
+- set_meta_tags description: wiki_meta_description
+- set_meta_tags keywords: wiki_meta_tags
 
 :ruby
   opg = {
-    title: '俺に働けって言われても酉　攻略wiki',
+    title: wiki_og_title,
     type: 'website',
     url: 'http://www.orehata-wiki.xyz',
     #image: '/images/nomi.png',
-    site_name: '俺に働けって言われても酉　攻略wiki',
-    description: '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。',
+    site_name: wiki_og_title,
+    description: wiki_meta_description,
     locale: 'ja_JP'
   }
 - set_meta_tags open_graph: opg
