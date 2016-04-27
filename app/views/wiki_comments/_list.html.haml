@@ -8,6 +8,6 @@
           .pull-right.comment-header
             = I18n.l(wiki_comment.created_at)
           .body
-            = wiki_comment.body
+            = simple_format wiki_comment.body
   %div{style: 'text-align:center;'}
     = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
