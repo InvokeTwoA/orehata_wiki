@@ -1,3 +1,5 @@
+- content_for :header_tags do
+  %meta{ name: "robots", content: "noindex" }
 - content_for :sidebar do
   = link_to 'TOPに戻る', root_project_wiki_page_index_path(project_id: params[:project_id])
 %h1 コメント一覧
@@ -24,4 +26,4 @@
         .body
           =wiki_comment.body
 %div{style: 'text-align:center;'}
-  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index', project_id: params[:project_id]}
+  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index', project_id: params[:project_id]}, rel: "nofollows"
