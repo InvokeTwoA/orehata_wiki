@@ -11,6 +11,14 @@
   <priority>0.8</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/cl_dungeon_sengoku/wiki/Top</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/cl_dungeon_sengoku/wiki/%E6%94%BB%E7%95%A5%E3%81%AE%E3%82%B3%E3%83%84</loc>
+  <priority>0.8</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/orehata_tori/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F</loc>
   <priority>0.8</priority>
 </url>
