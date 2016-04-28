@@ -71,6 +71,7 @@ function setupFlyout() {
     }
 
     if(isMobile()) {
+      $('#right_sidebar').remove();
       _initMobileMenu();
     } else {
       _initDesktopMenu();

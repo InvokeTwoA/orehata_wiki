@@ -18,6 +18,7 @@
 .mobile-toggle-button,
 .flyout-menu {
   display: none;
+  z-index: 999;
 }
 
 /*
