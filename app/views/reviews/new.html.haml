@@ -1,0 +1,55 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+
+%h1 #{@game.title} レビュー投稿
+
+.main
+  = simple_form_for Review.new, html: { class: 'form form-horizontal'} do |f|
+    .form-group
+      %label.col-sm-2.control-label 氏名(任意)
+      .col-sm-5
+        = f.text_field :created_by, class: 'form-control'
+    .form-group
+      %label.col-sm-2.control-label 得点（0~100）
+      .col-sm-5
+        = f.input_field :score, class: 'form-control'
+    .form-group
+      %label.col-sm-2.control-label ボリューム（1~5）
+      .col-sm-5
+        = f.input_field :point_volume, as: :select, collection: [1,2,3,4,5], include_blank: false
+    .form-group
+      %label.col-sm-2.control-label グラフィック（1~5）
+      .col-sm-5
+        = f.input_field :point_graphic, as: :select, collection: [1,2,3,4,5], include_blank: false
+    .form-group
+      %label.col-sm-2.control-label サウンド（1~5）
+      .col-sm-5
+        = f.input_field :point_sound, as: :select, collection: [1,2,3,4,5], include_blank: false
+    .form-group
+      %label.col-sm-2.control-label システムの快適さ（1~5）
+      .col-sm-5
+        = f.input_field :point_system, as: :select, collection: [1,2,3,4,5], include_blank: false
+    .form-group
+      %label.col-sm-2.control-label 満足度（1~5）
+      .col-sm-5
+        = f.input_field :point_difficulty, as: :select, collection: [1,2,3,4,5], include_blank: false
+    .form-group
+      %label.col-sm-2.control-label タイトル
+      .col-sm-5
+        = f.text_field :title, class: 'form-control'
+    .form-group
+      %label.col-sm-2.control-label Good
+      .col-sm-5
+        = f.input_field :body_good, class: 'form-control', rows: 10
+    .form-group
+      %label.col-sm-2.control-label Bad
+      .col-sm-5
+        = f.input_field :body_bad, class: 'form-control', rows: 10
+    .form-group
+      %label.col-sm-2.control-label Comment
+      .col-sm-5
+        = f.input_field :body_free, class: 'form-control', rows: 10
+    .form-group
+      = f.hidden_field :game_id, value: params[:game_id]
+      = f.submit '送信', class: 'btn btn-primary'
+

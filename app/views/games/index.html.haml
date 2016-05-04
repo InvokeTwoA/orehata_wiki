@@ -3,6 +3,21 @@
 
 %h1 ゲーム一覧
 
-%ul
-  %Li= link_to '俺に働けと言われても　酉', root_project_wiki_page_index_path(project_id: 'orehata_tori')
-  %li= link_to 'クラシックダンジョン戦国', root_project_wiki_page_index_path(project_id: 'cl_dungeon_sengoku')
+.main
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center タイトル
+      %th.center 発売日
+    %tr
+      %td.center= link_to '俺に働けと言われても　酉', root_project_wiki_page_index_path(project_id: 'orehata_tori')
+      %td.center 2016/3/17
+    %tr
+      %td.center= link_to 'クラシックダンジョン戦国', root_project_wiki_page_index_path(project_id: 'cl_dungeon_sengoku')
+      %td.center 2016/5/2
+    %tr
+      %td.center ルフランの地下迷宮と魔女ノ旅団
+      %td.center 2016/6/24
+    %tr
+      %td.center= link_to 'カルドセプト　リボルト', root_project_wiki_page_index_path(project_id: 'culdcept')
+      %td.center 2016年7月予定
+

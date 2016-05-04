@@ -25,6 +25,7 @@ Rails.application.routes.draw do
       get :explain
     end
   end
+  resources :reviews, only: [:index, :new, :create]
   resources :mail_forms, only: [:new, :create]
 
   resources :journals, :only => [:edit, :update] do
@@ -317,6 +318,11 @@ Rails.application.routes.draw do
   post 'admin/test_email', :to => 'admin#test_email', :as => 'test_email'
   post 'admin/default_configuration', :to => 'admin#default_configuration'
 
+  # 管理画面
+  namespace :admin do
+    resources :games, only: [:index, :new, :create, :edit, :update, :destroy]
+  end
+
   resources :auth_sources do
     member do
       get 'test_connection', :as => 'try_connection'
@@ -353,35 +359,4 @@ Rails.application.routes.draw do
       end
     end
   end
-=begin
-  # issue機能は使わない
-  match '/issues/preview/new/:project_id', :to => 'previews#issue', :as => 'preview_new_issue', :via => [:get, :post, :put, :patch]
-  match '/issues/preview/edit/:id', :to => 'previews#issue', :as => 'preview_edit_issue', :via => [:get, :post, :put, :patch]
-  match '/issues/preview', :to => 'previews#issue', :as => 'preview_issue', :via => [:get, :post, :put, :patch]
-  match '/issues/auto_complete', :to => 'auto_completes#issues', :via => :get, :as => 'auto_complete_issues'
-  match '/issues/context_menu', :to => 'context_menus#issues', :as => 'issues_context_menu', :via => [:get, :post]
-  match '/issues/changes', :to => 'journals#index', :as => 'issue_changes', :via => :get
-  match '/issues/:id/quoted', :to => 'journals#new', :id => /\d+/, :via => :post, :as => 'quoted_issue'
-  get '/issues/gantt', :to => 'gantts#show'
-  get '/projects/:project_id/issues/gantt', :to => 'gantts#show', :as => 'project_gantt'
-  get '/projects/:project_id/issues/calendar', :to => 'calendars#show', :as => 'project_calendar'
-  get '/issues/calendar', :to => 'calendars#show'
-
-  get 'projects/:id/issues/report', :to => 'reports#issue_report', :as => 'project_issues_report'
-  get 'projects/:id/issues/report/:detail', :to => 'reports#issue_report_details', :as => 'project_issues_report_details'
-
-  get   '/issues/imports/new', :to => 'imports#new', :as => 'new_issues_import'
-  
-  # 掲示板機能は使わない
-  match 'boards/:board_id/topics/new', :to => 'messages#new', :via => [:get, :post], :as => 'new_board_message'
-  get 'boards/:board_id/topics/:id', :to => 'messages#show', :as => 'board_message'
-  match 'boards/:board_id/topics/quote/:id', :to => 'messages#quote', :via => [:get, :post]
-  get 'boards/:board_id/topics/:id/edit', :to => 'messages#edit'
-
-  post 'boards/:board_id/topics/preview', :to => 'messages#preview', :as => 'preview_board_message'
-  post 'boards/:board_id/topics/:id/replies', :to => 'messages#reply'
-  post 'boards/:board_id/topics/:id/edit', :to => 'messages#edit'
-  post 'boards/:board_id/topics/:id/destroy', :to => 'messages#destroy'
-=end
-
 end

@@ -14,11 +14,18 @@ class WikiController < ApplicationController
 
   # TOP ページ
   def root
-    if params[:project_id] == 'cl_dungeon_sengoku'
+    case params[:project_id]
+    when 'cl_dungeon_sengoku' then
       @project = Project.find('cl_dungeon_sengoku')
       @wiki = @project.wiki
       @page = @wiki.find_or_new_page('top')
       params[:project_id] = 'cl_dungeon_sengoku'
+      params[:id] = 'top'
+    when 'culdcept' then
+      @project = Project.find('culdcept')
+      @wiki = @project.wiki
+      @page = @wiki.find_or_new_page('top')
+      params[:project_id] = 'culdcept'
       params[:id] = 'top'
     else
       @project = Project.find('orehata_tori')

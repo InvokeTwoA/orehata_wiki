@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 ruby '2.2.1'
 
 if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('1.5.0')
@@ -6,7 +7,8 @@ if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('1.5.0')
 end
 
 #gem 'sass-rails', '~> 5.0'
-gem "rails", "4.2.5.2"
+#gem "rails", "4.2.5.2"
+gem "rails", "4.1.5"
 gem "jquery-rails", "~> 3.1.4"
 gem 'jquery-ui-rails'
 gem "coderay", "~> 1.1.0"
@@ -37,11 +39,14 @@ gem 'css2sass'
 gem 'haml'
 gem 'meta-tags', :require => 'meta_tags'
 
+gem 'inherited_resources', "~> 1.5.0"
+
 # Request at least nokogiri 1.6.7.2 because of security advisories
 gem "nokogiri", ">= 1.6.7.2"
 
 # Request at least rails-html-sanitizer 1.0.3 because of security advisories 
 gem "rails-html-sanitizer", ">= 1.0.3"
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin, :jruby]
@@ -81,6 +86,7 @@ group :production do
   gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw, :x64_mingw]
   gem 'rails_12factor'
   gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
+
 
   # 高速化
   gem 'heroku-deflater'

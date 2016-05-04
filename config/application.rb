@@ -37,7 +37,7 @@ module RedmineApp
 
     config.action_controller.include_all_helpers = false
 
-    config.active_record.raise_in_transactional_callbacks = true
+    #config.active_record.raise_in_transactional_callbacks = true
 
     config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::XmlParamsParser
 

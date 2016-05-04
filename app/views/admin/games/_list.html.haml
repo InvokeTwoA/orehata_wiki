@@ -1,0 +1,22 @@
+#{ games.total_count }件
+.paginate
+  = paginate games
+.main
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center ID
+      %th.center タイトル
+      %th.center ASIN
+      %th.center PV
+      %th.center アクション
+    - games.each do |game|
+      %tr
+        %td.center= game.id
+        %td.center= game.title
+        %td.center= game.asin
+        %td.center= game.pv_url
+        %td.center
+          = link_to '編集', edit_admin_game_path(game), class: 'btn btn-info'
+          = link_to '削除', admin_game_path(game), method: :delete, data: { confirm: "#{ game.title }を削除します。よろしいですか？" }, class: 'btn btn-danger'
+.paginate
+  = paginate games

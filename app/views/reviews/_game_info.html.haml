@@ -1,0 +1,18 @@
+%h2 レビュー#{ @game.title }
+
+.center{style: 'text-align: center;'}
+
+  - if @game.asin.present?
+    %h3 商品画像
+
+    = @game.asin.html_safe
+    %br
+    ※ 画像のリンク先はAmazon購入ページです
+    %br
+  - if @game.pv_url.present?
+    %h3 PV
+
+    = @game.pv_url.html_safe
+
+  %h3 SCORE #{ @game.total_score } 点
+  平均( #{ @game.average_score } )
