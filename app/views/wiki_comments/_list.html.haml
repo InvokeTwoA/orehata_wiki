@@ -8,6 +8,12 @@
           .pull-right.comment-header
             = I18n.l(wiki_comment.created_at)
           .body
-            = simple_format wiki_comment.body
+            = # simple_format wiki_comment.body
+            = # Redmine::WikiFormatting.html_parser.to_text(wiki_comment.body)
+            = # Redmine::WikiFormatting::Markdown::Formatter.new(wiki_comment.body).to_html
+            = # textilizable wiki_comment.body, :text, attachments: nil, edit_section_links: nil
+            = # RedCloth3.new(wiki_comment.body).to_html.html_safe
+            = # textilizable wiki_comment.body, :text
+            = textilizable wiki_comment.body
   %div{style: 'text-align:center;'}
     = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true
