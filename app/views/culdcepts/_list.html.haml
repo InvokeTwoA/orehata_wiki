@@ -1,0 +1,14 @@
+.main
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center 名前
+      %th.center コスト
+      %th.center レアリティ
+      %th.center カードタイプ
+    - if culdcepts.present?
+      - culdcepts.each do |culdcept|
+        %tr
+          %td.center= link_to culdcept.name, game_wiki_path(project_id: 'culdcept', id: culdcept.name)
+          %td.center= culdcept.cost
+          %td.center= culdcept.rare
+          %td.center= culdcept.card_type

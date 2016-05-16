@@ -1,0 +1,63 @@
+= search_form_for @q, method: :get, remote: true, html: { id: 'search-form' } do |f|
+  = render layout: 'condition_box' do
+    .clearfix
+      .grid-item
+        %label カード名
+        = f.search_field :name_cont
+      .grid-item
+        %label コスト
+        = f.search_field :cost_gteq
+        〜
+        = f.search_field :cost_lteq
+      .grid-item
+        %label レアリティ
+        %label 
+          = radio_button_tag "q[rare_in]", 'N'
+          N
+        %label 
+          = radio_button_tag "q[rare_in]", 'S'
+          S
+        %label 
+          = radio_button_tag "q[rare_in]", 'R'
+          R
+        %label 
+          = radio_button_tag "q[rare_in]", 'E'
+          E
+    .clearfix
+      .grid-item
+        %label カードタイプ
+        %label 
+          = radio_button_tag "q[card_type_in]", 'クリーチャー'
+          クリーチャー
+        %label 
+          = radio_button_tag "q[card_type_in]", 'アイテム'
+          アイテム
+        %label 
+          = radio_button_tag "q[submit_type_in]", 'スペル'
+          スペル
+    .clearfix
+      .grid-item
+        %label 能力値（モンスターの時のみ入力）
+        %label ST
+        = f.search_field :st_gteq
+        〜
+        = f.search_field :st_lteq
+        %label HP
+        = f.search_field :hp_gteq
+        〜
+        = f.search_field :hp_lteq
+    .clearfix
+      .grid-item
+        %label アイテムタイプ（アイテムの時のみ選択）
+        %label 
+          = radio_button_tag "q[item_type_in]", '武器'
+          武器
+        %label 
+          = radio_button_tag "q[item_type_in]", '防具'
+          防具
+        %label 
+          = radio_button_tag "q[item_type_in]", '道具'
+          道具
+        %label 
+          = radio_button_tag "q[item_type_in]", '巻物'
+          巻物

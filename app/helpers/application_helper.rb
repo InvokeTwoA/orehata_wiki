@@ -1328,6 +1328,8 @@ module ApplicationHelper
 
   # 手動でタイトル出し分け
   def wiki_page_title_link
+    return "カルドセプトリボルト　徹底攻略wiki" if controller_name == 'culdcepts'
+
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
       link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
@@ -1340,6 +1342,8 @@ module ApplicationHelper
 
   # wikiのdescription
   def wiki_meta_description
+    return '「カルドセプトリボルト」の検索データベースです。' if controller_name == 'culdcepts'
+
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
       '「クラシックダンジョン戦国」の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
@@ -1353,6 +1357,10 @@ module ApplicationHelper
   end
 
   def wiki_meta_tags
+    if controller_name == 'culdcepts'
+      return ['カルドセプト', 'リボルト', 'リボルド', '対戦', '攻略', '検索', 'データベース', '考察', 'まとめ', 'ブック', 'カード', '徹底', '徹底攻略', 'テクニック', 'コンボ']
+    end
+
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
       ['クラシックダンジョン', 'クラダン', '戦国', 'クラシックダンジョン戦国', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
@@ -1366,6 +1374,9 @@ module ApplicationHelper
   end
 
   def wiki_og_title
+    if controller_name == 'culdcepts'
+      return 'カルドセプトリボルト　徹底攻略wiki'
+    end
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
       'クラシックダンジョン戦国　徹底攻略wiki'
@@ -1377,4 +1388,9 @@ module ApplicationHelper
       '俺に働けって言われても酉　徹底攻略wiki'
     end
   end
+
+  def fa_icon icon_name
+    content_tag(:i, '', class: "fa fa-#{icon_name}")
+  end 
+
 end

@@ -1,0 +1,48 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+- content_for :sidebar do
+  - if @wiki && @wiki.sidebar
+    .wiki
+      = textilizable @wiki.sidebar.content, :text
+  - else
+    no side bar
+
+- if User.current.admin?
+  = link_to 'カード登録', new_culdcept_path
+
+- if params[:card_id].present?
+  - card = Culdcept.find params[:card_id]
+  = link_to card.name, game_wiki_path(project_id: 'culdcept', id: card.name)
+  /%div{style: "backgroud-color: #ccc"}
+  %pre
+    h1. #{ card.name }
+    %br
+    %br
+    {background: #FFA0A0}. |_. 属性|_. コスト|_. レア度|_. ST|_. HP|_. 配置制限|_. アイテム制限|
+    %br
+    | [[#{ card.element }属性クリーチャー|#{ card.element }属性]] | #{ card.cost } | #{ card.rare } | #{ card.st } | #{ card.hp } | #{ forbidden_field_text(card) } | #{ forbidden_item_text(card) }|
+    %br
+    | カード文章 |\6. #{ br_encode( card.card_text ) }|
+    %br
+    | 説明文 |\6. #{ br_encode( card.description ) }|
+    %br
+    | アドバイス |\6.  #{ br_encode( card.advice) }|
+    %br
+    %br
+    h1. カード考察
+
+%h1 カード検索
+
+.row{ style: 'margin: 0 auto;'}
+  .col-xs-12.section
+    = render 'search_form'
+    
+%h1 カード一覧
+
+.row{ style: 'margin: 0 auto;'}
+  #collection.col-xs-12
+    - if collection.any?
+      = render 'list', culdcepts: collection
+    - else
+      データが見つかりませんでした。
+
