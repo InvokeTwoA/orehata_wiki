@@ -19,31 +19,31 @@
       %br
       |=.[[#{ card.element }属性クリーチャー|#{ card.element }属性]] |=.#{ card.cost } |=.#{ card.rare } |=.#{ card.st } |=.#{ card.hp } |=.#{ forbidden_field_text(card) }|=.#{ forbidden_item_text(card) }|
       %br
-      |=.{background: #FFA0A0}. カード文章 |\6. #{ br_encode( card.card_text ) }|
+      |={background: #FFA0A0}. *カード文章* |\6. #{ br_encode( card.card_text ) }|
       %br
-      |=.{background: #FFA0A0}. 説明文 |\6. #{ br_encode( card.description ) }|
+      |={background: #FFA0A0}. *説明文* |\6. #{ br_encode( card.description ) }|
       %br
-      |=.{background: #FFA0A0}. アドバイス |\6.  #{ br_encode( card.advice) }|
+      |={background: #FFA0A0}. *アドバイス* |\6.  #{ br_encode( card.advice) }|
     - elsif card.card_type == 'アイテム'
       {background: #FFA0A0}. |_. アイテム種類|_. コスト|_. レア度|_. ST|_. HP|
       %br
       |=.[[#{ card.item_type }]] |=.#{ card.cost } |=.#{ card.rare } |=.#{ card.st } |=.#{ card.hp }|
       %br
-      |=.{background: #FFA0A0}. カード文章 |\4. #{ br_encode( card.card_text ) }|
+      |={background: #FFA0A0}. *カード文章* |\4. #{ br_encode( card.card_text ) }|
       %br
-      |=.{background: #FFA0A0}. 説明文 |\4. #{ br_encode( card.description ) }|
+      |={background: #FFA0A0}. *説明文* |\4. #{ br_encode( card.description ) }|
       %br
-      |=.{background: #FFA0A0}. アドバイス |\4.  #{ br_encode( card.advice) }|
+      |={background: #FFA0A0}. *アドバイス* |\4.  #{ br_encode( card.advice) }|
     - elsif card.card_type == 'スペル'
       {background: #FFA0A0}. |_. スペル種類|_. コスト|_. レア度|
       %br
       |=.[[#{ card.spell_type }]] |=.#{ card.cost } |=.#{ card.rare }|
       %br
-      |=.{background: #FFA0A0}. カード文章 |\2. #{ br_encode( card.card_text ) }|
+      |={background: #FFA0A0}. *カード文章* |\2. #{ br_encode( card.card_text ) }|
       %br
-      |=.{background: #FFA0A0}. 説明文 |\2. #{ br_encode( card.description ) }|
+      |={background: #FFA0A0}. *説明文* |\2. #{ br_encode( card.description ) }|
       %br
-      |=.{background: #FFA0A0}. アドバイス |\2.  #{ br_encode( card.advice) }|
+      |={background: #FFA0A0}. *アドバイス* |\2.  #{ br_encode( card.advice) }|
     %br
     %br
     h1. カード考察
