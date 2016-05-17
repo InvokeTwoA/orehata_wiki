@@ -1,16 +1,15 @@
 = search_form_for @q, method: :get, remote: true, html: { id: 'search-form' } do |f|
   = render layout: 'condition_box' do
     .clearfix
-      .grid-item
-        %label カード名
-        = f.search_field :name_cont
-      .grid-item
-        %label コスト
+      .col-sm-3 カード名
+      .col-sm-9= f.search_field :name_cont
+      .col-sm-3 コスト
+      .col-sm-9
         = f.search_field :cost_gteq
         〜
         = f.search_field :cost_lteq
-      .grid-item
-        %label レアリティ
+      .col-sm-3 レアリティ
+      .col-sm-9
         %label 
           = radio_button_tag "q[rare_in]", 'N'
           N
@@ -24,8 +23,8 @@
           = radio_button_tag "q[rare_in]", 'E'
           E
     .clearfix
-      .grid-item
-        %label カードタイプ
+      .col-sm-3 カードタイプ
+      .col-sm-9
         %label 
           = radio_button_tag "q[card_type_in]", 'クリーチャー'
           クリーチャー
@@ -36,19 +35,50 @@
           = radio_button_tag "q[submit_type_in]", 'スペル'
           スペル
     .clearfix
-      .grid-item
-        %label 能力値（モンスターの時のみ入力）
-        %label ST
+      %hr
+      .center
+        %label 能力値（モンスターかアイテム時のみ入力）
+      %br
+      .col-sm-3 ST
+      .col-sm-9
         = f.search_field :st_gteq
         〜
         = f.search_field :st_lteq
-        %label HP
+    .clearfix
+      .col-sm-3 HP
+      .col-sm-9
         = f.search_field :hp_gteq
         〜
         = f.search_field :hp_lteq
     .clearfix
-      .grid-item
-        %label アイテムタイプ（アイテムの時のみ選択）
+      %hr
+      .center
+        %label モンスター時のみ入力
+      %br
+      .col-sm-3 属性
+      .col-sm-9
+        %label 
+          = radio_button_tag "q[element_in]", '無'
+          無
+        %label 
+          = radio_button_tag "q[element_in]", '水'
+          水
+        %label 
+          = radio_button_tag "q[element_in]", '火'
+          火
+        %label 
+          = radio_button_tag "q[element_in]", '風'
+          風
+        %label 
+          = radio_button_tag "q[element_in]", '土'
+          土
+    .clearfix
+      %hr
+      .center
+        %label アイテムの時のみ入力
+      %br
+      .col-sm-3 アイテムタイプ
+      .col-sm-9
         %label 
           = radio_button_tag "q[item_type_in]", '武器'
           武器
@@ -61,3 +91,22 @@
         %label 
           = radio_button_tag "q[item_type_in]", '巻物'
           巻物
+    .clearfix
+      %hr
+      .center
+        %label スペルの時のみ入力
+      %br
+      .col-sm-3 スペルタイプ
+      .col-sm-9
+        %label 
+          = radio_button_tag "q[spell_type_in]", '単体瞬間'
+          単体瞬間
+        %label 
+          = radio_button_tag "q[spell_type_in]", '複数瞬間'
+          複数瞬間
+        %label 
+          = radio_button_tag "q[spell_type_in]", '単体呪い'
+          単体呪い
+        %label 
+          = radio_button_tag "q[spell_type_in]", '複数呪い'
+          複数呪い

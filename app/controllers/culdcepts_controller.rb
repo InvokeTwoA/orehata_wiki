@@ -26,6 +26,7 @@ class CuldceptsController < ApplicationController
       :hp,
       :card_type,
       :item_type,
+      :spell_type,
       :rare,
       :deffensive,
       :element,

@@ -36,6 +36,10 @@
       .col-sm-5
         = f.input_field :item_type, as: :select, collection: ['武器','防具','巻物','道具'], include_blank: true
     .form-group
+      %label.col-sm-2.control-label スペル種別
+      .col-sm-5
+        = f.input_field :spell_type, as: :select, collection: ['単体瞬間','複数瞬間','単体呪い','複数呪い'], include_blank: true
+    .form-group
       %label.col-sm-2.control-label レア
       .col-sm-5
         = f.input_field :rare, as: :select, collection: ['N', 'S', 'R', 'E'], include_blank: false
@@ -46,7 +50,7 @@
     .form-group
       %label.col-sm-2.control-label 属性
       .col-sm-5
-        = f.input_field :element, as: :select, collection: ['無','火','水','風','地'], include_blank: false
+        = f.input_field :element, as: :select, collection: ['無','火','水','風','地'], include_blank: true
     .form-group
       %label.col-sm-2.control-label カードテキスト
       .col-sm-5
@@ -63,12 +67,15 @@
       %label.col-sm-2.control-label 配置制限　水
       .col-sm-5
         = f.input_field :forbidden_water, class: 'form-control'
+    .form-group
       %label.col-sm-2.control-label 配置制限　火
       .col-sm-5
         = f.input_field :forbidden_fire, class: 'form-control'
+    .form-group
       %label.col-sm-2.control-label 配置制限　地
       .col-sm-5
         = f.input_field :forbidden_forrest, class: 'form-control'
+    .form-group
       %label.col-sm-2.control-label 配置制限　風
       .col-sm-5
         = f.input_field :forbidden_wind, class: 'form-control'
@@ -76,12 +83,15 @@
       %label.col-sm-2.control-label アイテム制限 武器
       .col-sm-5
         = f.input_field :forbidden_weapon, class: 'form-control'
+    .form-group
       %label.col-sm-2.control-label アイテム制限 防具
       .col-sm-5
         = f.input_field :forbidden_armer, class: 'form-control'
+    .form-group
       %label.col-sm-2.control-label アイテム制限 道具
       .col-sm-5
         = f.input_field :forbidden_item, class: 'form-control'
+    .form-group
       %label.col-sm-2.control-label アイテム制限 巻物
       .col-sm-5
         = f.input_field :forbidden_spell, class: 'form-control'

@@ -5,6 +5,11 @@
       %th.center コスト
       %th.center レアリティ
       %th.center カードタイプ
+      %th.center 属性
+      %th.center アイテム種別
+      %th.center スペル種別
+      %th.center ST
+      %th.center HP
     - if culdcepts.present?
       - culdcepts.each do |culdcept|
         %tr
@@ -12,3 +17,8 @@
           %td.center= culdcept.cost
           %td.center= culdcept.rare
           %td.center= culdcept.card_type
+          %td.center= culdcept.element
+          %td.center= culdcept.item_type
+          %td.center= culdcept.spell_type
+          %td.center= culdcept.st
+          %td.center= culdcept.hp
