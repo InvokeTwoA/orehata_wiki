@@ -10,6 +10,8 @@
       %th.center スペル種別
       %th.center ST
       %th.center HP
+      - if User.current.admin?
+        %th.center
     - if culdcepts.present?
       - culdcepts.each do |culdcept|
         %tr
@@ -22,3 +24,5 @@
           %td.center= culdcept.spell_type
           %td.center= culdcept.st
           %td.center= culdcept.hp
+          - if User.current.admin?
+            %td.center= link_to '編集', edit_culdcept_path(culdcept), class: 'btn btn-primary' 

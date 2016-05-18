@@ -47,6 +47,15 @@
     %br
     %br
     h1. カード考察
+    %br
+    %br
+    - if card.card_type == 'クリーチャー'
+      |=.[[#{card.name}]] |=.#{card.cost} |=.#{card.rare} |=.#{card.st} |=.#{card.hp} | #{forbidden_field_text(card)} |=.#{ forbidden_item_text(card) } |=.#{card.card_text}|  
+    - elsif card.card_type == 'アイテム'
+      |=.[[#{card.name}]] |=.#{card.cost} |=.#{card.rare} |=.#{card.st} |=.#{card.hp}|=.#{card.card_text}|
+    - elsif card.card_type == 'スペル'
+      |=.[[#{card.name}]] |=.#{card.cost} |=.#{card.rare} |=.#{card.card_text}|
+
 
 %h1 カード検索
 
@@ -55,6 +64,8 @@
     = render 'search_form'
     
 %h1 カード一覧
+
+#{collection.count}枚
 
 .row{ style: 'margin: 0 auto;'}
   #collection.col-xs-12

@@ -1,11 +1,17 @@
 class CuldceptsController < ApplicationController
   inherit_resources
-  before_filter :set_sidebar, only: [:index]
+  before_filter :set_sidebar, only: [:index, :new]
   respond_to :js
 
   def create
     create! do
       redirect_to culdcepts_path(card_id: resource.id), notice: 'カードの登録が完了しました' and return
+    end
+  end
+
+  def update
+    update! do
+      redirect_to culdcepts_path(card_id: resource.id), notice: 'カードの編集が完了しました' and return
     end
   end
   

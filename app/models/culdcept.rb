@@ -25,7 +25,5 @@ class Culdcept < ActiveRecord::Base
 
   validates :name, presence: true
   validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0 }
-  validates :st, presence: true, numericality: { greater_than_or_equal_to: 0 }
-  validates :hp, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
 end

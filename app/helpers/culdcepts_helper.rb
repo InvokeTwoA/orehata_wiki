@@ -3,7 +3,7 @@ module CuldceptsHelper
     text = ""
     text += "水" if card.forbidden_water?
     text += "火" if card.forbidden_fire?
-    text += "土" if card.forbidden_forrest?
+    text += "地" if card.forbidden_forrest?
     text += "風" if card.forbidden_wind?
     text
   end
