@@ -11,28 +11,28 @@
       .col-sm-3 レアリティ
       .col-sm-9
         %label 
-          = radio_button_tag "q[rare_in]", 'N'
+          = check_box_tag "q[rare_in]", 'N'
           N
         %label 
-          = radio_button_tag "q[rare_in]", 'S'
+          = check_box_tag "q[rare_in]", 'S'
           S
         %label 
-          = radio_button_tag "q[rare_in]", 'R'
+          = check_box_tag "q[rare_in]", 'R'
           R
         %label 
-          = radio_button_tag "q[rare_in]", 'E'
+          = check_box_tag "q[rare_in]", 'E'
           E
     .clearfix
       .col-sm-3 カードタイプ
       .col-sm-9
         %label 
-          = radio_button_tag "q[card_type_in]", 'クリーチャー'
+          = check_box_tag "q[card_type_in]", 'クリーチャー'
           クリーチャー
         %label 
-          = radio_button_tag "q[card_type_in]", 'アイテム'
+          = check_box_tag "q[card_type_in]", 'アイテム'
           アイテム
         %label 
-          = radio_button_tag "q[submit_type_in]", 'スペル'
+          = check_box_tag "q[card_type_in]", 'スペル'
           スペル
     .clearfix
       %hr
@@ -58,19 +58,19 @@
       .col-sm-3 属性
       .col-sm-9
         %label 
-          = radio_button_tag "q[element_in]", '無'
+          = check_box_tag "q[element_in]", '無'
           無
         %label 
-          = radio_button_tag "q[element_in]", '水'
+          = check_box_tag "q[element_in]", '水'
           水
         %label 
-          = radio_button_tag "q[element_in]", '火'
+          = check_box_tag "q[element_in]", '火'
           火
         %label 
-          = radio_button_tag "q[element_in]", '風'
+          = check_box_tag "q[element_in]", '風'
           風
         %label 
-          = radio_button_tag "q[element_in]", '土'
+          = check_box_tag "q[element_in]", '土'
           土
     .clearfix
       %hr
@@ -80,16 +80,16 @@
       .col-sm-3 アイテムタイプ
       .col-sm-9
         %label 
-          = radio_button_tag "q[item_type_in]", '武器'
+          = check_box_tag "q[item_type_in]", '武器'
           武器
         %label 
-          = radio_button_tag "q[item_type_in]", '防具'
+          = check_box_tag "q[item_type_in]", '防具'
           防具
         %label 
-          = radio_button_tag "q[item_type_in]", '道具'
+          = check_box_tag "q[item_type_in]", '道具'
           道具
         %label 
-          = radio_button_tag "q[item_type_in]", '巻物'
+          = check_box_tag "q[item_type_in]", '巻物'
           巻物
     .clearfix
       %hr
@@ -99,14 +99,14 @@
       .col-sm-3 スペルタイプ
       .col-sm-9
         %label 
-          = radio_button_tag "q[spell_type_in]", '単体瞬間'
+          = check_box_tag "q[spell_type_in]", '単体瞬間'
           単体瞬間
         %label 
-          = radio_button_tag "q[spell_type_in]", '複数瞬間'
+          = check_box_tag "q[spell_type_in]", '複数瞬間'
           複数瞬間
         %label 
-          = radio_button_tag "q[spell_type_in]", '単体呪い'
+          = check_box_tag "q[spell_type_in]", '単体呪い'
           単体呪い
         %label 
-          = radio_button_tag "q[spell_type_in]", '複数呪い'
+          = check_box_tag "q[spell_type_in]", '複数呪い'
           複数呪い
