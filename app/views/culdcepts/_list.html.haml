@@ -5,6 +5,9 @@
   %br
   #{culdcepts.total_count}枚
   %br
+  .paginate
+    = paginate culdcepts, params: params, remote: true
+  %br
   %table.table.table-striped.table-hover
     %tr
       %th.center 名前
@@ -34,5 +37,5 @@
           - if User.current.admin?
             %td.center= link_to '編集', edit_culdcept_path(culdcept), class: 'btn btn-primary' 
             %td.center= link_to '削除', culdcept_path(culdcept), method: :delete, data: { confirm: "#{ culdcept.name }を削除します。よろしいですか？" }, class: 'btn btn-danger'
-    .paginate
-      = paginate culdcepts, params: params, remote: true
+  .paginate
+    = paginate culdcepts, params: params, remote: true

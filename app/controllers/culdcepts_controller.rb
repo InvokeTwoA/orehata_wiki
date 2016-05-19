@@ -19,7 +19,7 @@ class CuldceptsController < ApplicationController
   def collection
     @cond ||= params[:q] || {}
     @q = end_of_association_chain.search(@cond)
-    @culdcepts = @q.result.recent.page(params[:page]).per(30).uniq
+    @culdcepts = @q.result.recent.page(params[:kaminari_page]).per(30).uniq
   end
 
   def culdcept_params
