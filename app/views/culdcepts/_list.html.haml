@@ -1,4 +1,9 @@
 .main
+  %pre{ style: 'background-color: #ccc' }
+    検索結果URL: #{ culdcepts_url(params) }
+  %br
+  #{culdcepts.count}枚
+  %br
   %table.table.table-striped.table-hover
     %tr
       %th.center 名前

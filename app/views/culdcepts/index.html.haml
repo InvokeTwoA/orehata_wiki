@@ -7,55 +7,18 @@
   - else
     no side bar
 
-- if User.current.admin?
-  = link_to 'カード登録', new_culdcept_path
-
 - if params[:card_id].present?
   - card = Culdcept.find params[:card_id]
-  = link_to card.name, game_wiki_path(project_id: 'culdcept', id: card.name)
-  %div{style: "backgroud-color: #ccc"}
-    - if card.card_type == 'クリーチャー'
-      {background: #FFA0A0}. |_. 属性|_. コスト|_. レア度|_. ST|_. HP|_. 配置制限|_. アイテム制限|
-      %br
-      |=.[[#{ card.element }属性クリーチャー|#{ card.element }属性]] |=.#{ card.cost } |=.#{ card.rare } |=.#{ card.st } |=.#{ card.hp } |=.#{ forbidden_field_text(card) }|=.#{ forbidden_item_text(card) }|
-      %br
-      |={background: #FFA0A0}. *カード文章* |\6. #{ br_encode( card.card_text ) }|
-      %br
-      |={background: #FFA0A0}. *説明文* |\6. #{ br_encode( card.description ) }|
-      %br
-      |={background: #FFA0A0}. *アドバイス* |\6.  #{ br_encode( card.advice) }|
-    - elsif card.card_type == 'アイテム'
-      {background: #FFA0A0}. |_. アイテム種類|_. コスト|_. レア度|_. ST|_. HP|
-      %br
-      |=.[[#{ card.item_type }]] |=.#{ card.cost } |=.#{ card.rare } |=.#{ card.st } |=.#{ card.hp }|
-      %br
-      |={background: #FFA0A0}. *カード文章* |\4. #{ br_encode( card.card_text ) }|
-      %br
-      |={background: #FFA0A0}. *説明文* |\4. #{ br_encode( card.description ) }|
-      %br
-      |={background: #FFA0A0}. *アドバイス* |\4.  #{ br_encode( card.advice) }|
-    - elsif card.card_type == 'スペル'
-      {background: #FFA0A0}. |_. スペル種類|_. コスト|_. レア度|
-      %br
-      |=.[[#{ card.spell_type }]] |=.#{ card.cost } |=.#{ card.rare }|
-      %br
-      |={background: #FFA0A0}. *カード文章* |\2. #{ br_encode( card.card_text ) }|
-      %br
-      |={background: #FFA0A0}. *説明文* |\2. #{ br_encode( card.description ) }|
-      %br
-      |={background: #FFA0A0}. *アドバイス* |\2.  #{ br_encode( card.advice) }|
-    %br
-    %br
-    h1. カード考察
-    %br
-    %br
-    - if card.card_type == 'クリーチャー'
-      |=.[[#{card.name}]] |=.#{card.cost} |=.#{card.rare} |=.#{card.st} |=.#{card.hp} | #{forbidden_field_text(card)} |=.#{ forbidden_item_text(card) } |=.#{card.card_text}|  
-    - elsif card.card_type == 'アイテム'
-      |=.[[#{card.name}]] |=.#{card.cost} |=.#{card.rare} |=.#{card.st} |=.#{card.hp}|=.#{card.card_text}|
-    - elsif card.card_type == 'スペル'
-      |=.[[#{card.name}]] |=.#{card.cost} |=.#{card.rare} |=.#{card.card_text}|
+  .widget-box
+    .widget-header
+      .widget-title
+        wiki登録用の文章(下記の文章をコピペして#{link_to card.name, game_wiki_path(project_id: 'culdcept', id: card.name) }のページに貼り付けてください)
+    .widget-body
+      .widget-main
+        = render 'copy_paste', card: card
+      .widget-toolbox.padding-8.clearfix.center
 
+= link_to '新規カード登録', new_culdcept_path, class: 'btn btn-primary'
 
 %h1 カード検索
 
@@ -65,8 +28,6 @@
     
 %h1 カード一覧
 
-#{collection.count}枚
-
 .row{ style: 'margin: 0 auto;'}
   #collection.col-xs-12
     - if collection.any?
@@ -74,3 +35,8 @@
     - else
       データが見つかりませんでした。
 
+/ google ads
+%script{:async => "", :src => "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+%ins.adsbygoogle{"data-ad-client" => "ca-pub-3329113358393775", "data-ad-format" => "auto", "data-ad-slot" => "4333067042", :style => "display:block"}
+  :javascript
+    (adsbygoogle = window.adsbygoogle || []).push({});
