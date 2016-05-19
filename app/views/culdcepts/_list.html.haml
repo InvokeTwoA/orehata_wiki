@@ -1,6 +1,7 @@
 .main
-  %pre{ style: 'background-color: #ccc' }
-    検索結果URL: #{ culdcepts_url(params) }
+  検索結果URL
+  %pre.culd
+    #{ culdcepts_url(params) }
   %br
   #{culdcepts.count}枚
   %br

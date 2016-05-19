@@ -1484,3 +1484,10 @@ a.btn {
   color: #FFFFFF !important
 }
 
+
+pre.culd {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+  background-color: #ccc
+}
