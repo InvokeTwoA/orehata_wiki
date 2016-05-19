@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   resources :reviews, only: [:index, :new, :create]
   resources :mail_forms, only: [:new, :create]
 
-  resources :culdcepts, only: [:index, :new, :create, :edit, :update]
+  resources :culdcepts, only: [:index, :new, :create, :edit, :update, :destroy]
 
   resources :journals, :only => [:edit, :update] do
     member do

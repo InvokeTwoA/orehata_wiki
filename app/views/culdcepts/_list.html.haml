@@ -17,6 +17,7 @@
       %th.center HP
       - if User.current.admin?
         %th.center
+        %th.center
     - if culdcepts.present?
       - culdcepts.each do |culdcept|
         %tr
@@ -31,3 +32,4 @@
           %td.center= culdcept.hp
           - if User.current.admin?
             %td.center= link_to '編集', edit_culdcept_path(culdcept), class: 'btn btn-primary' 
+            %td.center= link_to '削除', culdcept_path(culdcept), method: :delete, data: { confirm: "#{ culdcept.name }を削除します。よろしいですか？" }, class: 'btn btn-danger'
