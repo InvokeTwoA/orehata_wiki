@@ -55,7 +55,7 @@ class CuldceptsController < ApplicationController
     @wiki = @project.wiki
     @page = @wiki.find_or_new_page('top')
     params[:project_id] = 'culdcept'
-    params[:id] = 'top'
+    params[:id] = 'top' if params[:id].blank?
   end
 
 end
