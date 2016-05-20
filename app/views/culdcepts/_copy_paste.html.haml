@@ -33,6 +33,9 @@
 h1. カード考察
 %br
 %br
+一覧画面には以下をコピペ
+%br
+%br
 - if card.card_type == 'クリーチャー'
   |=.[[#{card.name}]] |=.#{card.element}|=.#{card.cost} |=.#{card.rare} |=.#{card.st} |=.#{card.hp} |=.#{forbidden_field_text(card)} |=.#{ forbidden_item_text(card) } |=.#{card.card_text}|  
 - elsif card.card_type == 'アイテム'
