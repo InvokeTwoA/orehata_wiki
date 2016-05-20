@@ -42,14 +42,6 @@
     .col-sm-5
       = f.input_field :rare, as: :select, collection: ['N', 'S', 'R', 'E'], include_blank: false
   .form-group
-    %label.col-sm-2.control-label 防御型
-    .col-sm-5
-      = f.input_field :deffensive
-  .form-group
-    %label.col-sm-2.control-label 属性
-    .col-sm-5
-      = f.input_field :element, as: :select, collection: ['無','火','水','風','地'], include_blank: true
-  .form-group
     %label.col-sm-2.control-label カードテキスト
     .col-sm-5
       = f.input_field :card_text, class: 'form-control', rows: 10
@@ -61,6 +53,42 @@
     %label.col-sm-2.control-label アドバイス
     .col-sm-5
       = f.input_field :advice, class: 'form-control', rows: 10
+  .form-group
+    %label.col-sm-2.control-label 属性
+    .col-sm-5
+      = f.input_field :element, as: :select, collection: ['無','火','水','風','地'], include_blank: true
+  .form-group
+    %label.col-sm-2.control-label 防御型
+    .col-sm-5
+      = f.input_field :deffensive
+  .form-group
+    %label.col-sm-2.control-label 再生
+    .col-sm-5
+      = f.input_field :regenerate
+  .form-group
+    %label.col-sm-2.control-label 先制
+    .col-sm-5
+      = f.input_field :first_attack
+  .form-group
+    %label.col-sm-2.control-label 遺産
+    .col-sm-5
+      = f.input_field :heritage
+  .form-group
+    %label.col-sm-2.control-label 援護
+    .col-sm-5
+      = f.input_field :support
+  .form-group
+    %label.col-sm-2.control-label 即死
+    .col-sm-5
+      = f.input_field :death
+  .form-group
+    %label.col-sm-2.control-label 秘術
+    .col-sm-5
+      = f.input_field :magick
+  .form-group
+    %label.col-sm-2.control-label 強打
+    .col-sm-5
+      = f.input_field :strong_attack
   .form-group
     %label.col-sm-2.control-label 配置制限　水
     .col-sm-5

@@ -8,6 +8,13 @@
 #    t.string :item_type
 #    t.string :rare
 #    t.boolean :deffensive
+#    t.boolean :regenerate
+#    t.boolean :first_attack
+#    t.boolean :heritage
+#    t.boolean :support
+#    t.boolean :death 
+#    t.boolean :magick 
+#    t.boolean :strong_attack
 #    t.string :element
 #    t.text   :card_text
 #    t.text   :description

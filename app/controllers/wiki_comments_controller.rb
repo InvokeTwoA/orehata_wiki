@@ -1,6 +1,10 @@
 class WikiCommentsController < ApplicationController
   def index
-    @wiki_comments = WikiComment.recent.where(project_id: params[:project_id]).page(params[:kaminari_page]).per(20)
+    if params[:project_id].present?
+      @wiki_comments = WikiComment.recent.where(project_id: params[:project_id]).page(params[:kaminari_page]).per(20)
+    else
+      @wiki_comments = WikiComment.recent.page(params[:kaminari_page]).per(20)
+    end
   end
 
   def create

@@ -1328,7 +1328,7 @@ module ApplicationHelper
 
   # 手動でタイトル出し分け
   def wiki_page_title_link
-    return "カルドセプトリボルト　徹底攻略wiki" if controller_name == 'culdcepts'
+    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
 
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
