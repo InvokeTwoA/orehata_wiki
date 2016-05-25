@@ -20,14 +20,14 @@
   %body{:class => body_css_classes}
     = call_hook :view_layouts_base_body_top
     #wrapper
-      .flyout-menu.js-flyout-menu
-        - if User.current.logged? || !Setting.login_required?
-          .flyout-menu__search
-            = form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do
-              = hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope
-              = label_tag 'flyout-search', '⚲'.html_safe, :class => 'search-magnifier search-magnifier--flyout'
-              %input#q{ type: "text", name: "q", size: "20", class: "small", accesskey: "f", autofocus: true }
-        %span.js-sidebar.flyout-menu__sidebar
+      /.flyout-menu.js-flyout-menu
+      /  - if User.current.logged? || !Setting.login_required?
+      /    .flyout-menu__search
+      /      = form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do
+      /        = hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope
+      /        = label_tag 'flyout-search', '⚲'.html_safe, :class => 'search-magnifier search-magnifier--flyout'
+      /        %input#q{ type: "text", name: "q", size: "20", class: "small", accesskey: "f", autofocus: true }
+      /  %span.js-sidebar.flyout-menu__sidebar
       #wrapper2
         #wrapper3
           - if User.current.admin?
