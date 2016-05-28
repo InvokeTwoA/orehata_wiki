@@ -1,8 +1,8 @@
 - content_for :header_tags do
   %meta{ name: "robots", content: "noindex" }
+- project_id = params[:project_id].present? ?  params[:project_id] : 'orehata_tori' 
 - content_for :sidebar do
-  - if params[:project_id].present?
-    = link_to 'TOPに戻る', root_project_wiki_page_index_path(project_id: params[:project_id])
+  = link_to 'TOPに戻る', root_project_wiki_page_index_path(project_id: project_id)
 %h1 コメント一覧
 
 全#{ @wiki_comments.total_count }件
@@ -14,7 +14,7 @@
         .comment-header
           %span.page
             ページ:
-            = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: 'orehata_tori')
+            = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: project_id)
           %span.pull-right
             = I18n.l(wiki_comment.created_at)
             - if User.current.admin?
@@ -27,4 +27,4 @@
         .body
           =wiki_comment.body
 %div{style: 'text-align:center;'}
-  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index', project_id: params[:project_id]}, rel: "nofollows"
+  = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index', project_id: project_id}, rel: "nofollows"
