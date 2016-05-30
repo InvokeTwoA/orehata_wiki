@@ -21,4 +21,11 @@ module CuldceptsHelper
     str = html_escape(text)
     str.gsub(/\r\n|\r|\n/, "<br />")
   end
+
+  def cost_text(card)
+    text = card.cost
+    text = "#{text}+#{'▫︎'*card.card_cost}" if card.card_cost > 0
+    text = "#{text}+#{card.element_cost}" if card.element_cost.present?
+    text
+  end
 end

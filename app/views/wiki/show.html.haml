@@ -43,11 +43,7 @@
       = submit_tag l(:button_add)
       = link_to l(:button_cancel), {}, :onclick => "$('#add_attachment_form').hide(); return false;"
 
-/ google ads
-%script{:async => "", :src => "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
-%ins.adsbygoogle{"data-ad-client" => "ca-pub-3329113358393775", "data-ad-format" => "auto", "data-ad-slot" => "4333067042", :style => "display:block"}
-  :javascript
-    (adsbygoogle = window.adsbygoogle || []).push({});
+= render 'ads_google'
 
 %h2 コメント
 = simple_form_for WikiComment.new do |f|
