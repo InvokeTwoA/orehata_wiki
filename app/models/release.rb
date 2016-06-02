@@ -7,7 +7,7 @@
 #
 class Release < ActiveRecord::Base
 
-  scope :recent, -> { order('release_date DESC') }
+  scope :recent, -> { order('release_date ASC') }
   scope :active, -> { where("release_date > NOW()") }
 
 end

@@ -6,6 +6,8 @@
 ※ゲームのパッケージ画像をクリックするとAmazonページへと遷移します。
 %br
 
+= render 'ads_google'
+
 .main
   %table.table.table-striped.table-hover
     %tr
@@ -22,4 +24,3 @@
           = release.asin.html_safe if release.asin.present?
         %td.center= release.youtube_pv.html_safe if release.youtube_pv.present?
 
-= render 'ads_google'
