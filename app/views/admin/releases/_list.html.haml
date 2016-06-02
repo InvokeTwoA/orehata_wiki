@@ -1,0 +1,23 @@
+#{ releases.total_count }件
+.paginate
+  = paginate releases
+.main
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center ID
+      %th.center タイトル
+      %th.center ASIN
+      %th.center PV
+      %th.center アクション
+    - releases.each do |release|
+      %tr
+        %td.center= release.id
+        %td.center= release.title
+        %td.center= release.asin
+        %td.center= release.youtube_pv
+        %td.center= release.hard_type
+        %td.center
+          = link_to '編集', edit_admin_release_path(release), class: 'btn btn-info'
+          = link_to '削除', admin_release_path(release), method: :delete, data: { confirm: "#{ release.title }を削除します。よろしいですか？" }, class: 'btn btn-danger'
+.paginate
+  = paginate releases

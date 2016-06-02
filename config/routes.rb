@@ -25,6 +25,7 @@ Rails.application.routes.draw do
       get :explain
     end
   end
+  resources :releases, only: [:index]
   resources :reviews, only: [:index, :new, :create]
   resources :mail_forms, only: [:new, :create]
 
@@ -323,6 +324,7 @@ Rails.application.routes.draw do
   # 管理画面
   namespace :admin do
     resources :games, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :releases, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
   resources :auth_sources do

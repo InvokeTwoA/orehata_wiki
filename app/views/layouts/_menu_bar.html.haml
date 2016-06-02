@@ -1,8 +1,13 @@
 %ul
-  %li= link_to 'ゲームタイトル一覧', games_path
+  %li= link_to '攻略タイトル一覧', games_path
   /%li= link_to 'レビュー', reviews_path
+  %li= link_to 'ゲーム発売日', releases_path
   %li= link_to 'このサイトについて', explain_games_path(project_id: params[:project_id])
   %li= link_to '管理人への連絡', new_mail_form_path(project_id: params[:project_id])
-
   - if params[:project_id] == 'culdcept' || controller_name == 'culdcepts'
     %li= link_to 'カード検索', culdcepts_path
+  %li
+    /.social{ style: 'text-align: right; padding: 10px'}
+    = link_to 'ツィート', 'https://twitter.com/share', class: 'twitter-share-button', data: { url: request.url, text: wiki_og_title, lang: "ja" }
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

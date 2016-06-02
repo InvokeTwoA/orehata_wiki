@@ -2,8 +2,8 @@
   .wiki
     = textilizable @wiki.sidebar.content, :text
 
-- unless User.current.admin?
-  = render '/wiki/news'
+/- unless User.current.admin?
+= render '/wiki/news'
 %br
 %br
 %br

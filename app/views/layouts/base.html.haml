@@ -47,7 +47,9 @@
                     \:
                   = text_field_tag 'q', @question, :size => 20, :class => 'small', :accesskey => accesskey(:quick_search)
                 = render_project_jump_box
-            %h1= wiki_page_title_link
+            %h1
+              = wiki_page_title_link
+              = image_tag '/images/kappa_32_32_2.png'
             #main-menu.tabs
               = render partial: 'layouts/menu_bar'
               .tabs-buttons{:style => "display:none;"}
@@ -62,9 +64,9 @@
               = yield
               = call_hook :view_layouts_base_content
               %div{:style => "clear:both;"}
-            - if User.current.admin? && yield(:right_sidebar).present?
-              #right_sidebar
-                = yield :right_sidebar
+            /- if User.current.admin? && yield(:right_sidebar).present?
+            /  #right_sidebar
+            /    = yield :right_sidebar
         #ajax-indicator{:style => "display:none;"}
           %span= l(:label_loading)
         #ajax-modal{:style => "display:none;"}

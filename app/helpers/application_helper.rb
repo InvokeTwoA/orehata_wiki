@@ -1329,7 +1329,7 @@ module ApplicationHelper
   # 手動でタイトル出し分け
   def wiki_page_title_link
     return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
-    return link_to "カッパの徹底攻略wiki", games_path if controller_name == 'games'
+    return link_to "カッパの徹底攻略wiki", games_path if controller_name == 'games' || controller_name == 'releases'
 
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
@@ -1386,7 +1386,7 @@ module ApplicationHelper
     when 'orehata_tori' then
       '俺に働けって言われても酉　徹底攻略wiki'
     else
-      '俺に働けって言われても酉　徹底攻略wiki'
+      'カッパの徹底攻略wiki'
     end
   end
 

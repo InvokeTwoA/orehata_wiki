@@ -1,0 +1,25 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+
+%h1 ゲーム発売日一覧
+
+※ゲームのパッケージ画像をクリックするとAmazonページへと遷移します。
+%br
+
+.main
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center 発売日
+      %th.center タイトル
+      %th.center PV
+    - @releases.each do |release|
+      %tr
+        %td.center= release.release_date
+        %td.center
+          %span.badge= release.hard_type
+          = release.title
+          %br
+          = release.asin.html_safe if release.asin.present?
+        %td.center= release.youtube_pv.html_safe if release.youtube_pv.present?
+
+= render 'ads_google'
