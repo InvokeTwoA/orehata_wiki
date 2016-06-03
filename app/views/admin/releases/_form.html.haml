@@ -18,6 +18,6 @@
   .form-group
     %label.col-sm-2.control-label ハード
     .col-sm-5
-      = f.input_field :hard_type, as: :select, collection: ['3DS','PS4','PSVita', 'Wii U'], include_blank: false
+      = f.input_field :hard_type, as: :select, collection: ['3DS','PS4','PSVita', 'Wii U', 'PS4/PSVita'], include_blank: false
   .form-group
     = f.submit '送信', class: 'btn btn-primary'
