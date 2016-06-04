@@ -1,3 +1,6 @@
+- if params[:parent].present?
+  - content_for :header_tags do
+    %meta{ name: "robots", content: "noindex" }
 - unless action_name == 'root' || @page.title == 'top' || @page.title == 'Top'
   .contextual
     - if @editable
@@ -10,6 +13,8 @@
         = link_to_if_authorized(l(:button_delete), {:action => 'destroy', :id => @page.title}, :method => :delete, :data => {:confirm => l(:text_are_you_sure)}, :class => 'icon icon-del')
   = wiki_page_breadcrumb(@page)
 - unless @content.current_version?
+  - content_for :header_tags do
+    %meta{ name: "robots", content: "noindex" }
   = title [@page.pretty_title, project_wiki_page_path(@page.project, @page.title, :version => nil)], 
     [l(:label_history), history_project_wiki_page_path(@page.project, @page.title)],                 
     "#{l(:label_version)} #{@content.version}"

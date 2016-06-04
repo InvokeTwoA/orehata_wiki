@@ -1368,6 +1368,8 @@ module ApplicationHelper
   def wiki_meta_tags
     if controller_name == 'culdcepts'
       return ['カルドセプト', 'リボルト', 'リボルド', '対戦', '攻略', '検索', 'データベース', '考察', 'まとめ', 'ブック', 'カード', '徹底', '徹底攻略', 'テクニック', 'コンボ']
+    else controller_name == 'releases'
+      return ['ゲーム', '発売日', 'PV', 'PS4', 'PSVita', '3DS', 'Wii U', 'もうすぐ', '一覧']
     end
 
     case params[:project_id]
