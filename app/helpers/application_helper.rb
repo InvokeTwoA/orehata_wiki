@@ -1336,6 +1336,10 @@ module ApplicationHelper
       link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'culdcept' then
       link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'healer' then
+      link_to "ヒーラーは二度死ぬ　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'refrain' then
+      link_to "ルフランの地下迷宮と魔女ノ旅団　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     else
       link_to '俺に働けって言われても　酉　徹底攻略wiki', home_path
     end
@@ -1351,7 +1355,11 @@ module ApplicationHelper
     when 'culdcept' then
       '「カルドセプトリボルト」の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     when 'orehata_tori' then
-      '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
+      '俺に働けって言われても酉の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
+    when 'healer' then
+      'ヒーラーは二度死ぬ　の攻略wikiです。'
+    when 'refrain' then
+      'ルフランの地下迷宮と魔女ノ旅団の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     else
       '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     end
@@ -1368,7 +1376,11 @@ module ApplicationHelper
     when 'culdcept' then
       ['カルドセプト', 'リボルト', 'リボルド', '対戦', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', 'ブック', 'カード', '徹底', '徹底攻略', 'テクニック', 'コンボ']
     when 'orehata_tori' then
-      ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
+      ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
+    when 'healer' then
+      ['ヒーラーは二度死ぬ', '攻略', 'wiki', '徹底', '徹底攻略']
+    when 'refrain' then
+      ['ルフランの地下迷宮と魔女ノ旅団', '攻略', 'wiki', '考察', '稼ぎ', 'ルフラン', '地下迷宮', 'まとめ', '考察', '徹底', '徹底攻略']
     else
       ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
     end
@@ -1385,6 +1397,10 @@ module ApplicationHelper
       'カルドセプトリボルト　徹底攻略wiki'
     when 'orehata_tori' then
       '俺に働けって言われても酉　徹底攻略wiki'
+    when 'healer' then
+      'ヒーラーは二度死ぬ　徹底攻略wiki'
+    when 'refrain' then
+      'ルフランの地下迷宮と魔女ノ旅団　徹底攻略wiki'
     else
       'カッパの徹底攻略wiki'
     end

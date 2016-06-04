@@ -27,6 +27,16 @@ class WikiController < ApplicationController
       @page = @wiki.find_or_new_page('top')
       params[:project_id] = 'culdcept'
       params[:id] = 'top'
+    when 'healer' then
+      @project = Project.find(params[:project_id])
+      @wiki = @project.wiki
+      @page = @wiki.find_or_new_page('top')
+      params[:id] = 'top'
+    when 'refrain' then
+      @project = Project.find(params[:project_id])
+      @wiki = @project.wiki
+      @page = @wiki.find_or_new_page('top')
+      params[:id] = 'top'
     else
       @project = Project.find('orehata_tori')
       @wiki = @project.wiki

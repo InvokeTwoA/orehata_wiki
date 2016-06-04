@@ -1,4 +1,8 @@
 class WikiCommentsController < ApplicationController
+
+  before_filter :check_spam, only: [:create]
+  
+
   def index
     if params[:project_id].present?
       @wiki_comments = WikiComment.recent.where(project_id: params[:project_id]).page(params[:kaminari_page]).per(20)
@@ -44,5 +48,12 @@ class WikiCommentsController < ApplicationController
     wiki_comment.active_flag = false
     wiki_comment.save!
     redirect_to :back
+  end
+
+  private
+  def check_spam
+    unless params[:wiki_comment][:body].match(/Hello\!/).nil?
+      return redirect_to :back, alert: 'コメントに Hello! を含む投稿はできません'
+    end
   end
 end
