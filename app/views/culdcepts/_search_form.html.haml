@@ -37,7 +37,7 @@
     .clearfix
       %hr
       .center
-        %label 能力値（モンスターかアイテム時のみ入力）
+        %label 能力値（クリーチャーかアイテム時のみ入力）
       %br
       .col-sm-3 ST
       .col-sm-9
@@ -53,7 +53,7 @@
     .clearfix
       %hr
       .center
-        %label モンスター時のみ入力
+        %label クリーチャー時のみ入力
       %br
       .col-sm-3 属性
       .col-sm-9
@@ -73,25 +73,39 @@
           = check_box_tag "q[element_in]", '土'
           土
       %br
-      .col-sm-3 防御型
+      .col-sm-3 能力
       .col-sm-9
         %label 
           = check_box_tag "q[deffensive_in]", '1'
-      %br
-      .col-sm-3 再生
-      .col-sm-9
+          防御型
         %label 
           = check_box_tag "q[regenerate_in]", '1'
-      %br
-      .col-sm-3 先制
-      .col-sm-9
+          再生
         %label 
           = check_box_tag "q[first_attack_in]", '1'
-      %br
-      .col-sm-3 援護
-      .col-sm-9
-        %label 
-          = check_box_tag "q[support_in]", '1'
+          先制
+        /%label 
+        /  = check_box_tag "q[support_in]", '1'
+        /  援護
+      /.col-sm-3 防御型
+      /.col-sm-9
+      /  %label 
+      /    = check_box_tag "q[deffensive_in]", '1'
+      /%br
+      /.col-sm-3 再生
+      /.col-sm-9
+      /  %label 
+      /    = check_box_tag "q[regenerate_in]", '1'
+      /%br
+      /.col-sm-3 先制
+      /.col-sm-9
+      /  %label 
+      /    = check_box_tag "q[first_attack_in]", '1'
+      /%br
+      /.col-sm-3 援護
+      /.col-sm-9
+      /  %label 
+      /    = check_box_tag "q[support_in]", '1'
     .clearfix
       %hr
       .center
