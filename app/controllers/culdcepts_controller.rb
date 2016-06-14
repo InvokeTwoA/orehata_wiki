@@ -37,6 +37,7 @@ class CuldceptsController < ApplicationController
       :deffensive,
       :regenerate,
       :first_attack,
+      :protect_spell,
       :heritage,
       :support,
       :death ,
