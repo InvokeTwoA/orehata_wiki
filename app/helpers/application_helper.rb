@@ -1347,7 +1347,11 @@ module ApplicationHelper
 
   # wikiのdescription
   def wiki_meta_description
-    return '「カルドセプトリボルト」の検索データベースです。' if controller_name == 'culdcepts'
+    if controller_name == 'culdcepts'
+      return '「カルドセプトリボルト」の検索データベースです。'
+    else controller_name == 'releases'
+      return 'ゲームの発売日情報とPV一覧です。'
+    end
 
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
@@ -1369,7 +1373,7 @@ module ApplicationHelper
     if controller_name == 'culdcepts'
       return ['カルドセプト', 'リボルト', 'リボルド', '対戦', '攻略', '検索', 'データベース', '考察', 'まとめ', 'ブック', 'カード', '徹底', '徹底攻略', 'テクニック', 'コンボ']
     else controller_name == 'releases'
-      return ['ゲーム', '発売日', 'PV', 'PS4', 'PSVita', '3DS', 'Wii U', 'もうすぐ', '一覧']
+      return ['ゲーム', '発売日', 'PV', 'PS4', 'PSVita', '3DS', 'Wii U', 'もうすぐ', '一覧', 'プロモーション', 'CM']
     end
 
     case params[:project_id]
@@ -1411,5 +1415,15 @@ module ApplicationHelper
   def fa_icon icon_name
     content_tag(:i, '', class: "fa fa-#{icon_name}")
   end 
+
+  def html_origin_title
+    if controller_name == 'culdcepts'
+      return 'カルドセプトリボルト　徹底攻略wiki'
+    elsif controller_name == 'releases'
+      return 'ゲーム発売日、PV一覧　カッパの徹底攻略wiki'
+    else
+      'カッパの徹底攻略wiki'
+    end
+  end
 
 end

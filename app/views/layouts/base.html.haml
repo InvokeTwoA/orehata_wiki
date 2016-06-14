@@ -3,7 +3,11 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{ name: "google-site-verification", content: "8AghetCaAVHVIWGfv00VWktBPymY8k97E2fPaWs5Rkc"} 
-    %title= html_title.gsub(/Redmine/, '')
+    %title
+      - if html_title.present?
+        = html_title.gsub(/Redmine/, '')
+      - else
+        = html_origin_title
     = render partial: 'layouts/meta_tags'
     = csrf_meta_tag
     = favicon
