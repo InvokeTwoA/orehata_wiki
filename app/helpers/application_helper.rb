@@ -1422,7 +1422,7 @@ module ApplicationHelper
     elsif controller_name == 'releases'
       return 'ゲーム発売日、PV一覧　カッパの徹底攻略wiki'
     else
-      'カッパの徹底攻略wiki'
+      return 'カッパの徹底攻略wiki'
     end
   end
 
