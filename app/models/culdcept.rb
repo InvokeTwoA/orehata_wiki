@@ -14,7 +14,11 @@
 #    t.boolean :support
 #    t.boolean :death 
 #    t.boolean :magick 
-#    t.boolean :strong_attack
+#    t.boolean strong_attack
+#    t.boolean fortitude
+#    t.boolean secret
+#    t.boolean mix
+#    t.boolean induction
 #    t.string :element
 #    t.text   :card_text
 #    t.text   :description

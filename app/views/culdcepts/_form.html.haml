@@ -110,6 +110,22 @@
       .col-sm-5
         = f.input_field :strong_attack
     .form-group
+      %label.col-sm-2.control-label 不屈
+      .col-sm-5
+        = f.input_field :fortitude
+    .form-group
+      %label.col-sm-2.control-label 密命
+      .col-sm-5
+        = f.input_field :secret
+    .form-group
+      %label.col-sm-2.control-label 合成
+      .col-sm-5
+        = f.input_field :mix
+    .form-group
+      %label.col-sm-2.control-label 感応
+      .col-sm-5
+        = f.input_field :induction
+    .form-group
       %label.col-sm-2.control-label 配置制限　水
       .col-sm-5
         = f.input_field :forbidden_water, class: 'form-control'
