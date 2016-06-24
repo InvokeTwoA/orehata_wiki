@@ -52,7 +52,7 @@ class WikiCommentsController < ApplicationController
 
   private
   def check_spam
-    unless params[:wiki_comment][:body].match(/Hello\!/).nil?
+    unless WikiComment.is_correct_word?(params[:wiki_comment][:body])
       return redirect_to :back, alert: 'コメントに Hello! を含む投稿はできません'
     end
   end

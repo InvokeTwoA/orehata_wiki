@@ -1,4 +1,4 @@
-- if params[:parent].present? || params[:id] == 'sandbox'
+- if params[:parent].present? || params[:id] == 'sandbox' || params[:id] == 'Sandbox'
   - content_for :header_tags do
     %meta{ name: "robots", content: "noindex" }
 - unless action_name == 'root' || @page.title == 'top' || @page.title == 'Top'
