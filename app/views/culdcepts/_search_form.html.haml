@@ -26,13 +26,13 @@
       .col-sm-3 カードタイプ
       .col-sm-9
         %label 
-          = check_box_tag "q[card_type_in]", 'クリーチャー'
+          = check_box_tag "q[card_type_in][]", 'クリーチャー'
           クリーチャー
         %label 
-          = check_box_tag "q[card_type_in]", 'アイテム'
+          = check_box_tag "q[card_type_in][]", 'アイテム'
           アイテム
         %label 
-          = check_box_tag "q[card_type_in]", 'スペル'
+          = check_box_tag "q[card_type_in][]", 'スペル'
           スペル
     .clearfix
       %hr
@@ -58,20 +58,20 @@
       .col-sm-3 属性
       .col-sm-9
         %label 
-          = check_box_tag "q[element_in]", '無'
+          = check_box_tag "q[element_in][]", '無'
           無
         %label 
-          = check_box_tag "q[element_in]", '水'
+          = check_box_tag "q[element_in][]", '水'
           水
         %label 
-          = check_box_tag "q[element_in]", '火'
+          = check_box_tag "q[element_in][]", '火'
           火
         %label 
-          = check_box_tag "q[element_in]", '風'
+          = check_box_tag "q[element_in][]", '風'
           風
         %label 
-          = check_box_tag "q[element_in]", '土'
-          土
+          = check_box_tag "q[element_in][]", '地'
+          地
       %br
       .col-sm-3 能力
       .col-sm-9
@@ -105,25 +105,6 @@
         %label 
           = check_box_tag "q[cheer_in]", '1'
           応援
-      /.col-sm-3 防御型
-      /.col-sm-9
-      /  %label 
-      /    = check_box_tag "q[deffensive_in]", '1'
-      /%br
-      /.col-sm-3 再生
-      /.col-sm-9
-      /  %label 
-      /    = check_box_tag "q[regenerate_in]", '1'
-      /%br
-      /.col-sm-3 先制
-      /.col-sm-9
-      /  %label 
-      /    = check_box_tag "q[first_attack_in]", '1'
-      /%br
-      /.col-sm-3 援護
-      /.col-sm-9
-      /  %label 
-      /    = check_box_tag "q[support_in]", '1'
     .clearfix
       %hr
       .center
@@ -132,16 +113,16 @@
       .col-sm-3 アイテムタイプ
       .col-sm-9
         %label 
-          = check_box_tag "q[item_type_in]", '武器'
+          = check_box_tag "q[item_type_in][]", '武器'
           武器
         %label 
-          = check_box_tag "q[item_type_in]", '防具'
+          = check_box_tag "q[item_type_in][]", '防具'
           防具
         %label 
-          = check_box_tag "q[item_type_in]", '道具'
+          = check_box_tag "q[item_type_in][]", '道具'
           道具
         %label 
-          = check_box_tag "q[item_type_in]", '巻物'
+          = check_box_tag "q[item_type_in][]", '巻物'
           巻物
     .clearfix
       %hr
@@ -151,17 +132,17 @@
       .col-sm-3 スペルタイプ
       .col-sm-9
         %label 
-          = check_box_tag "q[spell_type_in]", '単体瞬間'
+          = check_box_tag "q[spell_type_in][]", '単体瞬間'
           単体瞬間
         %label 
-          = check_box_tag "q[spell_type_in]", '複数瞬間'
+          = check_box_tag "q[spell_type_in][]", '複数瞬間'
           複数瞬間
         %label 
-          = check_box_tag "q[spell_type_in]", '単体呪い'
+          = check_box_tag "q[spell_type_in][]", '単体呪い'
           単体呪い
         %label 
-          = check_box_tag "q[spell_type_in]", '複数呪い'
+          = check_box_tag "q[spell_type_in][]", '複数呪い'
           複数呪い
         %label 
-          = check_box_tag "q[spell_type_in]", '世界呪い'
+          = check_box_tag "q[spell_type_in][]", '世界呪い'
           世界呪い
