@@ -685,6 +685,8 @@ module ApplicationHelper
         all
       end
     end
+    rescue => e
+      text
   end
 
   # Redmine links

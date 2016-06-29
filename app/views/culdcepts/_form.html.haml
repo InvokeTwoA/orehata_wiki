@@ -74,50 +74,49 @@
       = f.input_field :advice, class: 'form-control', rows: 10
   - if params[:type] == 'creature' || action_name == 'edit'
     .form-group
-      %label.col-sm-1.control-label 防御型
-      .col-sm-5
+      %label.col-sm-2.control-label 防御型
+      .col-sm-2
         = f.input_field :deffensive
-    .form-group
       %label.col-sm-2.control-label 再生
       .col-sm-2
         = f.input_field :regenerate
       %label.col-sm-2.control-label 先制
       .col-sm-2
         = f.input_field :first_attack
+    .form-group
       %label.col-sm-2.control-label 防魔
       .col-sm-2
         = f.input_field :protect_spell
-    .form-group
       %label.col-sm-2.control-label 遺産
       .col-sm-2
         = f.input_field :heritage
       %label.col-sm-2.control-label 援護
       .col-sm-2
         = f.input_field :support
+    .form-group
       %label.col-sm-2.control-label 即死
       .col-sm-2
         = f.input_field :death
-    .form-group
       %label.col-sm-2.control-label 秘術
       .col-sm-2
         = f.input_field :magick
       %label.col-sm-2.control-label 強打
       .col-sm-2
         = f.input_field :strong_attack
+    .form-group
       %label.col-sm-2.control-label 不屈
       .col-sm-2
         = f.input_field :fortitude
-    .form-group
       %label.col-sm-2.control-label 密命
       .col-sm-2
         = f.input_field :secret
       %label.col-sm-2.control-label 合成
       .col-sm-2
         = f.input_field :mix
+    .form-group
       %label.col-sm-2.control-label 感応
       .col-sm-2
         = f.input_field :induction
-    .form-group
       %label.col-sm-2.control-label 応援
       .col-sm-2
         = f.input_field :cheer
