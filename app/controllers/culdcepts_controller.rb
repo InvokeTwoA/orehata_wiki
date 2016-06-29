@@ -42,6 +42,7 @@ class CuldceptsController < ApplicationController
       :support,
       :death ,
       :magick, 
+      :cheer,
       :strong_attack,
       :fortitude,
       :secret,

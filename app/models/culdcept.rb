@@ -14,6 +14,7 @@
 #    t.boolean :support
 #    t.boolean :death 
 #    t.boolean :magick 
+#    t.boolean :cheer
 #    t.boolean strong_attack
 #    t.boolean fortitude
 #    t.boolean secret

@@ -53,7 +53,7 @@ class WikiCommentsController < ApplicationController
   private
   def check_spam
     unless WikiComment.is_correct_word?(params[:wiki_comment][:body])
-      return redirect_to :back, alert: 'コメントに Hello! を含む投稿はできません'
+      return redirect_to :back, alert: 'コメントにNGワードが含まれていたため投稿できませんでした。'
     end
   end
 end
