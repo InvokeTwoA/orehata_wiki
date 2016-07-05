@@ -66,7 +66,7 @@
   select,
   textarea,
   button {
-    font-size: 14px;  /* Set font-size for standard elements to 14px */
+    font-size: 16px;  /* Set font-size for standard elements to 16px */
   }
 
   select {
@@ -593,6 +593,11 @@
     padding-left: 0; /* reset left padding in order to use whole space */
     white-space: normal;
     color: transparent;
+
+    /* add */
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap : break-word;
   }
 
   #content>.contextual a,
@@ -786,7 +791,6 @@
   .pagination ul.pages li.next {display:inline-block; width:32%; overflow:hidden;}
 
   .scroll-table {
-    width: 400px;
     overflow: auto;　　　　/*tableをスクロールさせる*/
     white-space: nowrap;
   }

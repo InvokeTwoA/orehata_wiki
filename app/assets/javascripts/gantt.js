@@ -1,6 +1,8 @@
 /* Redmine - project management software
    Copyright (C) 2006-2016  Jean-Philippe Lang */
 
+/* no use
+
 var draw_gantt = null;
 var draw_top;
 var draw_right;
@@ -173,3 +175,4 @@ function drawGanttHandler() {
   if ($("#draw_relations").prop('checked'))
     drawRelations();
 }
+*/

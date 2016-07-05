@@ -1,10 +1,15 @@
 html {
-  overflow: auto;
+  /* overflow: auto; */
+  overflow: scroll;
 }
 body { 
-  font-family: Verdana, sans-serif; font-size: 14px; color:#333; 
-  margin: 0; padding: 0; 
-  min-width: 1260px !important;
+  font-family: Verdana, sans-serif; 
+  font-size: 16px; 
+  color:#333; 
+  margin: 0px; padding: 0px; 
+
+  /* default */
+  min-width: 900px;
 }
 
 h1, h2, h3, h4 {
@@ -18,11 +23,16 @@ h4 {border-bottom: 1px dotted #bbb;}
 pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 
 #main {
-  display: table;
   background-color:#EEEEEE;
+
+  /* add */
+  display: table;
 }
 
-#wrapper {background: white;overflow: hidden;}
+#wrapper {
+  background: white;
+  overflow: hidden;
+}
 
 #top-menu {background: #3E5B76; color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;}
 #top-menu ul {margin: 0;  padding: 0;}
@@ -87,13 +97,21 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #admin-menu a.info { background-image: url(../images/help.png); }
 #admin-menu a.server_authentication { background-image: url(../images/server_key.png); }
 
+/* add */
+/*
 #right_sidebar{ 
   z-index: 9; padding: 20px; margin: 0;
 }
+*/
+
+/*
+#sidebar{ float: right; width: 22%; position: relative; z-index: 9; padding: 0; margin: 0;}
+*/
 
 #sidebar{ 
-  width: 15%; 
   z-index: 9; padding: 0; margin: 0; 
+
+  width: 22%; 
   display: table-cell; 
 }
 * html #sidebar{ width: 22%; }
@@ -107,16 +125,30 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #sidebar div.wiki ul {margin:inherit; padding-left:40px;}
 #sidebar div.wiki ul li {list-style-type:inherit;}
 
+/*
+#content { width: 75%; background-color: #fff; margin: 0px; border-right: 1px solid #ddd; padding: 6px 10px 10px 10px; z-index: 10; }
+*/
 #content { 
-  width: 70%;
-  display: table-cell; 
   background-color: #fff; margin: 0; 
-  padding: 6px 10px 10px 10px; z-index: 10; 
+
+  padding-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  z-index: 10; 
+
+  max-width: 75%;
+  display: table-cell; 
+  width: 70%;
+  word-wrap: break-word;
+  overflow-wrap : break-word;
   overflow: auto;
 }
-* html #content{ padding-left: 0; margin-top: 0px; padding: 6px 10px 10px 10px;}
-html>body #content { min-height: 600px; min-width: 400px; width: 100%; }
+/* 
+  html>body #content { min-height: 600px; min-width: 400px; width: 100%; } 
 * html body #content { height: 600px; }
+*/
+html>body #content {  width: 100%; }
 
 #main.nosidebar #sidebar{ display: none; }
 #main.nosidebar #content{ width: auto; border-right: 0; }
@@ -1352,6 +1384,10 @@ color: #555; text-shadow: 1px 1px 0 #fff;
   overflow:hidden;
 }
 
+
+/****** add **********/
+
+
 .wiki_comment_text_area {
   -webkit-appearance:none
   margin: 0px;
@@ -1425,9 +1461,11 @@ color: #555; text-shadow: 1px 1px 0 #fff;
   color: #ffffff
 }
 
+/*
 #content table {
   width: 100%;
 }
+*/
 
 #mail_form {
   text-align: center;
@@ -1487,7 +1525,6 @@ a.btn {
 
 pre.culd {
   white-space: pre-wrap;
-  word-wrap: break-word;
   overflow: auto;
   background-color: #ccc
 }

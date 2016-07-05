@@ -1,6 +1,8 @@
 /* Redmine - project management software
    Copyright (C) 2006-2016  Jean-Philippe Lang */
 
+/* no use
+
 var revisionGraph = null;
 
 function drawRevisionGraph(holder, commits_hash, graph_space) {
@@ -95,3 +97,4 @@ function drawRevisionGraph(holder, commits_hash, graph_space) {
     });
     top.toFront();
 };
+*/
