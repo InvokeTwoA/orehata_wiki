@@ -109,7 +109,9 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 */
 
 #sidebar{ 
-  z-index: 9; padding: 0; margin: 0; 
+  z-index: 9; 
+  padding-left: 5px; 
+  margin: 0; 
 
   width: 22%; 
   display: table-cell; 
