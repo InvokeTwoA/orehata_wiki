@@ -4,6 +4,19 @@
   - if @wiki && @wiki.sidebar
     .wiki
       = textilizable @wiki.sidebar.content, :text
+    = render '/wiki/news'
+    %br
+    %br
+    %br
+    / menu
+    = render partial: 'layouts/menu_bar'
+
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br
   - else
     no side bar
 
@@ -45,8 +58,4 @@
     - else
       データが見つかりませんでした。
 
-/ google ads
-%script{:async => "", :src => "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
-%ins.adsbygoogle{"data-ad-client" => "ca-pub-3329113358393775", "data-ad-format" => "auto", "data-ad-slot" => "4333067042", :style => "display:block"}
-  :javascript
-    (adsbygoogle = window.adsbygoogle || []).push({});
+= render 'ads_google'

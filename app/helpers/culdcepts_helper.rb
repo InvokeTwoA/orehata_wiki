@@ -28,4 +28,17 @@ module CuldceptsHelper
     text = "#{text}+#{card.element_cost}" if card.element_cost.present?
     text
   end
+
+  def sort_activity_events_for_right_bar(events)
+    events_by_group = events.group_by(&:event_group)
+    sorted_events = []
+    events.sort {|x, y| y.event_datetime <=> x.event_datetime}.each do |event|
+      if group_events = events_by_group.delete(event.event_group)
+        group_events.sort {|x, y| y.event_datetime <=> x.event_datetime}.each_with_index do |e, i|
+          sorted_events << [e, i > 0]
+        end
+      end
+    end
+    sorted_events
+  end
 end

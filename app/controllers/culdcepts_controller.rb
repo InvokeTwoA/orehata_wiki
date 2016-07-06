@@ -1,6 +1,7 @@
 class CuldceptsController < ApplicationController
   inherit_resources
   before_filter :set_sidebar, only: [:index, :new, :edit]
+  before_filter :get_activities, only: [:index]
   respond_to :js
 
   def create
@@ -71,4 +72,32 @@ class CuldceptsController < ApplicationController
     params[:id] = 'top' if params[:id].blank?
   end
 
+  def get_activities
+    @days = Setting.activity_days_default.to_i
+    @date_to ||= Date.today + 1
+    @date_from = @date_to - @days
+    @activity = Redmine::Activity::Fetcher.new(User.current, :project => @project)
+    pref = User.current.pref
+    @activity.scope_select {|t| !params["show_#{t}"].nil?}
+    @activity.scope = :all
+    events = @activity.events(@date_from, @date_to)
+
+    if events.empty? || stale?(:etag => [@activity.scope, @date_to, @date_from, @with_subprojects, @author, events.first, events.size, User.current, current_language])
+      respond_to do |format|
+        format.html {
+          @events_by_day = events.group_by {|event| User.current.time_to_date(event.event_datetime)}
+          render :layout => false if request.xhr?
+        }
+        format.atom {
+          title = l(:label_activity)
+          if @author
+            title = @author.name
+          elsif @activity.scope.size == 1
+            title = l("label_#{@activity.scope.first.singularize}_plural")
+          end
+          render_feed(events, :title => "#{@project || Setting.app_title}: #{title}")
+        }
+      end
+    end
+  end
 end
