@@ -1,7 +1,7 @@
 class CuldceptsController < ApplicationController
   inherit_resources
   before_filter :set_sidebar, only: [:index, :new, :edit]
-  before_filter :get_activities, only: [:index]
+  # before_filter :get_activities, only: [:index]
   respond_to :js
 
   def create
