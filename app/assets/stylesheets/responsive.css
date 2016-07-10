@@ -793,6 +793,7 @@
   .scroll-table {
     overflow: auto;　　　　/*tableをスクロールさせる*/
     white-space: nowrap;
+    max-width: 300px;
   }
   .scroll-table::-webkit-scrollbar {　　/*tableにスクロールバーを追加*/
    height: 5px;
