@@ -1332,6 +1332,9 @@ module ApplicationHelper
   def wiki_page_title_link
     return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
     return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'culdcept'
+    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'refrain'
+    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'healer'
+    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'cl_dungeon_sengoku'
     return link_to "カッパの徹底攻略wiki", games_path if controller_name == 'games' || controller_name == 'releases'
 
 
