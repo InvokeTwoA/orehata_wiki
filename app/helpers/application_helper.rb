@@ -1336,7 +1336,7 @@ module ApplicationHelper
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
       link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
-    when 'culdcept' then
+    when 'culdcepts' then
       link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'healer' then
       link_to "ヒーラーは二度死ぬ　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
