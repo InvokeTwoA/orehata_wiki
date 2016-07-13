@@ -25,7 +25,8 @@ class WikiCommentsController < ApplicationController
       body: params[:wiki_comment][:body],
       page: page,
     )
-    redirect_to :back,  notice: 'コメントを投稿しました。'
+    #redirect_to :back, time: Time.now.to_i, notice: 'コメントを投稿しました。'
+    redirect_to game_wiki_path(project_id: params[:wiki_comment][:project_id], id: page, time: Time.now.to_i), notice: 'コメントを投稿しました'
   end
 
   def destroy

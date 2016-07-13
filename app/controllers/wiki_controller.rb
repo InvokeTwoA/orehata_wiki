@@ -207,7 +207,7 @@ class WikiController < ApplicationController
         format.html {
           anchor = @section ? "section-#{@section}" : nil
           #redirect_to project_wiki_page_path(@project, @page.title, :anchor => anchor)
-          redirect_to game_wiki_path(project_id: @project.identifier, id: @page.title)
+          redirect_to game_wiki_path(project_id: @project.identifier, id: @page.title, time: Time.now.to_i)
         }
         format.api {
           if was_new_page

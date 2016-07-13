@@ -1,0 +1,17 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+
+%h1 iOSアプリ一覧
+
+管理人が作ったiOSアプリ。
+
+.main
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center タイトル
+      %th.center 備考
+    %tr
+      %td.center= link_to '俺に働けと言われても　酉', root_project_wiki_page_index_path(project_id: 'orehata_tori')
+      %td.center 2016/3/17
+
+= render 'ads_google'
