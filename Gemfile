@@ -25,6 +25,7 @@ gem 'kaminari'
 gem 'css2sass'
 gem 'ransack'  # search_form
 gem "font-awesome-rails"  # fa-icon
+gem 'newrelic_rpm' # performance check
 
 #gem 'twitter-bootswatch-rails', '3.2.0'
 #gem 'therubyracer'
