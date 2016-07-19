@@ -5,6 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   # 高速化
+  config.serve_static_assets = true
   config.static_cache_control = "public, max-age=31536000"
 
   # Eager load code on boot. This eager loads most of Rails and
