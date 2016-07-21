@@ -8,6 +8,6 @@
 class Release < ActiveRecord::Base
 
   scope :recent, -> { order('release_date ASC') }
-  scope :active, -> { where("release_date > NOW()") }
+  scope :active, -> { where("release_date > ?", Time.now - 6.days) }
 
 end
