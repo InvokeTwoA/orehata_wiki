@@ -37,6 +37,11 @@ class WikiController < ApplicationController
       @wiki = @project.wiki
       @page = @wiki.find_or_new_page('top')
       params[:id] = 'top'
+    when 'ys8' then
+      @project = Project.find(params[:project_id])
+      @wiki = @project.wiki
+      @page = @wiki.find_or_new_page('top')
+      params[:id] = 'top'
     else
       @project = Project.find('orehata_tori')
       @wiki = @project.wiki
