@@ -25,7 +25,11 @@ Rails.application.routes.draw do
       get :explain
     end
   end
-  resources :releases, only: [:index]
+  resources :releases, only: [:index] do
+    collection do
+      get :all
+    end
+  end
   resources :reviews, only: [:index, :new, :create]
   resources :mail_forms, only: [:new, :create]
   resources :applis, only: [:index]
