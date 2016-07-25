@@ -1331,13 +1331,14 @@ module ApplicationHelper
 
   # 手動でタイトル出し分け
   def wiki_page_title_link
-    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
-    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'culdcept'
-    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'refrain'
-    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'healer'
-    return link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'cl_dungeon_sengoku'
-    return link_to "イース8 -Lacrimosa of DANA-　攻略メモ", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'ys8'
-    return link_to "カッパの徹底攻略wiki", games_path if controller_name == 'games' || controller_name == 'releases'
+    return link_to "カルドセプトリボルト　徹底攻略wiki",     root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
+    return link_to "カルドセプトリボルト　徹底攻略wiki",     root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'culdcept'
+    return link_to "ルフランの地下迷宮と魔女ノ旅団",         root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'refrain'
+    return link_to "ヒーラーは二度死ぬ　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'healer'
+    return link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'cl_dungeon_sengoku'
+    return link_to "イース8 -Lacrimosa of DANA-　攻略メモ",  root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'ys8'
+    return link_to "世界一長い５分間　徹底攻略wiki",         root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == '5min'
+    return link_to "カッパの徹底攻略wiki",  games_path if controller_name == 'games' || controller_name == 'releases'
 
 
     case params[:project_id]
@@ -1351,6 +1352,8 @@ module ApplicationHelper
       link_to "ルフランの地下迷宮と魔女ノ旅団　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'ys8' then
       link_to "イース8 -Lacrimosa of DANA-　攻略メモ", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when '5min' then
+      link_to "世界一長い５分間　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     else
       link_to '俺に働けって言われても　酉　徹底攻略wiki', home_path
     end
@@ -1377,6 +1380,8 @@ module ApplicationHelper
       'ルフランの地下迷宮と魔女ノ旅団の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     when 'ys8' then
       'イース8 -Lacrimosa of DANA- の攻略メモです。効率の良い稼ぎ方や、攻略情報をまとめてます。'
+    when '5min' then
+      '世界一長い5分間 の攻略wikiです。効率の良い稼ぎ方や、攻略情報をまとめてます。'
     else
       '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     end
@@ -1399,9 +1404,11 @@ module ApplicationHelper
     when 'healer' then
       ['ヒーラーは二度死ぬ', '攻略', 'wiki', '徹底', '徹底攻略']
     when 'refrain' then
-      ['ルフランの地下迷宮と魔女ノ旅団', '攻略', 'wiki', '考察', '稼ぎ', 'ルフラン', '地下迷宮', 'まとめ', '考察', '徹底', '徹底攻略']
+      ['ルフランの地下迷宮と魔女ノ旅団', '攻略', 'wiki', '稼ぎ', 'ルフラン', '地下迷宮', 'まとめ', '考察', '徹底', '徹底攻略']
     when 'ys8' then
       ['イース', 'Lacrimosa', 'DANA', '8', 'イース8', 'wiki', '徹底', '徹底攻略', '攻略メモ', 'ラクシャ', 'ダーナ']
+    when '5min' then
+      ['世界一長い5分間', '攻略', 'wiki', '稼ぎ', '5分間', '世界一', 'まとめ', '徹底', '徹底攻略']
     else
       ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
     end
@@ -1424,6 +1431,8 @@ module ApplicationHelper
       'ルフランの地下迷宮と魔女ノ旅団　徹底攻略wiki'
     when 'ys8' then
       'イース8 -Lacrimosa of DANA- 　攻略メモ'
+    when '5min' then
+      '世界一長い5分間　徹底攻略wiki'
     else
       'カッパの徹底攻略wiki'
     end

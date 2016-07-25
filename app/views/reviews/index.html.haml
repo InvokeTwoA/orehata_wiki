@@ -14,7 +14,7 @@
     - if @games.present?
       - @games.each do |game|
         %tr
-          %td.center= game.title
+          %td.center= link_to game.title, game_reviews_path(game_id: game.id)
           %td.center
             = game.asin.present? ? game.asin : 'なし'
           %td.center= game.reviews.count

@@ -14,6 +14,6 @@
             = # textilizable wiki_comment.body, :text, attachments: nil, edit_section_links: nil
             = # RedCloth3.new(wiki_comment.body).to_html.html_safe
             = # textilizable wiki_comment.body, :text
-            = textilizable wiki_comment.body
+            = simple_format textilizable wiki_comment.body
   %div{style: 'text-align:center;'}
     = paginate comments, params: {controller: 'wiki_comments', action: 'index'}, remote: true

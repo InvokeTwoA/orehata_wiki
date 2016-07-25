@@ -9,22 +9,25 @@
       %th.center タイトル
       %th.center 発売日
     %tr
-      %td.center= link_to '俺に働けと言われても　酉', root_project_wiki_page_index_path(project_id: 'orehata_tori')
+      %td.center= link_to '俺に働けと言われても　酉', game_wiki_path(project_id: 'orehata_tori', id: 'top')
       %td.center 2016/3/17
     %tr
-      %td.center= link_to 'クラシックダンジョン戦国', root_project_wiki_page_index_path(project_id: 'cl_dungeon_sengoku')
+      %td.center= link_to 'クラシックダンジョン戦国', game_wiki_path(project_id: 'cl_dungeon_sengoku', id: 'top')
       %td.center 2016/5/26
     %tr
-      %td.center= link_to 'ヒーラーは二度死ぬ', root_project_wiki_page_index_path(project_id: 'healer')
+      %td.center= link_to 'ヒーラーは二度死ぬ', game_wiki_path(project_id: 'healer', id: 'top')
       %td.center 2016/6/3
     %tr
-      %td.center= link_to 'ルフランの地下迷宮と魔女ノ旅団', root_project_wiki_page_index_path(project_id: 'refrain')
+      %td.center= link_to 'ルフランの地下迷宮と魔女ノ旅団', game_wiki_path(project_id: 'refrain', id: 'top')
       %td.center 2016/6/24
     %tr
-      %td.center= link_to 'カルドセプト　リボルト', root_project_wiki_page_index_path(project_id: 'culdcept')
+      %td.center= link_to 'カルドセプト　リボルト', game_wiki_path(project_id: 'culdcept', id: 'top')
       %td.center 2016/7/7
     %tr
-      %td.center= link_to 'イースⅧ -Lacrimosa of DANA- ', root_project_wiki_page_index_path(project_id: 'ys8')
+      %td.center= link_to 'イースⅧ -Lacrimosa of DANA- ', game_wiki_path(project_id: 'ys8', id: 'top')
       %td.center 2016/7/21
+    /%tr
+    /  %td.center= link_to '世界一長い5分間', game_wiki_path(project_id: '5min', id: 'top')
+    /  %td.center 2016/7/28
 
 = render 'ads_google'

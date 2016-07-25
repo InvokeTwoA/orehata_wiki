@@ -27,6 +27,7 @@ gem 'ransack'  # search_form
 gem "font-awesome-rails"  # fa-icon
 gem 'newrelic_rpm' # performance check
 gem 'unicorn'
+gem 'lazy_high_charts'
 
 #gem 'twitter-bootswatch-rails', '3.2.0'
 #gem 'therubyracer'

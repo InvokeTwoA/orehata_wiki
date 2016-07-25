@@ -1,18 +1,24 @@
-%h2 レビュー#{ @game.title }
+= content_for :header_tags do
+  /= javascript_include_tag 'reviews'
+= link_to 'レビュー一覧へ', reviews_path
 
-.center{style: 'text-align: center;'}
+%h2 レビュー
 
-  - if @game.asin.present?
-    %h3 商品画像
+※ 画像をクリックするとAmazon購入ページへと遷移します
 
-    = @game.asin.html_safe
-    %br
-    ※ 画像のリンク先はAmazon購入ページです
-    %br
-  - if @game.pv_url.present?
-    %h3 PV
+.panel.panel-default
+  .panel-heading
+    %h3= @game.title
+  .panel-body
+    - if @game.asin.present?
+      %h3 商品画像
+      .center
+        = @game.asin.html_safe
+    - if @game.pv_url.present?
+      %h3 PV
+      = @game.pv_url.html_safe
 
-    = @game.pv_url.html_safe
-
-  %h3 SCORE #{ @game.total_score } 点
-  平均( #{ @game.average_score } )
+    %h3 TOTAL SCORE #{ @game.total_score } point
+    平均  #{ @game.average_score } point
+    .review_graph
+      = high_chart("radar", @chart)

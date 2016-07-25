@@ -1,0 +1,30 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+
+= render 'game_info', game: @game
+
+- @game.reviews.recent.each do |review|
+  .panel.panel-default
+    .panel-heading
+      %h3.panel-title= review.title
+      .pull-right= review.created_by.present? ? review.created_by : "名無しのゲーマー"
+        
+    .panel-body
+      %h2 
+        SCORE  #{review.score}
+    
+      - if review.body_good.present?
+        .alert.alert-success
+          %h3 Good
+          = simple_format review.body_good
+
+      - if review.body_bad.present?
+        .alert.alert-danger
+          %h3 Bad
+          = simple_format review.body_bad
+
+      - if review.body_free.present?
+        .alert.alert-info
+          %h3 Comment
+          = simple_format review.body_free
+

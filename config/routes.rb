@@ -30,7 +30,12 @@ Rails.application.routes.draw do
       get :all
     end
   end
-  resources :reviews, only: [:index, :new, :create]
+  resources :reviews, only: [:index, :new, :create, :show] do
+    collection do
+      get :game
+    end
+  end
+
   resources :mail_forms, only: [:new, :create]
   resources :applis, only: [:index]
 
