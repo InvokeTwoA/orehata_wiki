@@ -11,17 +11,37 @@ class ReviewsController < ApplicationController
     @game = Game.find params[:game_id]
 
     # グラフ描画
-    graph_data = []
-    graph_data.push ['ボリューム',       @game.average_point('point_volume')]
-    graph_data.push ['グラフィック',     @game.average_point('point_graphic')]
-    graph_data.push ['サウンド',         @game.average_point('point_sound')]
-    graph_data.push ['システムの快適さ', @game.average_point('point_system')]
-    graph_data.push ['満足度',           @game.average_point('point_difficulty')]
-    @chart = LazyHighCharts::HighChart.new('radar') do |f|
+    graph_data = [ 
+      @game.average_point('point_volume'), 
+      @game.average_point('point_graphic'), 
+      @game.average_point('point_sound'), 
+      @game.average_point('point_system'), 
+      @game.average_point('point_difficulty')
+    ]
+    @chart = LazyHighCharts::HighChart.new('line') do |f|
+      f.chart(
+          polar: true,
+          type: 'line'
+        )
+      f.title(
+        text: "平均: #{@game.average_point('score')}点",
+        x: -80
+        )
       f.pane(size:'90%') 
+      f.xAxis(
+        categories: ['ボリューム', 'グラフィック', 'サウンド', 'システムの快適さ', '満足度'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+      )
+      f.yAxis(
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0
+      )
       f.series({
         name: 'Review',
-        data: graph_data
+        data: graph_data,
+        pointPlacement: 'on'
       })
     end
   end

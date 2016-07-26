@@ -18,7 +18,6 @@
       %h3 PV
       = @game.pv_url.html_safe
 
-    %h3 TOTAL SCORE #{ @game.total_score } point
-    平均  #{ @game.average_score } point
+    %h3 SCORE
     .review_graph
       = high_chart("radar", @chart)

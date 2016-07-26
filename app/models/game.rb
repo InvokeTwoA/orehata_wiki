@@ -11,11 +11,6 @@ class Game < ActiveRecord::Base
 
   has_many :reviews
 
-  # 平均点を算出
-  def average_score
-    reviews.count
-  end
-
   def average_point(name)
     reviews.average(name).to_i
   end
