@@ -1,3 +1,8 @@
+- if action_name == 'index'
+  = link_to '過去の発売日タイトルも見る', all_admin_releases_path
+- else
+  = link_to '最近の発売日タイトルも見る', admin_releases_path
+
 .pull-right
   = link_to 'ゲームを追加する', new_admin_release_path, class: 'btn btn-success'
 .collection

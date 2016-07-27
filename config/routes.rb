@@ -334,7 +334,11 @@ Rails.application.routes.draw do
   # 管理画面
   namespace :admin do
     resources :games, only: [:index, :new, :create, :edit, :update, :destroy]
-    resources :releases, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :releases, only: [:index, :new, :create, :edit, :update, :destroy] do
+      collection do
+        get :all
+      end
+    end
   end
 
   resources :auth_sources do

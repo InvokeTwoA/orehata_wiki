@@ -1,6 +1,11 @@
 class Admin::ReleasesController < Admin::ApplicationController
   inherit_resources
 
+  def all
+    @releases = Release.recent.page(params[:page]).per(30).uniq
+    render :index
+  end
+
   def create
     create! do
       redirect_to admin_releases_path, notice: 'ゲームを追加しました' and return
