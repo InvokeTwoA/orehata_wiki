@@ -26,6 +26,6 @@
           %span.badge= release.hard_type
           = release.title
           %br
-          = release.asin.html_safe if release.asin.present?
+          = release.asin_mini.html_safe if release.asin_mini.present?
         %td.center= release.youtube_pv.html_safe if release.youtube_pv.present?
 

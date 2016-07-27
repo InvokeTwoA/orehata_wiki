@@ -1,6 +1,6 @@
 %ul
   %li= link_to '攻略タイトル一覧', games_path
-  /%li= link_to 'レビュー', reviews_path
+  %li= link_to 'レビュー', reviews_path
   %li= link_to 'ゲーム発売日', releases_path
   %li= link_to 'このサイトについて', explain_games_path(project_id: params[:project_id])
   %li= link_to '管理人への連絡', new_mail_form_path(project_id: params[:project_id])

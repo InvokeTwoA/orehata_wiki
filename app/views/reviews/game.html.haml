@@ -3,28 +3,34 @@
 
 = render 'game_info', game: @game
 
-- @game.reviews.recent.each do |review|
-  .panel.panel-default
-    .panel-heading
-      %h3.panel-title= review.title
-      .pull-right= review.created_by.present? ? review.created_by : "名無しのゲーマー"
-        
-    .panel-body
-      %h2 
-        SCORE  #{review.score}
-    
-      - if review.body_good.present?
-        .alert.alert-success
-          %h3 Good
-          = simple_format review.body_good
+= render 'ads_google'
 
-      - if review.body_bad.present?
-        .alert.alert-danger
-          %h3 Bad
-          = simple_format review.body_bad
-
-      - if review.body_free.present?
-        .alert.alert-info
-          %h3 Comment
-          = simple_format review.body_free
-
+- if @game.reviews.any?
+  - @game.reviews.recent.each do |review|
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title= review.title
+      .panel-body
+        %h4
+          SCORE  #{review.score}
+        %span.date
+          = I18n.l(review.created_at)
+          written by #{ review.created_by.present? ? review.created_by : "名無しのカッパ" }
+        - if review.body_good.present?
+          .panel.panel-success
+            .panel-heading Good
+            .panel-body= simple_format review.body_good
+        - if review.body_bad.present?
+          .panel.panel-danger
+            .panel-heading Bad
+            .panel-body= simple_format review.body_bad
+        - if review.body_free.present?
+          .panel.panel-info
+            .panel-heading Comment
+            .panel-body= simple_format review.body_free
+- else
+  レビューはまだ投稿されていません。
+%br
+もしゲームのレビューを投稿していただければ幸いです。
+%br
+= link_to 'レビュー投稿', new_review_path(game_id: @game.id), class: 'btn btn-info'

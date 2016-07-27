@@ -8,31 +8,31 @@
     .form-group
       %label.col-sm-2.control-label 氏名(任意)
       .col-sm-5
-        = f.text_field :created_by, class: 'form-control'
+        = f.text_field :created_by, class: 'form-control', value: '名無しのカッパ'
     .form-group
       %label.col-sm-2.control-label 得点（0~100）
       .col-sm-5
-        = f.input_field :score, class: 'form-control'
+        = f.input_field :score, class: 'form-control', value: 50
     .form-group
       %label.col-sm-2.control-label ボリューム（1~5）
       .col-sm-5
-        = f.input_field :point_volume, as: :select, collection: [1,2,3,4,5], include_blank: false
+        = f.input_field :point_volume, as: :select, collection: [1,2,3,4,5], include_blank: false, selected: 3
     .form-group
       %label.col-sm-2.control-label グラフィック（1~5）
       .col-sm-5
-        = f.input_field :point_graphic, as: :select, collection: [1,2,3,4,5], include_blank: false
+        = f.input_field :point_graphic, as: :select, collection: [1,2,3,4,5], include_blank: false, selected: 3
     .form-group
       %label.col-sm-2.control-label サウンド（1~5）
       .col-sm-5
-        = f.input_field :point_sound, as: :select, collection: [1,2,3,4,5], include_blank: false
+        = f.input_field :point_sound, as: :select, collection: [1,2,3,4,5], include_blank: false, selected: 3
     .form-group
       %label.col-sm-2.control-label システムの快適さ（1~5）
       .col-sm-5
-        = f.input_field :point_system, as: :select, collection: [1,2,3,4,5], include_blank: false
+        = f.input_field :point_system, as: :select, collection: [1,2,3,4,5], include_blank: false, selected: 3
     .form-group
       %label.col-sm-2.control-label 満足度（1~5）
       .col-sm-5
-        = f.input_field :point_difficulty, as: :select, collection: [1,2,3,4,5], include_blank: false
+        = f.input_field :point_difficulty, as: :select, collection: [1,2,3,4,5], include_blank: false, selected: 3
     .form-group
       %label.col-sm-2.control-label タイトル
       .col-sm-5

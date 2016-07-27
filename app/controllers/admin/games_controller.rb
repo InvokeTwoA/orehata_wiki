@@ -28,6 +28,8 @@ class Admin::GamesController < Admin::ApplicationController
     params.require(:game).permit(
       :title,
       :asin,
+      :asin_mini,
+      :hard_type,
       :release_date,
       :pv_url,
       :total_score

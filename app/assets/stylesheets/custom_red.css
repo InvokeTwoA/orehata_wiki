@@ -1542,3 +1542,12 @@ pre.culd {
   margin-top: 10px
   margin-bottom: 10px
 }
+
+.review_list ul {
+  padding-top: 10px  
+}
+
+.review_list li {
+  margin: 1px;
+  list-style: none;
+}

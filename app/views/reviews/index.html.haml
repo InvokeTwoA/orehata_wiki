@@ -2,22 +2,24 @@
   = stylesheet_link_tag 'boot'
 
 %h1 レビュー一覧
-
 .main
   %table.table.table-striped.table-hover
     %tr
+      %th.center
       %th.center タイトル
-      %th.center サムネイル
       %th.center レビュー件数
       %th.center 平均点
-      %th.center
     - if @games.present?
       - @games.each do |game|
         %tr
-          %td.center= link_to game.title, game_reviews_path(game_id: game.id)
           %td.center
-            = game.asin.present? ? game.asin : 'なし'
+            = game.asin_mini.present? ? game.asin_mini.html_safe : ''
+          %td.center
+            %ul.review_list
+              %li= link_to game.title, game_reviews_path(game_id: game.id)
+              %li= game.release_date
+              %li= game.hard_type
           %td.center= game.reviews.count
           %td.center= game.average_point('score')
-          %td
-            = link_to 'レビュー投稿', new_review_path(game_id: game.id), class: 'btn btn-info'
+
+  = render 'ads_google'

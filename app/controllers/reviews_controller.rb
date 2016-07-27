@@ -23,13 +23,14 @@ class ReviewsController < ApplicationController
           polar: true,
           type: 'line'
         )
+      f.legend(enabled: false)
       f.title(
         text: "平均: #{@game.average_point('score')}点",
-        x: -80
+        align: 'center'
         )
       f.pane(size:'90%') 
       f.xAxis(
-        categories: ['ボリューム', 'グラフィック', 'サウンド', 'システムの快適さ', '満足度'],
+        categories: ['ボリューム', 'グラフィック', 'サウンド', '快適さ', '満足度'],
         tickmarkPlacement: 'on',
         lineWidth: 0
       )
@@ -39,9 +40,8 @@ class ReviewsController < ApplicationController
         min: 0
       )
       f.series({
-        name: 'Review',
         data: graph_data,
-        pointPlacement: 'on'
+        pointPlacement: 'on',
       })
     end
   end

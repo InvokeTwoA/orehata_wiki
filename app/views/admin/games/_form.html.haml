@@ -8,6 +8,10 @@
     .col-sm-5
       = f.text_field :asin, class: 'form-control'
   .form-group
+    %label.col-sm-2.control-label ASIN(mini)
+    .col-sm-5
+      = f.text_field :asin_mini, class: 'form-control'
+  .form-group
     %label.col-sm-2.control-label PV
     .col-sm-5
       = f.text_field :pv_url, class: 'form-control'
@@ -19,5 +23,9 @@
     %label.col-sm-2.control-label 発売日
     .col-sm-5
       = f.input_field :release_date, class: 'datepicker'
+  .form-group
+    %label.col-sm-2.control-label ハード
+    .col-sm-5
+      = f.input_field :hard_type, as: :select, collection: ['3DS','PS4','PSVita', 'Wii U', 'PS4/PSVita'], include_blank: false
   .form-group
     = f.submit '送信', class: 'btn btn-primary'

@@ -11,13 +11,17 @@
     %h3= @game.title
   .panel-body
     - if @game.asin.present?
-      %h3 商品画像
-      .center
-        = @game.asin.html_safe
+      .col-sm-5
+        .center
+          = @game.asin.html_safe
+      .col-sm-7
+        .review_graph
+          = high_chart("radar", @chart)
+    - else
+      .col-sm-12
+        .review_graph
+          = high_chart("radar", @chart)
     - if @game.pv_url.present?
       %h3 PV
       = @game.pv_url.html_safe
 
-    %h3 SCORE
-    .review_graph
-      = high_chart("radar", @chart)

@@ -1452,4 +1452,14 @@ module ApplicationHelper
     end
   end
 
+  # sidebarが必要な場合などは #content をつける 
+  def main_content_style
+    if controller_name == 'reviews' || controller_name == 'games'
+      'width: 100% !important;'
+    else
+      ''
+    end
+  end
+
+
 end
