@@ -13,11 +13,4 @@ class Review < ActiveRecord::Base
   validates :title, presence: true
   validates :score, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 100 }
 
-  after_create :increment_score
-
-  def increment_score
-    game.total_score += self.score
-    game.save!
-  end
-
 end

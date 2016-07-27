@@ -7,7 +7,7 @@
 #   t.timestamps
 # end
 class Game < ActiveRecord::Base
-  scope :recent, -> { order('id DESC') }
+  scope :recent, -> { order('release_date DESC') }
 
   has_many :reviews
 

@@ -37,7 +37,8 @@ class ReviewsController < ApplicationController
       f.yAxis(
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
-        min: 0
+        min: 0,
+        max: 5,
       )
       f.series({
         data: graph_data,

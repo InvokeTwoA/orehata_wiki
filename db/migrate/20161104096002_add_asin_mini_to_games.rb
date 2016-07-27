@@ -1,5 +1,5 @@
 class AddAsinMiniToGames < ActiveRecord::Migration
   def change
-    add_column :games, :asin_mini, :text
+    remove_column :games, :total_count
   end
 end                        
