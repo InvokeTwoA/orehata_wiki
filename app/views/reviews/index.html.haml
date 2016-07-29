@@ -17,8 +17,10 @@
           %td.center
             %ul.review_list
               %li= link_to game.title, game_reviews_path(game_id: game.id)
-              %li= game.release_date
-              %li= game.hard_type
+              %li
+                #{ I18n.l(game.release_date) }発売
+              %li
+                %span.label.label-info= game.hard_type
           %td.center= game.reviews.count
           %td.center= game.average_point('score')
 
