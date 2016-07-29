@@ -1557,3 +1557,22 @@ pre.culd {
   margin: 1px;
   list-style: none;
 }
+
+.reviews {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.reviews img {
+  vertical-align:middle; 
+  max-width:100%;
+
+  /* add */
+  height: auto;
+}
+
+@media all and (max-width: 599px) {
+  .reviews {
+    width: 100% !important;
+  }
+}

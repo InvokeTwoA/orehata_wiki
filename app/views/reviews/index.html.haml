@@ -2,26 +2,28 @@
   = stylesheet_link_tag 'boot'
 
 %h1 レビュー一覧
-.main
-  %table.table.table-striped.table-hover
-    %tr
-      %th.center
-      %th.center タイトル
-      %th.center レビュー件数
-      %th.center 平均点
-    - if @games.present?
-      - @games.each do |game|
-        %tr
-          %td.center
-            = game.asin_mini.present? ? game.asin_mini.html_safe : ''
-          %td.center
-            %ul.review_list
-              %li= link_to game.title, game_reviews_path(game_id: game.id)
-              %li
-                #{ I18n.l(game.release_date) }発売
-              %li
+
+.reviews
+  .scroll-table
+    %table{style: 'border: 0px !important;'}
+      %thead
+        %th.center
+        %th.center タイトル
+        %th.center 件数
+        %th.center 平均点
+      - if @games.present?
+        - @games.each do |game|
+          %tr
+            %td.center
+              = game.asin_mini.present? ? game.asin_mini.html_safe : ''
+            %td.center
+              .title= link_to game.title, game_reviews_path(game_id: game.id)
+              - if game.release_date.present?
+                .release_date
+                  #{ I18n.l(game.release_date) }発売
+              .hard_type
                 %span.label.label-info= game.hard_type
-          %td.center= game.reviews.count
-          %td.center= game.average_point('score')
+            %td.center= game.reviews.count
+            %td.center= game.average_point('score')
 
   = render 'ads_google'

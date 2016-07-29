@@ -1,36 +1,42 @@
 = content_for :header_tags do
   = stylesheet_link_tag 'boot'
 
-= render 'game_info', game: @game
+= link_to 'レビュー一覧へ', reviews_path
+/%br
+/※ 画像をクリックするとAmazon購入ページへと遷移します
 
-= render 'ads_google'
+.reviews
+  .scroll-table
+    = render 'game_info', game: @game
 
-- if @game.reviews.any?
-  - @game.reviews.recent.each do |review|
-    .panel.panel-default
-      .panel-heading
-        %h3.panel-title= review.title
-      .panel-body
-        %h4
-          SCORE  #{review.score}
-        %span.date
-          = I18n.l(review.created_at)
-          written by #{ review.created_by.present? ? review.created_by : "名無しのカッパ" }
-        - if review.body_good.present?
-          .panel.panel-success
-            .panel-heading Good
-            .panel-body= simple_format review.body_good
-        - if review.body_bad.present?
-          .panel.panel-danger
-            .panel-heading Bad
-            .panel-body= simple_format review.body_bad
-        - if review.body_free.present?
-          .panel.panel-info
-            .panel-heading Comment
-            .panel-body= simple_format review.body_free
-- else
-  レビューはまだ投稿されていません。
-%br
-もしゲームのレビューを投稿していただければ幸いです。
-%br
-= link_to 'レビュー投稿', new_review_path(game_id: @game.id), class: 'btn btn-info'
+    = render 'ads_google'
+
+    - if @game.reviews.any?
+      - @game.reviews.recent.each do |review|
+        .panel.panel-default.col-sm-12
+          .panel-heading
+            %h3.panel-title= review.title
+          .panel-body
+            %h4
+              SCORE  #{review.score}
+            %span.date
+              = I18n.l(review.created_at)
+              written by #{ review.created_by.present? ? review.created_by : "名無しのカッパ" }
+            - if review.body_good.present?
+              .panel.panel-success
+                .panel-heading Good
+                .panel-body= simple_format review.body_good
+            - if review.body_bad.present?
+              .panel.panel-danger
+                .panel-heading Bad
+                .panel-body= simple_format review.body_bad
+            - if review.body_free.present?
+              .panel.panel-info
+                .panel-heading Comment
+                .panel-body= simple_format review.body_free
+    - else
+      レビューはまだ投稿されていません。
+    %br
+    もしゲームのレビューを投稿していただければ幸いです。
+    %br
+    = link_to 'レビュー投稿', new_review_path(game_id: @game.id), class: 'btn btn-info'
