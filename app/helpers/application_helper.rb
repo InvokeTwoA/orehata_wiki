@@ -1392,8 +1392,10 @@ module ApplicationHelper
       return ['カルドセプト', 'リボルト', 'リボルド', '対戦', '攻略', '検索', 'データベース', '考察', 'まとめ', 'ブック', 'カード', '徹底', '徹底攻略', 'テクニック', 'コンボ']
     elsif controller_name == 'releases'
       return ['ゲーム', '発売日', 'PV', 'PS4', 'PSVita', '3DS', 'Wii U', 'もうすぐ', '一覧', 'プロモーション', 'CM']
-    else controller_name == 'reviews'
-      return ['ゲーム', 'レビュー', '評価', '一覧', 'PSVita', '3DS', 'Wii U', 'PS4', 'コメント', 'CM', '評判', '感想']
+    elsif controller_name == 'reviews' && action_name == 'index'
+      return ['ゲーム', 'レビュー', '評価', '一覧', 'PSVita', '3DS', 'Wii U', 'PS4', 'コメント', '評判', '感想']
+    elsif controller_name == 'reviews' && action_name == 'game'
+      return [@game.title, 'ゲーム', 'レビュー', '評価', @game.hard_type, 'コメント', '評判', '感想', '批評', 'review']
     end
 
     case params[:project_id]

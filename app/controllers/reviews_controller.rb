@@ -41,6 +41,7 @@ class ReviewsController < ApplicationController
         max: 5,
       )
       f.series({
+        type: 'area',
         data: graph_data,
         pointPlacement: 'on',
       })
