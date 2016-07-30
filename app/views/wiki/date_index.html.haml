@@ -1,3 +1,5 @@
+- content_for :header_tags do
+  %meta{ name: "robots", content: "noindex" }
 .contextual
   = watcher_link(@wiki, User.current)
 %h2= l(:label_index_by_date)

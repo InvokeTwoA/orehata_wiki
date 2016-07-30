@@ -1,3 +1,5 @@
+- content_for :header_tags do
+  %meta{ name: "robots", content: "noindex" }
 %h2= l(:label_search) 
 
 = form_tag({}, :method => :get, :id => 'search-form') do

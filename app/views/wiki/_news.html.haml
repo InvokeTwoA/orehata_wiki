@@ -21,16 +21,18 @@
 / 
 /= link_to '全て見る', project_activity_path(@page.project, show_wiki_edits: '1'), {ref: 'nofollow'}
 
-%h3 更新されたページ
+- if @page.present?
+  %h3 更新されたページ
 
-= link_to 'こちら', project_activity_path(@page.project, show_wiki_edits: '1'), {ref: 'nofollow'}
+  = link_to 'こちら', project_activity_path(@page.project, show_wiki_edits: '1'), {ref: 'nofollow'}
 
-%h3 新着コメント
+- if @project.present? && @page.present?
+  %h3 新着コメント
 
-%table
-  - WikiComment.where(project_id: @project.identifier).recent.limit(10).each do |wiki_comment|
-    %tr
-      %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: @page.project.identifier)
-      %td #{time_ago_in_words wiki_comment.created_at}前
+  %table
+    - WikiComment.where(project_id: @project.identifier).recent.limit(10).each do |wiki_comment|
+      %tr
+        %td= link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: @page.project.identifier)
+        %td #{time_ago_in_words wiki_comment.created_at}前
 
-= link_to '全てのコメント', wiki_comments_path(project_id: @page.project.identifier), {ref: 'nofollow'}
+  = link_to '全てのコメント', wiki_comments_path(project_id: @page.project.identifier), {ref: 'nofollow'}
