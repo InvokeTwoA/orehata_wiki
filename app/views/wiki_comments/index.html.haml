@@ -18,7 +18,7 @@
         .comment-header
           %span.page
             ページ:
-            = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: project_id)
+            = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: wiki_comment.project_id)
           %span.pull-right
             = I18n.l(wiki_comment.created_at)
             - if User.current.admin?
@@ -29,6 +29,6 @@
                 = link_to '有効にする', to_active_wiki_comment_path(wiki_comment), method: :put, class: 'btn btn-info'
               = link_to '削除する', wiki_comment_path(wiki_comment), method: :delete
         .body
-          =wiki_comment.body
+          = simple_format wiki_comment.body
 %div{style: 'text-align:center;'}
   = paginate @wiki_comments, params: {controller: 'wiki_comments', action: 'index', project_id: project_id}, rel: "nofollows"

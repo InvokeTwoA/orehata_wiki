@@ -6,7 +6,7 @@ class WikiComment < ActiveRecord::Base
 
 
   def self.is_correct_word?(word)
-    word.match(/Hello\!/).nil? && word.match(/香川県ルー餃子/).nil?
+    word.match(/Hello\!/).nil? && word.match(/香川県ルー餃子/).nil? && word.match(/フジフーヅ/).nil?
   end
 
 end
