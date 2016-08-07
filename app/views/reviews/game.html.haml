@@ -1,8 +1,9 @@
 = content_for :header_tags do
   = javascript_include_tag 'reviews'
   = stylesheet_link_tag 'boot'
-- content_for :sidebar do
-  = render partial: 'layouts/menu_bar'
+- if request.mobile? || request.smart_phone?
+  - content_for :sidebar do
+    = render partial: 'layouts/menu_bar'
 
 = link_to 'レビュー一覧へ', reviews_path
 /%br

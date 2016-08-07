@@ -1,7 +1,8 @@
 = content_for :header_tags do
   = stylesheet_link_tag 'boot'
-- content_for :sidebar do
-  = render partial: 'layouts/menu_bar'
+- if request.mobile? || request.smart_phone?
+  - content_for :sidebar do
+    = render partial: 'layouts/menu_bar'
 
 %h1 ゲーム発売日一覧
 
