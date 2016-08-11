@@ -18,7 +18,10 @@
         .comment-header
           %span.page
             ページ:
-            = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: wiki_comment.project_id)
+            - if wiki_comment.project_id == 'releases'
+              = link_to wiki_comment.page, releases_path
+            - else
+              = link_to wiki_comment.page, project_wiki_page_path(wiki_comment.page, project_id: wiki_comment.project_id)
           %span.pull-right
             = I18n.l(wiki_comment.created_at)
             - if User.current.admin?
