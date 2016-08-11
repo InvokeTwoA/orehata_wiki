@@ -1580,3 +1580,7 @@ pre.culd {
 .ads_google {
   width: 100%;
 }
+
+#wiki-comments {
+  word-break: break-all;
+}
