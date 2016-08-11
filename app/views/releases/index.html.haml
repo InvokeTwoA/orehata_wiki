@@ -32,3 +32,23 @@
           = release.asin.html_safe if release.asin.present?
         %td.center= release.youtube_pv.html_safe if release.youtube_pv.present?
 
+%h2 コメント
+
+= simple_form_for WikiComment.new do |f|
+  .form-group
+    %label.col-sm-2.control-label 内容
+    .col
+      = f.input_field :body, class: 'wiki_comment_text_area'
+  .form-actions
+    = f.hidden_field :page, value: '発売日一覧'
+    = f.hidden_field :project_id, value: 'releases'
+    = f.submit 'コメント', class: 'wiki_comment_submit'
+- if WikiComment.where(project_id: 'releases').any?
+  %h2 コメント 一覧
+  %table
+    - comments = WikiComment.where(project_id: 'releases').recent.page(params[:kaminari_page]).per(10)
+    - params[:project_id] = 'releases'
+    - params[:id] = '発売日一覧'
+    #comments
+      = render("/wiki_comments/list", comments: comments)
+
