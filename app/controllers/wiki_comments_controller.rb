@@ -60,5 +60,8 @@ class WikiCommentsController < ApplicationController
     unless WikiComment.is_correct_word?(params[:wiki_comment][:body])
       return redirect_to :back, alert: 'コメントにNGワードが含まれていたため投稿できませんでした。'
     end
+    unless WikiComment.is_not_spam?(params[:wiki_comment][:body])
+      return redirect_to :back, alert: '半角だけのコメントはできません。'
+    end
   end
 end

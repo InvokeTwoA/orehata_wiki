@@ -9,4 +9,11 @@ class WikiComment < ActiveRecord::Base
     word.match(/Hello\!|香川県ルー|フジフーヅ|FyLitCl7Pf7kjQdDUOLQOuaxTXbj5iNG/).nil?
   end
 
+  # 半角だけのコメントだとスパムと判定
+  # 全角が少しでも混じっていればtrueが返る
+  def self.is_not_spam?(word)
+    word =~ /[^ -~。-゜]/
+  end
+
+
 end
