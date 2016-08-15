@@ -13,7 +13,7 @@ class WikiComment < ActiveRecord::Base
   # 全角が少しでも混じっていればtrueが返る
   def self.is_not_spam?(word)
     jp_length = word.gsub(/[a-zA-Z0-9]/, "").to_s.split(//).size
-    body_length = body.split(//).size
+    body_length = word.split(//).size
     par = 90
     if body_length * ( par / 100 )  < jp_length
       return false
