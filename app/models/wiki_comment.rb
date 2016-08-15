@@ -10,12 +10,12 @@ class WikiComment < ActiveRecord::Base
   end
 
   # 半角文字の割合が多いとスパムと判定
-  # perより多い割合の全角文字がなければ却下
+  # per%より多い割合の全角文字があればok
   def self.is_not_spam?(word)
     jp_length = word.gsub(/[a-zA-Z0-9]/, "").to_s.split(//).size
     body_length = word.split(//).size
-    par = 90.0
-    if body_length * ( par / 100.0 )  < jp_length
+    per = 20.0
+    if body_length * ( per / 100.0 )  < jp_length
       return true
     else 
       return false
