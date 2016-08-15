@@ -13,7 +13,7 @@ class WikiCommentsController < ApplicationController
 
   def create
     return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
-    # return redirect_to :back, alert: '現在、スパムコメントを防ぐためコメント機能を停止中です'
+    return redirect_to :back, alert: '現在、スパムコメントを防ぐためコメント機能を停止中です'
 
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
