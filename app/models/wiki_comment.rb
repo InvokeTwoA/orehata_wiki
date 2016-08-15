@@ -9,13 +9,13 @@ class WikiComment < ActiveRecord::Base
     word.match(/Hello\!|香川県ルー|フジフーヅ|FyLitCl7Pf7kjQdDUOLQOuaxTXbj5iNG/).nil?
   end
 
-  # 半角だけのコメントだとスパムと判定
-  # 全角が少しでも混じっていればtrueが返る
+  # 半角文字の割合が多いとスパムと判定
+  # perより多い割合の全角文字がなければ却下
   def self.is_not_spam?(word)
     jp_length = word.gsub(/[a-zA-Z0-9]/, "").to_s.split(//).size
     body_length = word.split(//).size
-    par = 90
-    if body_length * ( par / 100 )  < jp_length
+    par = 90.0
+    if body_length * ( par / 100.0 )  < jp_length
       return true
     else 
       return false
