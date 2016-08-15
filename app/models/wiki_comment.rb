@@ -12,7 +12,7 @@ class WikiComment < ActiveRecord::Base
   # 半角だけのコメントだとスパムと判定
   # 全角が少しでも混じっていればtrueが返る
   def self.is_not_spam?(word)
-    word =~ /[^ -~。-゜]/
+    word.gsub(/(\r\n|\r|\n)/, "") =~ /[^ -~。-゜]/
   end
 
 
