@@ -13,6 +13,7 @@ class WikiCommentsController < ApplicationController
 
   def create
     return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
+    return redirect_to :back, alert: '現在、スパムコメントを防ぐためコメント機能を停止中です'
 
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
@@ -61,7 +62,7 @@ class WikiCommentsController < ApplicationController
       return redirect_to :back, alert: 'コメントにNGワードが含まれていたため投稿できませんでした。'
     end
     unless WikiComment.is_not_spam?(params[:wiki_comment][:body])
-      return redirect_to :back, alert: '半角だけのコメントはできません。'
+      return redirect_to :back, alert: 'スパムコメントを防ぐため半角文字の割合が多い投稿はブロクしております。申し訳ありませんが内容を修正の上、再度コメントしていただけましたら幸いです'
     end
   end
 end
