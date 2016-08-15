@@ -16,9 +16,9 @@ class WikiComment < ActiveRecord::Base
     body_length = word.split(//).size
     par = 90
     if body_length * ( par / 100 )  < jp_length
-      return false
-    else 
       return true
+    else 
+      return false
     end
   end
 end
