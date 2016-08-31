@@ -4,7 +4,19 @@
   - content_for :sidebar do
     = render partial: 'layouts/menu_bar'
 
-%h1 攻略タイトル一覧
+%h1 攻略タイトル一覧(アプリ)
+
+.reviews
+  .scroll-table
+    %table.table.table-striped.table-hover
+      %tr
+        %th.center タイトル
+        %th.center 発売日
+      %tr
+        %td.center= link_to 'ハースストーン', game_wiki_path(project_id: 'hearth_stone', id: 'top')
+        %td.center 2014/3/11
+
+%h1 攻略タイトル一覧(PS4, PSVita, 3DS)
 
 .reviews
   .scroll-table
