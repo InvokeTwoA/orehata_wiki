@@ -62,7 +62,7 @@ class WikiCommentsController < ApplicationController
       return redirect_to :back, alert: 'コメントにNGワードが含まれていたため投稿できませんでした。'
     end
     unless WikiComment.is_not_spam?(params[:wiki_comment][:body])
-      return redirect_to :back, alert: 'スパムコメントを防ぐため半角文字の割合が多い投稿はブロクしております。申し訳ありませんが内容を修正の上、再度コメントしていただけましたら幸いです'
+      return redirect_to :back, :status => 500, alert: 'スパムコメントを防ぐため半角文字の割合が多い投稿はブロクしております。申し訳ありませんが内容を修正の上、再度コメントしていただけましたら幸いです'
     end
   end
 end
