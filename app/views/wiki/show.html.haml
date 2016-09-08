@@ -50,9 +50,8 @@
 
 = render 'ads_google'
 
-%h2 コメント
-
 - unless @project.identifier == 'culdcept'
+  %h2 コメント
   = simple_form_for WikiComment.new do |f|
     .form-group
       %label.col-sm-2.control-label 内容
