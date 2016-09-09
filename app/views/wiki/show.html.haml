@@ -50,7 +50,7 @@
 
 = render 'ads_google'
 
-- unless @project.identifier == 'culdcept'
+- unless (@project.identifier == 'culdcept' && @page.title == 'Top')
   %h2 コメント
   = simple_form_for WikiComment.new do |f|
     .form-group
