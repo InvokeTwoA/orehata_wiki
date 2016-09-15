@@ -1584,3 +1584,14 @@ pre.culd {
 #wiki-comments {
   word-break: break-all;
 }
+
+div.wiki ul.toc {
+  padding: 4px;
+  line-height: 1.2em;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  margin-left: 0;
+  display: table;
+  border: 1px solid #aaa;
+  background-color: #f9f9f9;
+}
