@@ -1340,8 +1340,9 @@ module ApplicationHelper
     return link_to "世界一長い５分間　徹底攻略wiki",         root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == '5min'
     return link_to "ハースストーン　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'hearth_stone'
     return link_to "かっぱクエスト　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'kappa_quest'
+    return link_to "誰が勇者を殺したか　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'dare_yuusha'
+    return link_to "エリエットクエスト　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'erietto'
     return link_to "カッパの徹底攻略wiki",  games_path if controller_name == 'games' || controller_name == 'releases'
-
 
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
@@ -1360,6 +1361,10 @@ module ApplicationHelper
       link_to "ハースストーン　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'kappa_quest' then
       link_to "かっぱクエスト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'dare_yuusha' then
+      link_to "誰が勇者を殺したか　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'erietto' then
+      link_to "エリエットクエスト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     else
       link_to '俺に働けって言われても　酉　徹底攻略wiki', home_path
     end
@@ -1392,6 +1397,10 @@ module ApplicationHelper
       'ハースストーン の攻略wikiです。デッキの組み方や対戦の考察、カード情報をまとめてます。'
     when 'kappa_quest' then
       'かっぱクエスト の攻略wikiです。効率の良い稼ぎ方や、攻略情報をまとめてます。'
+    when 'dare_yuusha' then
+      '誰が勇者を殺したか の攻略wikiです。エンディング一覧や攻略情報をまとめてます。'
+    when 'erietto' then
+      'エリエットクエスト の攻略wikiです。効率の良い稼ぎ方や、攻略情報をまとめてます。'
     else
       '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     end
@@ -1427,6 +1436,10 @@ module ApplicationHelper
       ['ハースストーン', '攻略', 'wiki', '稼ぎ', 'hearth', 'stone', 'まとめ', 'カード', '評価','徹底', '徹底攻略']
     when 'kappa_quest' then
       ['かっぱクエスト', '攻略', 'wiki', '稼ぎ', 'かっぱ', 'クエスト', 'カッパクエスト', 'かっぱくえすと','まとめ', '徹底', '徹底攻略']
+    when 'erietto' then
+      ['エリエットクエスト', '攻略', 'wiki', '稼ぎ', 'エリエット', 'エンディング', 'クリスタル','まとめ', '徹底', '徹底攻略']
+    when 'dare_yuusha' then
+      ['誰が勇者を殺したか', '攻略', 'wiki', 'ネタバレ', 'フローチャート', 'エンディング','まとめ', '徹底', '徹底攻略']
     else
       ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
     end
@@ -1455,6 +1468,10 @@ module ApplicationHelper
       'ハースストーン　徹底攻略wiki'
     when 'kappa_quest' then
       'かっぱクエスト　徹底攻略wiki'
+    when 'dare_yuusha' then
+      '誰が勇者を殺したか　徹底攻略wiki'
+    when 'erietto' then
+      'エリエットクエスト　徹底攻略wiki'
     else
       'カッパの徹底攻略wiki'
     end
