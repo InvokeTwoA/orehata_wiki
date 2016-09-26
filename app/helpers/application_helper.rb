@@ -1342,6 +1342,7 @@ module ApplicationHelper
     return link_to "かっぱクエスト　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'kappa_quest'
     return link_to "誰が勇者を殺したか　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'dare_yuusha'
     return link_to "エリエットクエスト　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'erietto'
+    return link_to "元カノは友達だから問題ない　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'motokano'
     return link_to "カッパの徹底攻略wiki",  games_path if controller_name == 'games' || controller_name == 'releases'
 
     case params[:project_id]
@@ -1365,6 +1366,8 @@ module ApplicationHelper
       link_to "誰が勇者を殺したか　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'erietto' then
       link_to "エリエットクエスト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'motokano' then
+      link_to "元カノは友達だから問題ない　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     else
       link_to '俺に働けって言われても　酉　徹底攻略wiki', home_path
     end
@@ -1401,6 +1404,8 @@ module ApplicationHelper
       '誰が勇者を殺したか の攻略wikiです。エンディング一覧や攻略情報をまとめてます。'
     when 'erietto' then
       'エリエットクエスト の攻略wikiです。効率の良い稼ぎ方や、攻略情報をまとめてます。'
+    when 'motokano' then
+      '元カノは友達だから問題ない の攻略wikiです。真エンディングの条件などまとまってます。'
     else
       '俺に働けって言われても酉　の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     end
@@ -1440,6 +1445,8 @@ module ApplicationHelper
       ['エリエットクエスト', '攻略', 'wiki', '稼ぎ', 'エリエット', 'エンディング', 'クリスタル','まとめ', '徹底', '徹底攻略']
     when 'dare_yuusha' then
       ['誰が勇者を殺したか', '攻略', 'wiki', 'ネタバレ', 'フローチャート', 'エンディング','まとめ', '徹底', '徹底攻略']
+    when 'motokano' then
+      ['元カノは友達だから問題ない', '攻略', 'wiki', 'ネタバレ', 'フローチャート', 'エンディング','まとめ', '徹底', '徹底攻略']
     else
       ['俺に働けって言われても', '酉', '攻略', 'wiki', '俺働', '考察', '稼ぎ', '俺働酉', '俺に働けと言われても', 'おれはた', '俺に働けって言われても酉', 'まとめ', '考察', '徹底', '徹底攻略']
     end
@@ -1472,6 +1479,8 @@ module ApplicationHelper
       '誰が勇者を殺したか　徹底攻略wiki'
     when 'erietto' then
       'エリエットクエスト　徹底攻略wiki'
+    when 'motokano' then
+      '元カノは友達だから問題ない　徹底攻略wiki'
     else
       'カッパの徹底攻略wiki'
     end
