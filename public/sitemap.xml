@@ -7,11 +7,19 @@
   <priority>1.0</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/search</loc>
+  <priority>0.8</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/releases</loc>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/top</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/top</loc>
   <priority>0.8</priority>
 </url>
 <url>
@@ -45,6 +53,10 @@
 <url>
   <loc>http://www.orehata-wiki.xyz/game/orehata_tori/wiki/top</loc>
   <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/search</loc>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F</loc>
@@ -195,6 +207,46 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/projects/motokano/search</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/%E6%8E%B2%E7%A4%BA%E6%9D%BF</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/%E6%94%BB%E7%95%A5%E3%81%AE%E5%9F%BA%E6%9C%AC</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E6%9D%A1%E4%BB%B6</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/%E4%BB%8A%E3%82%AB%E3%83%8E</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/%E5%85%83%E3%82%AB%E3%83%8E</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/%E4%BF%BA</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/motokano/wiki/Sidebar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/attachments/wiki_pages/959/edit</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/5min/search</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/5min/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F</loc>
   <priority>0.7</priority>
 </url>
@@ -259,6 +311,10 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/projects/ys8/search</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/ys8/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F</loc>
   <priority>0.7</priority>
 </url>
@@ -300,6 +356,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/ys8/wiki/%E9%96%A2%E9%80%A3%E5%95%86%E5%93%81</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -691,27 +751,19 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%A2%E3%83%96</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%96%E3%83%83%E3%82%AF%E6%9E%9A%E6%95%B0%E6%B8%9B%E3%82%89%E3%81%97%E3%83%96%E3%83%83%E3%82%AF</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%91%E3%83%88%E3%83%AD%E3%83%8A%E3%82%B9</loc>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%AA%E3%83%B3%E3%82%AB%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%AC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%89%E3%83%95%E3%82%A1%E3%83%AD%E3%82%B9</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%89%E3%83%9F%E3%83%8A%E3%83%B3%E3%83%88%E3%82%B0%E3%83%AD%E3%83%BC%E3%82%B9</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%87%E3%83%A5%E3%83%BC%E3%82%AF</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%A4%E3%83%89</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -724,6 +776,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/Direct%E7%AC%AC%EF%BC%92%E5%BC%BE%E3%81%AE%E6%83%85%E5%A0%B1%E3%81%BE%E3%81%A8%E3%82%81</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/refrain/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -871,6 +927,10 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/projects/healer/search</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/healer/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0</loc>
   <priority>0.7</priority>
 </url>
@@ -892,6 +952,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/healer/wiki/TRIAL_%E3%83%A2%E3%83%BC%E3%83%89</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/cl_dungeon_sengoku/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -1031,6 +1095,10 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/projects/erietto/search</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/erietto/wiki/%E6%8E%B2%E7%A4%BA%E6%9D%BF</loc>
   <priority>0.7</priority>
 </url>
@@ -1060,6 +1128,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/erietto/wiki/Sidebar</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/projects/orehata_tori/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -2615,6 +2687,10 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%89%E3%83%9F%E3%83%8A%E3%83%B3%E3%83%88%E3%82%B0%E3%83%AD%E3%83%BC%E3%82%B9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B0%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%9C%E3%83%87%E3%82%A3</loc>
   <priority>0.6</priority>
 </url>
@@ -2832,6 +2908,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%90%E3%82%A4%E3%83%AD%E3%82%AF%E3%83%AB%E3%82%B9?parent=%E5%B7%BB%E7%89%A9%E3%82%92%E8%80%83%E5%AF%9F</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A4%E3%83%89</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3183,6 +3263,10 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%89%E3%83%95%E3%82%A1%E3%83%AD%E3%82%B9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AA%E3%83%93%E3%83%B3%E3%82%B0%E3%83%9C%E3%83%A0</loc>
   <priority>0.6</priority>
 </url>
@@ -3232,10 +3316,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B7%E3%83%A3%E3%83%A9%E3%82%B6%E3%83%BC%E3%83%89</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%A2%E3%83%96</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3519,6 +3599,10 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%87%E3%83%A5%E3%83%BC%E3%82%AF</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%9E%E3%83%B3</loc>
   <priority>0.6</priority>
 </url>
@@ -3699,19 +3783,11 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A4%E3%83%BC%E3%82%B0%E3%83%AB%E3%83%AC%E3%82%A4%E3%83%94%E3%82%A2</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%A2%E3%82%A2</loc>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E3%83%87%E3%83%B3%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%B3%E3%83%BC%E3%82%B6%E3%83%BC</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3747,23 +3823,11 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AB%E3%82%B1%E3%83%BC%E3%83%97</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%BC%E3%83%A9%E3%83%81%E3%83%B3%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%BC</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%BC</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%96</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%BC</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3843,35 +3907,7 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%9E%E3%82%B8%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%BC%E3%83%97</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AD%E3%83%B3%E3%82%B0%E3%83%A9%E3%82%A4%E3%83%B3</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AB%E3%82%A8%E3%83%B3%E3%82%B9</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%96%E3%83%AC%E3%82%A4%E3%82%BA%E3%82%B9%E3%83%97%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%9B%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89%EF%BC%96</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%B7%E3%83%95%E3%83%88</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3883,10 +3919,6 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AA%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%82%B9%E3%83%86%E3%83%AD%E3%82%A4%E3%83%89</loc>
   <priority>0.6</priority>
 </url>
@@ -3895,43 +3927,51 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AC%E3%82%A4%E3%82%AA%E3%83%96%E3%83%91%E3%83%BC%E3%82%B8</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%A0</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%AA%E3%83%96%E3%83%AA%E3%82%BF%E3%83%AC%E3%83%BC%E3%83%88</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%B7%B4%E7%BF%92%E3%81%A0%E3%81%9E%EF%BC%81</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%B3</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF?parent=%E3%82%B5%E3%82%A4%E3%82%AF</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%A5%9E%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6?parent=%E3%83%86%E3%83%8D%E3%83%83%E3%83%88</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AA%E3%82%AD%E3%83%83%E3%83%89%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%94%B7%E3%81%AE%E4%BB%BB%E5%8B%99?parent=%E3%83%8A%E3%82%A4%E3%83%88%E3%83%9B%E3%83%BC%E3%82%AF</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%96%E3%83%A9%E3%82%B9%E3%83%88%E3%83%88%E3%83%A9%E3%83%83%E3%83%97</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%94%B7%E3%81%AE%E4%BB%81%E7%BE%A9?parent=%E3%83%8A%E3%82%A4%E3%83%88%E3%83%9B%E3%83%BC%E3%82%AF</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%89%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B8%E3%83%AB</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E6%98%8E%E9%8F%A1%E6%AD%A2%E6%B0%B4?parent=%E3%82%BD%E3%83%A0%E3%83%8B%E3%82%A2</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%83%BC%E3%82%BA</loc>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%A1%E3%82%B4%E3%82%B9%E3%81%AE%E8%81%96%E5%85%B8?parent=%E3%82%BD%E3%83%A0%E3%83%8B%E3%82%A2</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E5%B9%B3%E7%A9%8F%E3%81%AA%E9%97%87%E5%A4%9C</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E5%B9%B3%E5%92%8C%E3%81%AE%E8%AA%93%E3%81%84</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E5%AE%9F%E7%B8%BE46%E3%80%80%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%8F%E3%82%A4%E3%83%96%E8%BB%8D%E5%9B%A3</loc>
   <priority>0.6</priority>
 </url>
 
