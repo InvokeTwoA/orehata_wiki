@@ -1,7 +1,7 @@
 %h3 更新されたページ
 
 #activity
- - i = 0
+- i = 0
 - @events_by_day.keys.sort.reverse.each do |day|
   - break if i > 10
   /- date = day == User.current.today ? l(:label_today).titleize : format_date(day)
