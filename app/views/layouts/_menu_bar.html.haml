@@ -8,6 +8,10 @@
   - if params[:project_id] == 'culdcept' || controller_name == 'culdcepts'
     %li= link_to 'カード検索', culdcepts_path
   %span.pull-right{style: 'padding-right: 15px;'}
-    = link_to 'ツィート', 'https://twitter.com/share', class: 'twitter-share-button', data: { url: request.url, text: wiki_og_title, lang: "ja" }
+    - if html_title.gsub(/Redmine/, '').present?
+      - title =  html_title.gsub(/Redmine/, '')
+    - else
+      - title = wiki_og_title
+    = link_to 'ツィート', 'https://twitter.com/share', class: 'twitter-share-button', data: { url: request.url, text: title, lang: "ja" }
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
