@@ -508,6 +508,7 @@ module ApplicationHelper
     else
       @html_title ||= []
       @html_title += args
+      @html_title = html_origin_title if @html_title.blank?
     end
   end
 
