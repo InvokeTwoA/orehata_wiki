@@ -5,7 +5,10 @@
     %meta{ name: "google-site-verification", content: "8AghetCaAVHVIWGfv00VWktBPymY8k97E2fPaWs5Rkc"} 
     %title
       - @web_title = html_title.gsub(/Redmine/, '')
-      = @web_title
+      - if @web_title.present?
+        = @web_title
+      - else
+        = @web_title = html_origin_title
     = render partial: 'layouts/meta_tags'
     = render partial: 'layouts/header_ads'
     = csrf_meta_tag
