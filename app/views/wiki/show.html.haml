@@ -52,6 +52,9 @@
 
 - unless (@project.identifier == 'culdcept' && @page.title == 'Top')
   %h2 コメント
+  %pre
+    [[ページ名]]　　と書けばリンクになります。
+  %br
   = simple_form_for WikiComment.new do |f|
     .form-group
       %label.col-sm-2.control-label 内容
