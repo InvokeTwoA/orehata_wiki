@@ -52,8 +52,6 @@
 
 - unless (@project.identifier == 'culdcept' && @page.title == 'Top')
   %h2 コメント
-  %pre
-    [[ページ名]]　　と書けばリンクになります。
   %br
   = simple_form_for WikiComment.new do |f|
     .form-group
@@ -64,6 +62,9 @@
       = f.hidden_field :page, value: params[:id]
       = f.hidden_field :project_id, value: @project.identifier
       = f.submit 'コメント', class: 'wiki_comment_submit'
+  %div.wiki
+    %pre
+      [[ページ名]]　　と書けばリンクになります。
 - if WikiComment.where(page: params[:id]).any? || params[:id] == 'Wiki'
   %h2 コメント 一覧
   %table
