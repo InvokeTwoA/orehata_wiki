@@ -82,4 +82,11 @@
 /- content_for :right_sidebar do
 /  = render :partial => 'right_sidebar'
 - html_title @page.pretty_title
-
+%br
+%br
+%h3
+  最近発売のゲームタイトル
+- releases = Release.active.recent.limit(2)
+- releases.each do |release|
+  = release.asin.html_safe if release.asin.present?
+  %br
