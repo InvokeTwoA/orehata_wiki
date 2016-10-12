@@ -13,7 +13,7 @@
 %br
 %h3
   最近発売のゲームタイトル
-- releases = Release.recent.limit(2)
+- releases = Release.active.recent.limit(2)
 - releases.each do |release|
   = release.asin.html_safe if release.asin.present?
   %br
