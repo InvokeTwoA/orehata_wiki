@@ -7,10 +7,6 @@
   <priority>1.0</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/search</loc>
-  <priority>0.8</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/releases</loc>
   <priority>0.8</priority>
 </url>
@@ -55,11 +51,11 @@
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/search</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F</loc>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -71,6 +67,14 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.7</priority>
 </url>
@@ -79,7 +83,15 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%94%BB%E7%95%A5%E3%81%AE%E3%82%AA%E3%82%B9%E3%82%B9%E3%83%A1%E6%89%8B%E9%A0%86</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%AE%E5%9F%BA%E6%9C%AC</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -92,6 +104,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A712%E5%8B%9D%E3%81%97%E3%81%9F%E3%83%87%E3%83%83%E3%82%AD</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%92%E3%83%AD%E3%82%A4%E3%83%83%E3%82%AF%E9%85%92%E5%A0%B4%E3%81%AE%E5%96%A7%E5%98%A9</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -183,31 +199,11 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/wiki/%E6%9C%80%E5%BC%B7%E3%81%AE%E3%83%88%E3%83%AA%E3%82%AA</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/wiki/%E5%9F%8B%E7%8A%B6%E3%81%AE%E6%9A%97%E6%AE%BA%E8%80%85</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/wiki/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E9%95%B7%E5%BC%93</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/wiki/%E5%A4%A7%E3%81%84%E3%81%AA%E3%82%8B%E8%A7%A3%E5%91%AA</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/wiki/%E7%8D%B0%E7%8C%9B</loc>
+  <loc>http://www.orehata-wiki.xyz/projects/hearth_stone/wiki/%E7%AA%81%E6%92%83</loc>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/attachments/wiki_pages/857/edit</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/motokano/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -240,10 +236,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/attachments/wiki_pages/959/edit</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/5min/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -311,7 +303,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/ys8/search</loc>
+  <loc>http://www.orehata-wiki.xyz/game/5min/wiki/Sandbox</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -359,7 +351,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/search</loc>
+  <loc>http://www.orehata-wiki.xyz/game/ys8/wiki/Sandbox?parent=Top</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -751,19 +743,23 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%A2%E3%83%96</loc>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%AF%E3%82%A4%E3%83%B3%E3%83%86%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B9</loc>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%96%E3%83%83%E3%82%AF%E6%9E%9A%E6%95%B0%E6%B8%9B%E3%82%89%E3%81%97%E3%83%96%E3%83%83%E3%82%AF</loc>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E3%82%B8%E3%82%BE%E3%82%A6</loc>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%91%E3%83%88%E3%83%AD%E3%83%8A%E3%82%B9</loc>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%82%A4%E3%82%B8</loc>
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E3%83%AA%E3%83%B3%E3%82%AB%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</loc>
+  <loc>http://www.orehata-wiki.xyz/projects/culdcept/wiki/%E7%9C%A0%E3%82%8C%E3%82%8B%E7%A5%9E%E3%80%85%E3%81%A7%E9%96%8B%E6%94%BE%E3%81%95%E3%82%8C%E3%82%8B%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/Sandbox</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -771,15 +767,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%9C%A0%E3%82%8C%E3%82%8B%E7%A5%9E%E3%80%85%E3%81%A7%E9%96%8B%E6%94%BE%E3%81%95%E3%82%8C%E3%82%8B%E3%82%AB%E3%83%BC%E3%83%89</loc>
-  <priority>0.7</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/Direct%E7%AC%AC%EF%BC%92%E5%BC%BE%E3%81%AE%E6%83%85%E5%A0%B1%E3%81%BE%E3%81%A8%E3%82%81</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/refrain/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -927,7 +915,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/healer/search</loc>
+  <loc>http://www.orehata-wiki.xyz/game/refrain/wiki/Sandbox</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -952,10 +940,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/healer/wiki/TRIAL_%E3%83%A2%E3%83%BC%E3%83%89</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/cl_dungeon_sengoku/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -1095,7 +1079,7 @@
   <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/projects/erietto/search</loc>
+  <loc>http://www.orehata-wiki.xyz/game/cl_dungeon_sengoku/wiki/Sandbox</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -1128,10 +1112,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/erietto/wiki/Sidebar</loc>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/projects/orehata_tori/search</loc>
   <priority>0.7</priority>
 </url>
 <url>
@@ -1503,8 +1483,36 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/orehata_tori/wiki/Sandbox</loc>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/attachments/wiki_pages/3/edit</loc>
   <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B2%A9%E7%A9%BF%E3%81%A1%E3%81%AE%E6%AD%A6%E5%99%A8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%BF%E3%82%B9%E3%82%AB%E3%83%BC%E3%81%AE%E3%83%88%E3%83%BC%E3%83%86%E3%83%A0%E5%B8%AB</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%8D%92%E9%87%8E%E3%81%AE%E5%91%BC%E3%81%B3%E5%A3%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%AD%A2%E3%82%81%E3%81%AE%E4%B8%80%E6%92%83</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%AC%BC%E8%BB%8D%E6%9B%B9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B8%8C%E6%9C%9B%E3%81%AE%E7%B5%82%E7%84%89%E3%83%A8%E3%82%B0%EF%BC%9D%E3%82%B5%E3%83%AD%E3%83%B3</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%94%9F%E3%81%AE%E8%8B%A6%E6%82%A9?parent=%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF</loc>
@@ -1527,7 +1535,7 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/AOE?parent=%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/AOE</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1575,7 +1583,11 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B1%B1%E3%81%AE%E5%B7%A8%E4%BA%BA?parent=%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B1%B1%E3%81%AE%E5%B7%A8%E4%BA%BA</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%9F%E3%83%83%E3%83%89%E3%83%8A%E3%82%A4%E3%83%88%E3%83%BB%E3%83%89%E3%83%AC%E3%82%A4%E3%82%AF?parent=%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1595,11 +1607,15 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/OTK</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%82%8E%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%97</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8?parent=%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%89%E3%82%A5%E3%83%BC%E3%83%A0%E3%82%AC%E3%83%BC%E3%83%89?parent=%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/OTK</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1607,7 +1623,7 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%BD%B1%E9%9A%A0%E3%82%8C?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%BD%B1%E9%9A%A0%E3%82%8C</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1615,7 +1631,115 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%AD%BB%E8%A7%92%E3%81%8B%E3%82%89%E3%81%AE%E4%B8%80%E6%92%83?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%88%9D%E7%B4%9A%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%AD%94%E5%8A%9B%E3%81%AE%E5%B7%A8%E4%BA%BA</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%AD%BB%E8%A7%92%E3%81%8B%E3%82%89%E3%81%AE%E4%B8%80%E5%88%BA%E3%81%97</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%AE%B5%E5%8F%96%E3%82%8A</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%80%80%E6%95%A3?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%80%83%E3%81%92%E8%B6%B3?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%9B%86%E5%90%88%E3%81%AE%E5%90%88%E5%9B%B3</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%87%B4%E6%AD%BB%E6%AF%92?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%98%8F%E5%80%92?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%85%B9%E8%A3%82%E3%81%8D?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%89%E3%82%B9?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%A3%8F%E5%88%87%E3%82%8A</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%BD%B1%E3%81%AE%E4%B8%80%E9%96%83?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%8A%E3%82%A4%E3%83%95%E3%81%AE%E9%9B%A8?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%9A%97%E6%AE%BA?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%85%B8%E6%80%A7%E3%82%A6%E3%83%BC%E3%82%BA?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B9%B3%E7%AD%89?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%B1%BA%E9%97%98%E3%81%AE%E5%9C%B0?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E4%B9%B1%E9%97%98?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%89%E3%82%B9%E3%83%A9%E3%83%A0?parent=%E5%B7%A8%E4%BA%BA%E9%9B%86%E5%90%88%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%96%E3%83%A9%E3%83%83%E3%83%89%E3%83%A1%E3%82%A4%E3%82%B8%E3%83%BB%E3%82%B5%E3%83%AB%E3%83%8E%E3%82%B9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B3%E3%83%9C%E3%83%AB%E3%83%88%E3%81%AE%E5%9C%B0%E9%9C%8A%E8%A1%93%E5%B8%AB?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%BB%E3%83%89%E3%83%AC%E3%82%A4%E3%82%AF?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A8%E3%83%89%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%95?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E5%86%92%E9%99%BA%E8%80%85?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%9E%E3%83%8A%E4%B8%AD%E6%AF%92%E8%80%85?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%9A%A0%E8%94%BD?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%84%E3%82%A1%E3%83%B3%E3%81%AE%E7%AB%B6%E5%A3%B2%E4%BA%BA?parent=%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1623,23 +1747,7 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%80%80%E6%95%A3?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B3%E3%83%9C%E3%83%AB%E3%83%88%E3%81%AE%E5%9C%B0%E9%9C%8A%E8%A1%93%E5%B8%AB?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%98%8F%E5%80%92?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%85%B9%E8%A3%82%E3%81%8D?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%8B%A5%E3%81%8D%E9%85%92%E9%80%A0%E5%A4%A7%E4%BD%BF?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%8B%A5%E3%81%8D%E9%85%92%E9%80%A0%E5%A4%A7%E5%B8%AB</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1647,23 +1755,11 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%A3%8F%E5%88%87%E3%82%8A?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%85%B8%E6%80%A7%E6%B2%BC%E3%81%AE%E3%82%A6%E3%83%BC%E3%82%BA?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%9B%86%E5%90%88%E3%81%AE%E5%90%88%E5%9B%B3?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%AF%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B3%E3%81%AE%E9%96%80%E5%BC%9F?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%8A%E3%82%A4%E3%83%95%E3%81%AE%E9%9B%A8?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/SI7%E8%AB%9C%E5%A0%B1%E5%93%A1?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1671,15 +1767,19 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%BB%E3%83%89%E3%83%AC%E3%82%A4%E3%82%AF?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%89%E3%83%AC%E3%82%A4%E3%82%AF?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%9A%97%E6%AE%BA?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%83%88%E3%83%BC%E3%83%B3%E3%83%88?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7%E3%82%B6%E3%83%BC%E3%83%AB%E5%85%AC%E7%88%B5?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC?parent=%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E5%AF%BE%E5%BF%9C%E3%83%9F%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B0</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1755,11 +1855,55 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%B5%82%E6%9C%AB%E4%BA%88%E8%A8%80%E8%80%85?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%83%8E%E3%83%B4%E3%82%A1?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%90%E3%83%AA%E3%82%A2?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%83%AC%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E3%83%BC%E3%82%B6?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%83%9C%E3%83%AB%E3%83%88</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%AB?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%A9%E3%83%B3%E3%82%B9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%83%AC%E3%82%AF%E3%83%88%E3%83%A9%E3%83%BC%E3%82%B6?parent=%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BA%E3%83%A1%E3%82%A4%E3%82%B8</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%82%8E%E3%81%BE%E3%81%A8%E3%81%86%E7%84%A1%E8%B2%8C%E3%81%AE%E3%82%82%E3%81%AE?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E8%A9%95%E4%BE%A1</loc>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A8%E3%82%B5%E3%82%BE%E3%83%B3%E3%83%93?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A7%E5%8F%96%E3%82%8B%E3%81%B9%E3%81%8D%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%AA%E3%83%BC%E3%82%AC%E3%81%AE%E6%9A%B4%E3%82%8C%E3%82%93%E5%9D%8A?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A7%E5%8F%96%E3%82%8B%E3%81%B9%E3%81%8D%E3%82%AB%E3%83%BC%E3%83%89</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1776,6 +1920,14 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%89%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%BB%E3%83%96%E3%83%BC%E3%83%A0?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A7%E5%8F%96%E3%82%8B%E3%81%B9%E3%81%8D%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%A4%89%E3%83%BB%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%91%E3%83%BC?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A7%E5%8F%96%E3%82%8B%E3%81%B9%E3%81%8D%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%85%B5%E5%BD%B9%E6%8B%9B%E9%9B%86?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A7%E5%8F%96%E3%82%8B%E3%81%B9%E3%81%8D%E3%82%AB%E3%83%BC%E3%83%89</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1816,10 +1968,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC%E3%83%8F%E3%83%B3%E3%83%89%E3%81%AE%E5%9F%B7%E6%94%BF?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A712%E5%8B%9D%E3%81%97%E3%81%9F%E3%83%87%E3%83%83%E3%82%AD</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%83%88%E3%83%BC%E3%83%B3%E3%83%88?parent=%E9%97%98%E6%8A%80%E5%A0%B4%E3%81%A712%E5%8B%9D%E3%81%97%E3%81%9F%E3%83%87%E3%83%83%E3%82%AD</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1879,6 +2027,18 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%A3%AE%E6%9E%97%E3%82%AA%E3%82%AA%E3%82%AB%E3%83%9F?parent=%E9%85%92%E5%A0%B4%E3%81%AE%E5%96%A7%E5%98%A9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%80%9D%E5%BF%B5%E6%92%83%E7%A0%B4?parent=%E9%85%92%E5%A0%B4%E3%81%AE%E5%96%A7%E5%98%A9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%9C%80%E5%BC%B7%E3%81%AE%E3%83%88%E3%83%AA%E3%82%AA</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E5%BE%93%E9%A8%8E%E5%A3%AB</loc>
   <priority>0.6</priority>
 </url>
@@ -1931,7 +2091,15 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%A7%98%E5%AF%86%E3%82%92%E5%96%B0%E3%82%89%E3%81%86%E3%82%82%E3%81%AE</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%90%E3%83%BC%E3%83%B3%E3%82%BA</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1959,15 +2127,7 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%A9%E3%83%B3%E3%82%B9</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%87%8D%E7%B5%90</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%83%9C%E3%83%AB%E3%83%88</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -1999,6 +2159,10 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%8D%B0%E7%8C%9B</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E9%87%8E%E7%94%9F%E3%81%AE%E7%B9%81%E8%8C%82</loc>
   <priority>0.6</priority>
 </url>
@@ -2023,11 +2187,11 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B0%E3%83%AD%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%BB%E3%83%98%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E9%95%B7%E5%BC%93</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E7%AA%81%E6%92%83?parent=%E3%82%A6%E3%82%A9%E3%83%AA%E3%82%A2%E3%83%BC%E3%81%AE%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%B0%E3%83%AD%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%BB%E3%83%98%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%A0</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -2044,6 +2208,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%B2%88%E9%BB%99</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%A4%A7%E3%81%84%E3%81%AA%E3%82%8B%E8%A7%A3%E5%91%AA</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -2075,15 +2243,15 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B9%B3%E7%AD%89?parent=%E3%83%91%E3%83%A9%E3%83%87%E3%82%A3%E3%83%B3%E3%81%AE%E3%82%AB%E3%83%BC%E3%83%89</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%81%96%E5%88%A5</loc>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E8%81%96%E3%81%AA%E3%82%8B%E6%80%92%E3%82%8A?parent=%E3%83%91%E3%83%A9%E3%83%87%E3%82%A3%E3%83%B3%E3%81%AE%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%9F%8B%E7%8A%B6%E3%81%AE%E6%9A%97%E6%AE%BA%E8%80%85</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -2104,6 +2272,10 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%9E%E3%83%8A%E3%81%AE%E6%BD%AE%E3%81%AE%E3%83%88%E3%83%BC%E3%83%86%E3%83%A0?parent=%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%E3%82%AB%E3%83%BC%E3%83%89</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%88%E3%83%BC%E3%83%86%E3%83%A0</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -2131,10 +2303,6 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E4%B9%B1%E9%97%98?parent=%E3%82%A6%E3%82%A9%E3%83%AA%E3%82%A2%E3%83%BC</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%82%B0%E3%83%AD%E3%83%87%E3%83%83%E3%82%AD</loc>
   <priority>0.6</priority>
 </url>
@@ -2151,31 +2319,11 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC?parent=%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%9E%E3%83%BC%E3%83%AD%E3%83%83%E3%82%AF?parent=%E3%83%91%E3%83%A9%E3%83%87%E3%82%A3%E3%83%B3</loc>
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%B8%8C%E6%9C%9B%E3%81%AE%E7%B5%82%E7%84%89%E3%83%A8%E3%82%B0%EF%BC%9D%E3%82%B5%E3%83%AD%E3%83%B3?parent=%E6%9C%80%E5%BC%B7%E3%81%AE%E3%83%88%E3%83%AA%E3%82%AA</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E5%BF%98%E3%82%8C%E3%82%89%E3%82%8C%E3%81%9F%E6%9D%BE%E6%98%8E?parent=%E6%9C%80%E5%BC%B7%E3%81%AE%E3%83%88%E3%83%AA%E3%82%AA</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%83%8A%E3%82%A4%E3%83%95%E3%83%BB%E3%82%B8%E3%83%A3%E3%82%B0%E3%83%A9%E3%83%BC?parent=%E5%9F%8B%E7%8A%B6%E3%81%AE%E6%9A%97%E6%AE%BA%E8%80%85</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%8A%E3%82%A4%E3%83%88%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%91%E3%83%BC?parent=%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E9%95%B7%E5%BC%93</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/hearth_stone/wiki/%E6%9C%88%E3%81%AE%E7%82%8E?parent=%E7%8D%B0%E7%8C%9B</loc>
+  <loc>http://www.orehata-wiki.xyz/game/5min/wiki/%E3%83%A9%E3%83%93%E3%82%A2%E3%83%86%E3%82%A3?parent=Sandbox</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -2327,10 +2475,6 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%A5%9E%E3%81%AE%E5%B0%8E%E3%81%8D</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89</loc>
   <priority>0.6</priority>
 </url>
@@ -2468,10 +2612,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%9E%E3%82%B0%E3%83%9E%E3%82%B7%E3%83%95%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%AF%E3%82%A4%E3%83%B3%E3%83%86%E3%83%83%E3%82%BB%E3%83%B3%E3%82%B9</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -2623,10 +2763,6 @@
   <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%82%A4%E3%82%B8</loc>
-  <priority>0.6</priority>
-</url>
-<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AD%E3%83%83%E3%82%AF%E3%82%BF%E3%82%A4%E3%82%BF%E3%83%B3</loc>
   <priority>0.6</priority>
 </url>
@@ -2740,10 +2876,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%BF%E3%83%BC%E3%83%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E3%82%B8%E3%82%BE%E3%82%A6</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3319,6 +3451,10 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%A2%E3%83%96</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%94%E3%83%B3%E3%82%B0%E3%83%95%E3%83%AC%E3%82%A4%E3%83%A0</loc>
   <priority>0.6</priority>
 </url>
@@ -3667,6 +3803,10 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%91%E3%83%88%E3%83%AD%E3%83%8A%E3%82%B9</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%8A%E3%82%A4%E3%82%AD%E3%83%BC</loc>
   <priority>0.6</priority>
 </url>
@@ -3783,11 +3923,19 @@
   <priority>0.6</priority>
 </url>
 <url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A4%E3%83%BC%E3%82%B0%E3%83%AB%E3%83%AC%E3%82%A4%E3%83%94%E3%82%A2</loc>
+  <priority>0.6</priority>
+</url>
+<url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%A2%E3%82%A2</loc>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%88%E3%83%A9%E3%82%A4%E3%83%87%E3%83%B3%E3%83%88</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A0%E3%82%B3%E3%83%BC%E3%82%B6%E3%83%BC</loc>
   <priority>0.6</priority>
 </url>
 <url>
@@ -3808,170 +3956,6 @@
 </url>
 <url>
   <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%9E%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%89</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%BC</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A8%E3%82%BF%E3%83%BC%E3%83%8A%E3%83%AB%E3%83%A1%E3%82%A4%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%A1%E3%82%A4%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%BC%E3%83%A9%E3%83%81%E3%83%B3%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%BC</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%96</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%89%E3%82%B0%E3%83%BC%E3%82%B9</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%88%E3%82%A5%E3%83%BC%E3%83%A0%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%AA%E3%83%B3%E3%82%B0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B7%E3%83%AB%E3%83%90%E3%83%BC%E3%83%97%E3%83%AD%E3%82%A6</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%83%BC%E3%83%A1%E3%83%83%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%BF%E3%83%BC%E3%82%B3%E3%82%A4%E3%82%BA%E3%82%A2%E3%83%A0%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%88%E3%83%91%E3%83%BC%E3%82%BA%E3%82%A2%E3%83%A0%E3%83%AB</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B9%E3%82%A2%E3%83%B3%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B0%E3%83%AC%E3%83%A0%E3%83%AA%E3%83%B3%E3%82%A2%E3%82%A4</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%8D%E3%83%AC%E3%83%BC%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B4%E3%83%96%E3%83%AA%E3%83%B3%E3%82%BA%E3%83%AC%E3%82%A2</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AA%E3%83%AA%E3%83%BC%E3%83%95</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%91%E3%83%AB%E3%83%88%E3%82%A4</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB%E3%82%B8%E3%82%A7%E3%83%A0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A7%E3%82%B7%E3%83%BC</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%AA%E3%82%B9%E3%83%88%E3%82%A2</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89%E3%83%9A%E3%83%8A%E3%83%AB%E3%83%86%E3%82%A3</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B9%E3%83%A9%E3%82%B9%E3%83%88%E3%83%96%E3%83%AD%E3%82%A6</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AB%E3%82%A8%E3%83%B3%E3%82%B9</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A8%E3%82%A2%E3%83%BC%E3%82%B7%E3%83%95%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%83%BC%E3%82%B9%E3%82%B7%E3%83%95%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%82%B9%E3%83%86%E3%83%AD%E3%82%A4%E3%83%89</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%B5%E3%83%96%E3%82%B5%E3%82%A4%E3%83%89</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%82%A2%E3%83%A9%E3%83%BC%E3%83%A0</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%B7%B4%E7%BF%92%E3%81%A0%E3%81%9E%EF%BC%81</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF?parent=%E3%82%B5%E3%82%A4%E3%82%AF</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%A5%9E%E3%82%92%E4%BF%A1%E3%81%98%E3%81%A6?parent=%E3%83%86%E3%83%8D%E3%83%83%E3%83%88</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%94%B7%E3%81%AE%E4%BB%BB%E5%8B%99?parent=%E3%83%8A%E3%82%A4%E3%83%88%E3%83%9B%E3%83%BC%E3%82%AF</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E7%94%B7%E3%81%AE%E4%BB%81%E7%BE%A9?parent=%E3%83%8A%E3%82%A4%E3%83%88%E3%83%9B%E3%83%BC%E3%82%AF</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E6%98%8E%E9%8F%A1%E6%AD%A2%E6%B0%B4?parent=%E3%82%BD%E3%83%A0%E3%83%8B%E3%82%A2</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%A1%E3%82%B4%E3%82%B9%E3%81%AE%E8%81%96%E5%85%B8?parent=%E3%82%BD%E3%83%A0%E3%83%8B%E3%82%A2</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E5%B9%B3%E7%A9%8F%E3%81%AA%E9%97%87%E5%A4%9C</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E5%B9%B3%E5%92%8C%E3%81%AE%E8%AA%93%E3%81%84</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E5%AE%9F%E7%B8%BE46%E3%80%80%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95</loc>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>http://www.orehata-wiki.xyz/game/culdcept/wiki/%E3%83%8F%E3%82%A4%E3%83%96%E8%BB%8D%E5%9B%A3</loc>
   <priority>0.6</priority>
 </url>
 
