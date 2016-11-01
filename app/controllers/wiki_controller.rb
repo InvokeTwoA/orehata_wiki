@@ -14,6 +14,12 @@ class WikiController < ApplicationController
 
   # TOP ページ
   def root
+    @project = Project.find(params[:project_id])
+    @wiki = @project.wiki
+    @page = @wiki.find_or_new_page('top')
+    params[:project_id] = 'cl_dungeon_sengoku'
+    params[:id] = 'top'
+=begin
     case params[:project_id]
     when 'cl_dungeon_sengoku' then
       @project = Project.find('cl_dungeon_sengoku')
@@ -47,9 +53,9 @@ class WikiController < ApplicationController
       @wiki = @project.wiki
       @page = @wiki.find_or_new_page('wiki')
       params[:project_id] = 'orehata_tori'
-      params[:id] = 'wiki'
+      params[:id] = 'top'
     end
-
+=end
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
       return
