@@ -66,10 +66,11 @@
 - if WikiComment.where(page: params[:id]).any? || params[:id] == 'Wiki'
   %h2 コメント 一覧
   %table
-    - if params[:id] == 'Wiki'
-      - comments = WikiComment.where(page: 'wiki', project_id: @project.identifier).recent.page(params[:kaminari_page]).per(10)
-    - else 
-      - comments = WikiComment.where(page: params[:id], project_id: @project.identifier).recent.page(params[:kaminari_page]).per(10)
+    #- if params[:id] == 'Wiki'
+    #  - comments = WikiComment.where(page: 'wiki', project_id: @project.identifier).recent.page(params[:kaminari_page]).per(10)
+    #- else 
+    #  - comments = WikiComment.where(page: params[:id], project_id: @project.identifier).recent.page(params[:kaminari_page]).per(10)
+    - comments = WikiComment.where(page: params[:id], project_id: @project.identifier).recent.page(params[:kaminari_page]).per(10)
     #comments
       = render("/wiki_comments/list", comments: comments)
 /- other_formats_links do |f|
