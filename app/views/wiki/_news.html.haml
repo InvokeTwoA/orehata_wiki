@@ -1,27 +1,27 @@
 - if @page.present?
   %h3 更新されたページ
 
-#activity
-  - i = 0
-  - if @events_by_day.present?
-    - @events_by_day.keys.sort.reverse.each do |day|
-      - break if i > 10
-      /- date = day == User.current.today ? l(:label_today).titleize : format_date(day)
-      /%h3= date
-      %ul{style: "list-style-type: none"}
-        - sort_activity_events_for_right_bar(@events_by_day[day]).each do |e, in_group|
-          - next if in_group
-          - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Wiki/).present?
-          - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Sidebar/).present?
-          - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Sandbox/).present?
-          - next if  @project.nil? || @project != e.project
-          - i = i + 1
-          - break if i > 10
-          %li
-            /%span.time= format_time(e.event_datetime, false)
-            = link_to format_activity_title(e.event_title).gsub(/Wiki編集:/,'').gsub(/\(.*\)/, ''), e.event_url
-   
-  = link_to '全て見る', project_activity_path(@page.project, show_wiki_edits: '1'), {ref: 'nofollow'}
+  #activity
+    - i = 0
+    - if @events_by_day.present?
+      - @events_by_day.keys.sort.reverse.each do |day|
+        - break if i > 10
+        /- date = day == User.current.today ? l(:label_today).titleize : format_date(day)
+        /%h3= date
+        %ul{style: "list-style-type: none"}
+          - sort_activity_events_for_right_bar(@events_by_day[day]).each do |e, in_group|
+            - next if in_group
+            - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Wiki/).present?
+            - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Sidebar/).present?
+            - next if e.event_title.gsub(/Wiki編集:/,'').gsub(/\(.*\)/, '').match(/Sandbox/).present?
+            - next if  @project.nil? || @project != e.project
+            - i = i + 1
+            - break if i > 10
+            %li
+              /%span.time= format_time(e.event_datetime, false)
+              = link_to format_activity_title(e.event_title).gsub(/Wiki編集:/,'').gsub(/\(.*\)/, ''), e.event_url
+     
+    = link_to '全て見る', project_activity_path(@page.project, show_wiki_edits: '1'), {ref: 'nofollow'}
 
 - if @project.present? && @page.present?
   %h3 新着コメント
