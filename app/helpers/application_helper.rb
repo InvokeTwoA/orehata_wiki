@@ -1314,8 +1314,10 @@ module ApplicationHelper
   end
 
   def generate_csv(&block)
-    decimal_separator = l(:general_csv_decimal_separator)
-    encoding = l(:general_csv_encoding)
+    #decimal_separator = l(:general_csv_decimal_separator)
+    l(:general_csv_decimal_separator)
+    # encoding = l(:general_csv_encoding)
+    l(:general_csv_encoding)
   end
 
   private
@@ -1430,7 +1432,7 @@ module ApplicationHelper
 
     case params[:project_id]
     when 'castilla' then
-      ['マルディタカスティーラ', 'ドン・ラミロ', 'ドンラミロ', '呪われた大地','ex'', 'モーラの涙', 'ファイアソード', '真エンド', 'wiki', 'エンディング', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
+      ['マルディタカスティーラ', 'ドン・ラミロ', 'ドンラミロ', '呪われた大地','ex', 'モーラの涙', 'ファイアソード', '真エンド', 'wiki', 'エンディング', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
     when 'cl_dungeon_sengoku' then
       ['クラシックダンジョン', 'クラダン', '戦国', 'クラシックダンジョン戦国', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
     when 'culdcept' then
