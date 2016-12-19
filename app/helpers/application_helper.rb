@@ -1332,6 +1332,7 @@ module ApplicationHelper
 
   # 手動でタイトル出し分け
   def wiki_page_title_link
+    return link_to "マルディタカスティーラ -ドン・ラミロと呪われた大地ex-　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'castilla'
     return link_to "カルドセプトリボルト　徹底攻略wiki",     root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
     return link_to "カルドセプトリボルト　徹底攻略wiki",     root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'culdcept'
     return link_to "ルフランの地下迷宮と魔女ノ旅団",         root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'refrain'
@@ -1347,6 +1348,8 @@ module ApplicationHelper
     return link_to "カッパの徹底攻略wiki",  games_path if controller_name == 'games' || controller_name == 'releases'
 
     case params[:project_id]
+    when 'castilla' then
+      link_to "マルディタカスティーラ -ドン・ラミロと呪われた大地ex-　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'cl_dungeon_sengoku' then
       link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'culdcept' then
@@ -1383,6 +1386,8 @@ module ApplicationHelper
     end
 
     case params[:project_id]
+    when 'castilla' then
+      '「マルディタカスティーラ -ドン・ラミロと呪われた大地ex-」の攻略wikiです。真エンドの条件や隠し要素、プレイ動画のまとめを行ってます。'
     when 'cl_dungeon_sengoku' then
       '「クラシックダンジョン戦国」の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     when 'culdcept' then
@@ -1424,6 +1429,8 @@ module ApplicationHelper
     end
 
     case params[:project_id]
+    when 'castilla' then
+      ['マルディタカスティーラ', 'ドン・ラミロ', 'ドンラミロ', '呪われた大地','ex'', 'モーラの涙', 'ファイアソード', '真エンド', 'wiki', 'エンディング', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
     when 'cl_dungeon_sengoku' then
       ['クラシックダンジョン', 'クラダン', '戦国', 'クラシックダンジョン戦国', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
     when 'culdcept' then
@@ -1458,6 +1465,8 @@ module ApplicationHelper
       return 'カルドセプトリボルト　徹底攻略wiki'
     end
     case params[:project_id]
+    when 'castilla' then
+      'マルディタカスティーラ -ドン・ラミロと呪われた大地ex-　徹底攻略wiki'
     when 'cl_dungeon_sengoku' then
       'クラシックダンジョン戦国　徹底攻略wiki'
     when 'culdcept' then
