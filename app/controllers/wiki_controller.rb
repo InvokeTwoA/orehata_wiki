@@ -201,8 +201,8 @@ class WikiController < ApplicationController
 
     # FIXME スパム暫定対応
     redirect_to project_wiki_page_path(@page.project, @page.title)  if params[:comments].present?
+    redirect_to project_wiki_page_path(@page.project, @page.title)  unless params[:content].match(/香川県ルーちゃん/).nil?
 
-    
     @text = content_params[:text]
     if params[:section].present? && Redmine::WikiFormatting.supports_section_edit?
       @section = params[:section].to_i
