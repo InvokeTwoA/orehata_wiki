@@ -13,19 +13,23 @@ class WikiCommentsController < ApplicationController
   def create
     return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
     # return redirect_to :back, alert: '現在、スパムコメントを防ぐためコメント機能を停止中です'
-    return redirect_to :back, alert: '認証に失敗しました。' unless verify_recaptcha(model: WikiComment.new) 
+    wiki_comment = WikiComment.new(params[:wiki_comment])
+    return redirect_to :back, alert: '認証に失敗しました。' unless verify_recaptcha(model: wiki_comment)
 
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
     else
       page = params[:wiki_comment][:page]
     end
+    wiki_comment.save!
+=begin
     WikiComment.create(
       project_id: params[:wiki_comment][:project_id],
       title: params[:wiki_comment][:title],
       body: params[:wiki_comment][:body],
       page: page,
     )
+=end
     if params[:wiki_comment][:project_id] == 'releases'
       redirect_to releases_path(project_id: 'releases'), time: Time.now.to_i, notice: 'コメントを投稿しました'
     else
