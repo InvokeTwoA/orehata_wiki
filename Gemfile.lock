@@ -157,6 +157,8 @@ GEM
     rbpdf-font (1.19.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    recaptcha (4.3.1)
+      json
     redcarpet (3.3.4)
     request_store (1.0.5)
     responders (1.1.2)
@@ -246,6 +248,7 @@ DEPENDENCIES
   ransack
   rbpdf (~> 1.19.0)
   rdoc (>= 2.4.2)
+  recaptcha
   redcarpet (~> 3.3.2)
   request_store (= 1.0.5)
   rmagick (>= 2.14.0)

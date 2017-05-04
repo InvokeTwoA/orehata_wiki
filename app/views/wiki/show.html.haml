@@ -61,10 +61,14 @@
         %label.col-sm-2.control-label 内容
         .col
           = f.input_field :body, class: 'wiki_comment_text_area'
+      .form-group
+        .col
+          = recaptcha_tags
       .form-actions
         = f.hidden_field :page, value: params[:id]
         = f.hidden_field :project_id, value: @project.identifier
         = f.submit 'コメント', class: 'wiki_comment_submit'
+
     ※ [[ページ名]]　　と書けばリンクになります。
 - if WikiComment.where(page: params[:id]).any? || params[:id] == 'Wiki'
   %h2 コメント 一覧

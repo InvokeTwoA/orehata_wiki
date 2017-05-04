@@ -1,7 +1,6 @@
 class WikiCommentsController < ApplicationController
 
   before_filter :check_spam, only: [:create]
-  
 
   def index
     if params[:project_id].present?
@@ -14,6 +13,7 @@ class WikiCommentsController < ApplicationController
   def create
     return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
     # return redirect_to :back, alert: '現在、スパムコメントを防ぐためコメント機能を停止中です'
+    return redirect_to :back, alert: '認証に失敗しました。' unless verify_recaptcha(model: WikiComment.new) 
 
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
