@@ -19,43 +19,6 @@ class WikiController < ApplicationController
     @page = @wiki.find_or_new_page('top')
     params[:project_id] = 'cl_dungeon_sengoku'
     params[:id] = 'top'
-=begin
-    case params[:project_id]
-    when 'cl_dungeon_sengoku' then
-      @project = Project.find('cl_dungeon_sengoku')
-      @wiki = @project.wiki
-      @page = @wiki.find_or_new_page('top')
-      params[:project_id] = 'cl_dungeon_sengoku'
-      params[:id] = 'top'
-    when 'culdcept' then
-      @project = Project.find('culdcept')
-      @wiki = @project.wiki
-      @page = @wiki.find_or_new_page('top')
-      params[:project_id] = 'culdcept'
-      params[:id] = 'top'
-    when 'healer' then
-      @project = Project.find(params[:project_id])
-      @wiki = @project.wiki
-      @page = @wiki.find_or_new_page('top')
-      params[:id] = 'top'
-    when 'refrain' then
-      @project = Project.find(params[:project_id])
-      @wiki = @project.wiki
-      @page = @wiki.find_or_new_page('top')
-      params[:id] = 'top'
-    when 'ys8' then
-      @project = Project.find(params[:project_id])
-      @wiki = @project.wiki
-      @page = @wiki.find_or_new_page('top')
-      params[:id] = 'top'
-    else
-      @project = Project.find('orehata_tori')
-      @wiki = @project.wiki
-      @page = @wiki.find_or_new_page('wiki')
-      params[:project_id] = 'orehata_tori'
-      params[:id] = 'top'
-    end
-=end
     if params[:version] && !User.current.allowed_to?(:view_wiki_edits, @project)
       deny_access
       return
@@ -89,12 +52,6 @@ class WikiController < ApplicationController
       Redmine::WikiFormatting.supports_section_edit?
 
     render 'show'
-=begin
-    respond_to do |format|
-      format.html
-      format.api
-    end
-=end
   end
 
   # List of pages, sorted alphabetically and by parent (hierarchy)
@@ -199,10 +156,9 @@ class WikiController < ApplicationController
 
     @content.comments = content_params[:comments]
 
-    # FIXME スパム暫定対応
+    # スパム暫定対応
     return redirect_to project_wiki_page_path(@page.project, @page.title)  if params[:comments].present?
     return redirect_to project_wiki_page_path(@page.project, @page.title)  unless content_params[:text].match(/香川県ルー/).nil?
-
 
     @text = content_params[:text]
     if params[:section].present? && Redmine::WikiFormatting.supports_section_edit?
@@ -214,8 +170,7 @@ class WikiController < ApplicationController
       @content.text = @text
     end
     @content.author = User.current
-
-    if @page.save_with_content(@content)
+    if verify_recaptcha(model: @page) && @page.save_with_content(@content)
       Attachment.attach_files(@page, params[:attachments])
       render_attachment_warning_if_needed(@page)
       call_hook(:controller_wiki_edit_after_save, { :params => params, :page => @page})
@@ -224,7 +179,7 @@ class WikiController < ApplicationController
         format.html {
           anchor = @section ? "section-#{@section}" : nil
           #redirect_to project_wiki_page_path(@project, @page.title, :anchor => anchor)
-          redirect_to game_wiki_path(project_id: @project.identifier, id: @page.title, time: Time.now.to_i)
+          redirect_to game_wiki_path(project_id: @project.identifier, id: @page.title, time: Time.now.to_i, anchor: anchor)
         }
         format.api {
           if was_new_page

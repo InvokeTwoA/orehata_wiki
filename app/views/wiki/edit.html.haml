@@ -31,6 +31,8 @@
       %label= l(:label_attachment_plural)
       = render :partial => 'attachments/form'
   %p
+    = recaptcha_tags
+  %p
     = submit_tag l(:button_save)
     = preview_link({:controller => 'wiki', :action => 'preview', :project_id => @project, :id => @page.title }, 'wiki_form')
     | #{link_to l(:button_cancel), wiki_page_edit_cancel_path(@page)}
