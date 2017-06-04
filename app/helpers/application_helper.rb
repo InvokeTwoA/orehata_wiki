@@ -1337,6 +1337,7 @@ module ApplicationHelper
     return link_to "マルディタカスティーラ -ドン・ラミロと呪われた大地ex-　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'castilla'
     return link_to "カルドセプトリボルト　徹底攻略wiki",     root_project_wiki_page_index_path(project_id: params[:project_id]) if controller_name == 'culdcepts'
     return link_to "カルドセプトリボルト　徹底攻略wiki",     root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'culdcept'
+    return link_to "グウェント ウィッチャーカードゲーム　徹底攻略wiki",  root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'gwent'
     return link_to "魔女と百騎兵２　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'majo100_2'
     return link_to "ルフランの地下迷宮と魔女ノ旅団",         root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'refrain'
     return link_to "ヒーラーは二度死ぬ　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'healer'
@@ -1357,6 +1358,8 @@ module ApplicationHelper
       link_to "クラシックダンジョン戦国　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'culdcept' then
       link_to "カルドセプトリボルト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'gwent' then
+      link_to "グウェント ウィッチャーカードゲーム　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'majo100_2' then
       link_to "魔女と百騎兵２　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'healer' then
@@ -1397,6 +1400,8 @@ module ApplicationHelper
       '「クラシックダンジョン戦国」の攻略wikiです。効率の良い稼ぎ方や、ダンジョンを制覇するためのパーティー構成の考察などを行ってます。'
     when 'culdcept' then
       '「カルドセプトリボルト」の攻略wikiです。カード情報や対戦の考察を行ってます。'
+    when 'gwent' then
+      '「グウェント ウィッチャーカードゲーム」の攻略wikiです。カード評価やデッキレシピ。戦略の考察などをしてます。'
     when 'majo100_2' then
       '「魔女と百騎兵２」の攻略wikiです。エンディング分岐の考察なども行ってます。'
     when 'orehata_tori' then
@@ -1442,6 +1447,8 @@ module ApplicationHelper
       ['クラシックダンジョン', 'クラダン', '戦国', 'クラシックダンジョン戦国', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', '考察', '徹底', '徹底攻略']
     when 'culdcept' then
       ['カルドセプト', 'リボルト', 'リボルド', '対戦', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', 'ブック', 'カード', '徹底', '徹底攻略', 'テクニック', 'コンボ']
+    when 'gwent' then
+      ['グウェント', 'ウィッチャー', 'カード', 'ゲーム', 'gwent', 'グェント', 'グゥェント', 'グゥエント', 'カード評価', 'デッキ', '戦略', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ',  '徹底', '徹底攻略']
     when 'majo100_2' then
       ['魔女と百騎兵２', '魔女百', '百騎兵', '百鬼兵', '続編', '魔女百２', '攻略', 'wiki', '考察', '稼ぎ', 'まとめ', 'エンディング', '分岐', '徹底', '徹底攻略']
     when 'orehata_tori' then
@@ -1480,6 +1487,8 @@ module ApplicationHelper
       'クラシックダンジョン戦国　徹底攻略wiki'
     when 'culdcept' then
       'カルドセプトリボルト　徹底攻略wiki'
+    when 'gwent' then
+      'グウェント ウィッチャーカードゲーム　徹底攻略wiki'
     when 'majo100_2' then
       '魔女と百鬼兵２　徹底攻略wiki'
     when 'orehata_tori' then
