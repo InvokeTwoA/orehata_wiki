@@ -36,7 +36,9 @@ class GwentsController < ApplicationController
       :card_text,
       :review_rank,
       :is_elf,
+      :is_dwarf,
       :skill_adrenalin,
+      :skill_command,
     )
   end
 
