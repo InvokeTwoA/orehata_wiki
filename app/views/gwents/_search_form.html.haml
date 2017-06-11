@@ -72,6 +72,26 @@
           = check_box_tag "q[position_in][]", '全'
           全
     .clearfix
+      %br
+      .col-sm-3 種族
+      .col-sm-9
+        %label 
+          = check_box_tag "q[is_elf_in][]", 'エルフ'
+          エルフ
+        %label 
+          = check_box_tag "q[is_dwarf_in][]", 'ドワーフ'
+          ドワーフ
+    .clearfix
+      %br
+      .col-sm-3 能力
+      .col-sm-9
+        %label 
+          = check_box_tag "q[skill_adrenalin_in][]", '継戦'
+          継戦
+        %label 
+          = check_box_tag "q[skill_command_in][]", '命令'
+          命令
+    .clearfix
       .col-sm-3 カード評価
       .col-sm-9
         %label 
