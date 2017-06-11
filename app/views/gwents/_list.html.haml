@@ -26,7 +26,7 @@
       - gwents.each do |gwent|
         %tr
           %td.center= link_to gwent.name, game_wiki_path(project_id: 'gwent', id: gwent.name)
-          %td.center= gwent.card_color
+          %td.center= gwent.color_type
           %td.center= gwent.rare
           %td.center= gwent.speciality
           %td.center= gwent.bp
