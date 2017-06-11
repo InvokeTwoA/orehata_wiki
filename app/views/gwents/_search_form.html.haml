@@ -76,20 +76,20 @@
       .col-sm-3 種族
       .col-sm-9
         %label 
-          = check_box_tag "q[is_elf_in][]", 'エルフ'
+          = check_box_tag "q[is_elf_in][]", '1'
           エルフ
         %label 
-          = check_box_tag "q[is_dwarf_in][]", 'ドワーフ'
+          = check_box_tag "q[is_dwarf_in][]", '1'
           ドワーフ
     .clearfix
       %br
       .col-sm-3 能力
       .col-sm-9
         %label 
-          = check_box_tag "q[skill_adrenalin_in][]", '継戦'
+          = check_box_tag "q[skill_adrenalin_in][]", '1'
           継戦
         %label 
-          = check_box_tag "q[skill_command_in][]", '命令'
+          = check_box_tag "q[skill_command_in][]", '1'
           命令
     .clearfix
       .col-sm-3 カード評価
