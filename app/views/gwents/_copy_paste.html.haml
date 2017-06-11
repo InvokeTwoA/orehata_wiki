@@ -29,27 +29,35 @@
   h2. セリフ
   %br
   %br
-
-
-
 - elsif card.card_type == 'スペシャル'
 
   h1. #{ card.name }
-
+  %br
+  %br
   {{toc}}
-
+  %br
+  %br
   h2. カード内容
-
+  %br
+  %br
   {background: #FFA0A0}. |_. 勢力|_.枠名|_. レアリティ| 
+  %br
   |=.[[#{ card.war_group }]] |=. #{card.color_type} |=.#{card.rare} | 
-  |={background: #FFA0A0}. *アビリティ* |\3. #{ card.description }| 
+  %br
+  |={background: #FFA0A0}. *効果* |\3. #{ card.description }| 
+  %br
   |={background: #FFA0A0}. *フレーバーテキスト* |\3. #{card.card_text} | 
+  %br
   |={background: #FFA0A0}. *カード評価* |\3=. #{ card.review_rank } | 
-
+  %br
+  %br
+  %br
   h2. 説明
-
+  %br
+  %br
   * 
-
+  %br
+  %br
 %br
 %br
 一覧画面には以下をコピペ
@@ -61,3 +69,6 @@
   |=.[[#{card.name}]] |=. [[#{card.color_type}]] |=. [[#{card.rare}]] |=. #{card.speciality} |=. #{card.bp} |=. [[#{card.position}]] |=. #{card.description}| [[#{card.war_group}]] |=.#{card.review_rank} | 
 
 - elsif card.card_type == 'スペシャル'
+  |_.カード名|_.枠色|_.レアリティ|_.効果|_.カード評価| 
+  %br
+  |=.[[#{card.name}]] |=. [[#{card.color_type}]] |=. [[#{card.rare}]] |=. #{card.description}| [[#{card.war_group}]] |=.#{card.review_rank} | 
