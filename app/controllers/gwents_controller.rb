@@ -19,11 +19,11 @@ class GwentsController < ApplicationController
   def collection
     @cond ||= params[:q] || {}
     @q = end_of_association_chain.search(@cond)
-    @culdcepts = @q.result.recent.page(params[:kaminari_page]).per(30).uniq
+    @gwents = @q.result.recent.page(params[:kaminari_page]).per(30).uniq
   end
 
   def gwent_params
-    params.require(:culdcept).permit(
+    params.require(:gwent).permit(
       :name,
       :card_type,
       :bp,
