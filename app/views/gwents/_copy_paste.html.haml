@@ -9,15 +9,15 @@
   h2. カード内容
   %br
   %br
-  {background: #FFA0A0}. |_. 勢力|_. 戦力|_.枠名|_. レアリティ|_. 特性|_. 列|
+  {background: #FFA0A0}. |_. 勢力|_. 戦力|_.枠名|_. レアリティ|_. 特性|_. 列| 
   %br
-  |=.[[#{ card.war_group }]] |=. #{card.bp} |=. #{card.color_type} |=.#{card.rare} |=. #{card.speciality} |=. [[#{card.position}]] |
+  |=.[[#{ card.war_group }]] |=. #{card.bp} |=. #{card.color_type} |=.#{card.rare} |=. #{card.speciality} |=. [[#{card.position}]] | 
   %br
-  |={background: #FFA0A0}. *アビリティ* |\5. #{ card.description }|
+  |={background: #FFA0A0}. *アビリティ* |\5. #{ card.description }| 
   %br
-  |={background: #FFA0A0}. *フレーバーテキスト* |\5. #{card.card_text} |
+  |={background: #FFA0A0}. *フレーバーテキスト* |\5. #{card.card_text} | 
   %br
-  |={background: #FFA0A0}. *カード評価* |\5=. #{ card.review_rank } |
+  |={background: #FFA0A0}. *カード評価* |\5=. #{ card.review_rank } | 
   %br
   %br
   h2. 説明
@@ -40,11 +40,11 @@
 
   h2. カード内容
 
-  {background: #FFA0A0}. |_. 勢力|_.枠名|_. レアリティ|
-  |=.[[#{ card.war_group }]] |=. #{card.color_type} |=.#{card.rare} |
-  |={background: #FFA0A0}. *アビリティ* |\3. #{ card.description }|
-  |={background: #FFA0A0}. *フレーバーテキスト* |\3. #{card.card_text} |
-  |={background: #FFA0A0}. *カード評価* |\3=. #{ card.review_rank } |
+  {background: #FFA0A0}. |_. 勢力|_.枠名|_. レアリティ| 
+  |=.[[#{ card.war_group }]] |=. #{card.color_type} |=.#{card.rare} | 
+  |={background: #FFA0A0}. *アビリティ* |\3. #{ card.description }| 
+  |={background: #FFA0A0}. *フレーバーテキスト* |\3. #{card.card_text} | 
+  |={background: #FFA0A0}. *カード評価* |\3=. #{ card.review_rank } | 
 
   h2. 説明
 
@@ -56,7 +56,8 @@
 %br
 %br
 - if card.card_type == 'ユニット'
-  |_.カード名|_.枠色|_.レアリティ|_.特性|_.戦力|_.列|_.アビリティ|_.勢力|_.カード評価|
-  |=.[[#{card.name}]] |=. [[#{card.card_type}]] |=, [[#{card.rare}]] |=. #{card.speciality} |=. #{card.bp} |=. [[#{card.position}]] |=. #{card.description}| [[#{card.review_rank}]] |=.B |
+  |_.カード名|_.枠色|_.レアリティ|_.特性|_.戦力|_.列|_.アビリティ|_.勢力|_.カード評価| 
+  %br
+  |=.[[#{card.name}]] |=. [[#{card.card_type}]] |=. [[#{card.rare}]] |=. #{card.speciality} |=. #{card.bp} |=. [[#{card.position}]] |=. #{card.description}| [[#{card.review_rank}]] |=.B | 
 
 - elsif card.card_type == 'スペシャル'
