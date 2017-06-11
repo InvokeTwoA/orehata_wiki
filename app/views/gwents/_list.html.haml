@@ -22,7 +22,7 @@
       - if User.current.admin?
         %th.center
         %th.center
-    - if gwennts.present?
+    - if gwents.present?
       - gwents.each do |gwent|
         %tr
           %td.center= link_to gwent.name, game_wiki_path(project_id: 'gwent', id: gwent.name)
