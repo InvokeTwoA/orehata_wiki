@@ -1,0 +1,73 @@
+= search_form_for @q, method: :get, remote: true, html: { id: 'search-form' } do |f|
+  = render layout: 'condition_box' do
+    .clearfix
+      .col-sm-3 カード名
+      .col-sm-9= f.search_field :name_cont
+      .col-sm-3 戦力
+      .col-sm-9
+        = f.search_field :bp_gteq
+        〜
+        = f.search_field :bp_lteq
+      .col-sm-3 レアリティ
+      .col-sm-9
+        %label
+          = check_box_tag "q[rare_in][]", 'コモン'
+          コモン
+        %label
+          = check_box_tag "q[rare_in][]", 'レア'
+          レア
+        %label
+          = check_box_tag "q[rare_in][]", 'エピック'
+          エピック
+        %label
+          = check_box_tag "q[rare_in][]", 'レジェンダリー'
+          レジェンダリー
+    .clearfix
+      .col-sm-3 カード枠色
+      .col-sm-9
+        %label 
+          = check_box_tag "q[card_color_in][]", 'ブロンズ'
+          ブロンズ
+        %label 
+          = check_box_tag "q[card_color_in][]", 'シルバー'
+          シルバー
+        %label 
+          = check_box_tag "q[card_color_in][]", 'ゴールド'
+          ゴールド
+    .clearfix
+      %br
+      .col-sm-3 勢力
+      .col-sm-9
+        %label 
+          = check_box_tag "q[war_group_in][]", 'ニュートラル'
+          ニュートラル
+        %label 
+          = check_box_tag "q[war_group_in][]", 'スケリッジ'
+          スケリッジ
+        %label 
+          = check_box_tag "q[war_group_in][]", '北方諸国'
+          北方諸国
+        %label 
+          = check_box_tag "q[war_group_in][]", 'モンスター'
+          モンスター
+        %label 
+          = check_box_tag "q[war_group_in][]", 'スコイア＝テル'
+          スコイア＝テル
+        %label 
+          = check_box_tag "q[war_group_in][]", 'ニルフガード'
+    .clearfix
+      %br
+      .col-sm-3 隊列
+      .col-sm-9
+        %label 
+          = check_box_tag "q[position_in][]", '近接'
+          近接
+        %label 
+          = check_box_tag "q[position_in][]", '間接'
+          間接
+        %label 
+          = check_box_tag "q[position_in][]", '攻城'
+          攻城
+        %label 
+          = check_box_tag "q[position_in][]", '全'
+          全

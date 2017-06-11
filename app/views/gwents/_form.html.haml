@@ -1,0 +1,60 @@
+= simple_form_for resource, html: { class: 'form form-horizontal'} do |f|
+  .form-group
+    %label.col-sm-2.control-label カード名
+    .col-sm-5
+      = f.input_field :name, class: 'form-control'
+  .form-group
+    %label.col-sm-2.control-label カードタイプ
+    .col-sm-5
+      - if action_name == 'edit'
+        = f.input_field :card_type, as: :select, collection: ['ユニット', 'スペシャル'], include_blank: false
+      - elsif params[:type] == 'unit'
+        = f.input_field :card_type, as: :select, collection: ['ユニット'], include_blank: false
+      - elsif params[:type] == 'special'
+        = f.input_field :card_type, as: :select, collection: ['スペシャル'], include_blank: false
+      - else
+        = f.input_field :card_type, as: :select, collection: ['ユニット', 'スペシャル'], include_blank: false
+  - if params[:type] == 'unit'
+    .form-group
+      %label.col-sm-2.control-label 戦力
+      .col-sm-5
+        = f.input_field :bp, class: 'form-control'
+  .form-group
+    %label.col-sm-2.control-label
+      カード枠色
+    .col-sm-5
+      = f.input_field :color_type, as: :select, collection: ['ブロンズ', 'シルバー', 'ゴールド'], include_blank: false
+  .form-group
+    %label.col-sm-2.control-label
+      レアリティ
+    .col-sm-5
+      = f.input_field :rare, as: :select, collection: ['コモン', 'レア', 'エピック', 'レジェンダリー'], include_blank: false
+  .form-group
+    %label.col-sm-2.control-label
+      勢力
+    .col-sm-5
+      = f.input_field :war_group, as: :select, collection: ['ニュートラル', 'スケリッジ', '北方諸国', 'モンスター', 'スコイア＝テル', 'ニルフガード'], include_blank: false
+  - if params[:type] == 'unit'
+    .form-group
+      %label.col-sm-2.control-label 特性
+      .col-sm-5
+        = f.input_field :speciality, class: 'form-control', rows: 10
+  - if params[:type] == 'unit'
+    .form-group
+      %label.col-sm-2.control-label 隊列
+      .col-sm-5
+        = f.input_field :position, as: :select, collection: ['近接', '間接', '攻城', '全'], include_blank: false
+  .form-group
+    %label.col-sm-2.control-label カード説明文
+    .col-sm-5
+      = f.input_field :description, class: 'form-control', rows: 10
+  .form-group
+    %label.col-sm-2.control-label フレーバーテキスト
+    .col-sm-5
+      = f.input_field :card_text, class: 'form-control', rows: 10
+  .form-group
+    %label.col-sm-2.control-label レビューランク
+    .col-sm-5
+      = f.input_field :review_rank, as: :select, collection: ['D', 'C', 'B, 'A', 'S'], include_blank: false
+  .form-group
+    = f.submit '送信', class: 'btn btn-primary'

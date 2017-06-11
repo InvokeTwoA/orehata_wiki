@@ -1,0 +1,57 @@
+= content_for :header_tags do
+  = stylesheet_link_tag 'boot'
+- content_for :sidebar do
+  - if @wiki && @wiki.sidebar
+    .wiki
+      = textilizable @wiki.sidebar.content, :text
+    / = render '/wiki/news'
+    %br
+    %br
+    %br
+    / menu
+    = render partial: 'layouts/menu_bar'
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br
+  - else
+    no side bar
+
+- if params[:card_id].present?
+  - card = Gwent.find params[:card_id]
+  .widget-box
+    .widget-header
+      .widget-title
+        wiki登録用の文章(下記の文章をコピペして#{link_to card.name, game_wiki_path(project_id: 'gwent', id: card.name) }のページに貼り付けてください)
+    .widget-body
+      .widget-main
+        = render 'copy_paste', card: card
+      .widget-toolbox.padding-8.clearfix.center
+
+%ul.list-inline
+  %li= link_to 'ユニットカード登録', new_gwent_path(type: 'unit'), class: 'btn btn-primary'
+  %li= link_to 'スペシャルカード登録', new_gwent_path(type: 'special'), class: 'btn btn-primary'
+/  /%li= link_to 'スペルカード登録', new_culdcept_path(type: 'spell'), class: 'btn btn-primary'
+%br
+現在、どなたでもカード登録を行う事ができます。
+/混乱を避けるため、情報の編集は管理者権限でしかできないようにしているため、記入ミスなどあればお気軽にコメントをいただければと思います。
+/%br
+
+%h1 カード検索
+
+.row{ style: 'margin: 0 auto;'}
+  .col-xs-12.section
+    = render 'search_form'
+
+%h1 カード一覧
+
+.row{ style: 'margin: 0 auto;'}
+  #collection.col-xs-12
+    - if collection.any?
+      = render 'list', gwents: collection
+    - else
+      データが見つかりませんでした。
+
+= render 'ads_google'

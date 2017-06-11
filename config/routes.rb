@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   resources :applis, only: [:index]
 
   resources :culdcepts, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :gwents, only: [:index, :new, :create, :edit, :update, :destroy]
 
   resources :journals, :only => [:edit, :update] do
     member do

@@ -1,0 +1,41 @@
+.main
+  検索結果URL
+  %pre.culd
+    #{ gwents_url(params) }
+  %br
+  #{gwents.total_count}枚
+  %br
+  .paginate
+    = paginate gwents, params: params, remote: true
+  %br
+  %table.table.table-striped.table-hover
+    %tr
+      %th.center カード名
+      %th.center 枠色
+      %th.center レアリティ
+      %th.center 特性
+      %th.center 戦力
+      %th.center 隊列
+      %th.center アビリティ
+      %th.center 勢力
+      %th.center カード評価
+      - if User.current.admin?
+        %th.center
+        %th.center
+    - if gwennts.present?
+      - gwents.each do |gwent|
+        %tr
+          %td.center= link_to gwent.name, game_wiki_path(project_id: 'gwent', id: gwent.name)
+          %td.center= gwent.card_color
+          %td.center= gwent.rare
+          %td.center= gwent.speciality
+          %td.center= gwent.bp
+          %td.center= gwent.position
+          %td.center= gwent.description
+          %td.center= gwent.war_group
+          %td.center= gwent.review_rank
+          - if User.current.admin?
+            %td.center= link_to '編集', edit_gwent_path(gwent), class: 'btn btn-primary'
+            %td.center= link_to '削除', gwent_path(gwent), method: :delete, data: { confirm: "#{ gwent.name }を削除します。よろしいですか？" }, class: 'btn btn-danger'
+  .paginate
+    = paginate gwents, params: params, remote: true

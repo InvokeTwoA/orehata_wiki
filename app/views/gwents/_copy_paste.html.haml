@@ -1,0 +1,49 @@
+- if card.card_type == 'ユニット'
+
+  h1. #{ card.name }
+
+  {{toc}}
+
+  h2. カード内容
+
+  {background: #FFA0A0}. |_. 勢力|_. 戦力|_.枠名|_. レアリティ|_. 特性|_. 列|
+  |=.[[#{ card.war_group }]] |=. #{card.bp} |=. #{card.card_color} |=.#{card.rare} |=. #{card.speciality} |=. [[#{acrd.position}]] |
+  |={background: #FFA0A0}. *アビリティ* |\5. #{ card.description }|
+  |={background: #FFA0A0}. *フレーバーテキスト* |\5. #{card.card_text} |
+  |={background: #FFA0A0}. *カード評価* |\5=. #{ card.review_rank } |
+
+  h2. 説明
+
+  * 
+
+  h2. セリフ
+
+
+- elsif card.card_type == 'スペシャル'
+
+  h1. #{ card.name }
+
+  {{toc}}
+
+  h2. カード内容
+
+  {background: #FFA0A0}. |_. 勢力|_.枠名|_. レアリティ|
+  |=.[[#{ card.war_group }]] |=. #{card.card_color} |=.#{card.rare} |
+  |={background: #FFA0A0}. *アビリティ* |\3. #{ card.description }|
+  |={background: #FFA0A0}. *フレーバーテキスト* |\3. #{card.card_text} |
+  |={background: #FFA0A0}. *カード評価* |\3=. #{ card.review_rank } |
+
+  h2. 説明
+
+  * 
+
+%br
+%br
+一覧画面には以下をコピペ
+%br
+%br
+- if card.card_type == 'ユニット'
+  |_.カード名|_.枠色|_.レアリティ|_.特性|_.戦力|_.列|_.アビリティ|_.勢力|_.カード評価|
+  |=.[[#{card.name}]] |=. [[#{card.card_type}]] |=, [[#{card.rare}]] |=. #{card.speciality} |=. #{card.bp} |=. [[#{card.position}]] |=. #{card.description}| [[#{card.review_rank}]] |=.B |
+
+- elsif card.card_type == 'スペシャル'
