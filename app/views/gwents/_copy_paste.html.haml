@@ -1,22 +1,35 @@
 - if card.card_type == 'ユニット'
 
   h1. #{ card.name }
-
+  %br
+  %br
   {{toc}}
-
+  %br
+  %br
   h2. カード内容
-
+  %br
+  %br
   {background: #FFA0A0}. |_. 勢力|_. 戦力|_.枠名|_. レアリティ|_. 特性|_. 列|
+  %br
   |=.[[#{ card.war_group }]] |=. #{card.bp} |=. #{card.color_type} |=.#{card.rare} |=. #{card.speciality} |=. [[#{card.position}]] |
+  %br
   |={background: #FFA0A0}. *アビリティ* |\5. #{ card.description }|
+  %br
   |={background: #FFA0A0}. *フレーバーテキスト* |\5. #{card.card_text} |
+  %br
   |={background: #FFA0A0}. *カード評価* |\5=. #{ card.review_rank } |
-
+  %br
+  %br
   h2. 説明
-
+  %br
+  %br
   * 
-
+  %br
+  %br
   h2. セリフ
+  %br
+  %br
+
 
 
 - elsif card.card_type == 'スペシャル'
