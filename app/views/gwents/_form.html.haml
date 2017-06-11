@@ -39,7 +39,7 @@
       %label.col-sm-2.control-label 特性
       .col-sm-5
         = f.input_field :speciality, class: 'form-control', rows: 10
-  - if params[:type] == 'unit'
+  - if params[:type] == 'unit' || action_name == "edit"
     .form-group
       %label.col-sm-2.control-label 隊列
       .col-sm-5
@@ -52,7 +52,7 @@
     %label.col-sm-2.control-label フレーバーテキスト
     .col-sm-5
       = f.input_field :card_text, class: 'form-control', rows: 10
-  - if params[:type] == 'unit'
+  - if params[:type] == 'unit' || action_name == "edit"
     .form-group
       %label.col-sm-2.control-label 種族:エルフ
       .col-sm-5
