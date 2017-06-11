@@ -1,6 +1,6 @@
 class CreateGwents < ActiveRecord::Migration
   def change
-    create_table :culdcepts do |t|
+    create_table :gwents do |t|
       t.string :name,       null: false
       t.integer :bp
       t.string :card_type,  null: false
