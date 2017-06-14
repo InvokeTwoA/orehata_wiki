@@ -37,6 +37,7 @@ class GwentsController < ApplicationController
       :review_rank,
       :is_elf,
       :is_dwarf,
+      :is_weather,
       :skill_adrenalin,
       :skill_command,
     )
