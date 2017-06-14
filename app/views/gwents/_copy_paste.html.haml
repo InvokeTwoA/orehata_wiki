@@ -11,13 +11,13 @@
   %br
   {background: #FFA0A0}. |_. 勢力|_. 戦力|_.枠名|_. レアリティ|_. 特性|_. 列| 
   %br
-  |=.[[#{ card.war_group }]] |=. #{card.bp} |=. #{card.color_type} |=.#{card.rare} |=. #{card.speciality} |=. [[#{card.position}]] | 
+  |=.[[#{ card.war_group }]] |=. #{card.bp} |=. #{card.color_type} |=.#{card.rare} |=. #{card.speciality} |=. [[#{card.position}]]| 
   %br
   |={background: #FFA0A0}. *アビリティ* |\5. #{ card.description }| 
   %br
-  |={background: #FFA0A0}. *フレーバーテキスト* |\5. #{card.card_text} | 
+  |={background: #FFA0A0}. *フレーバーテキスト* |\5. #{card.card_text}| 
   %br
-  |={background: #FFA0A0}. *カード評価* |\5=. #{ card.review_rank } | 
+  |={background: #FFA0A0}. *カード評価* |\5=. #{ card.review_rank }| 
   %br
   %br
   h2. 説明
@@ -55,7 +55,10 @@
   h2. 説明
   %br
   %br
-  * 
+  h2. アップデート履歴
+  %br
+  |_.バージョン|_.変更内容|
+  |=.|=.|
   %br
   %br
 %br
@@ -66,9 +69,9 @@
 - if card.card_type == 'ユニット'
   |_.カード名|_.枠色|_.レアリティ|_.特性|_.戦力|_.列|_.アビリティ|_.勢力|_.カード評価| 
   %br
-  |=.[[#{card.name}]] |=. [[#{card.color_type}]] |=. [[#{card.rare}]] |=. #{card.speciality} |=. #{card.bp} |=. [[#{card.position}]] |=. #{card.description}| [[#{card.war_group}]] |=.#{card.review_rank} |  
+  |=.[[#{card.name}]] |=. [[#{card.color_type}]] |=. [[#{card.rare}]] |=. #{card.speciality} |=. #{card.bp} |=. [[#{card.position}]] |=. #{card.description}| [[#{card.war_group}]] |=.#{card.review_rank}|  
 
 - elsif card.card_type == 'スペシャル'
   |_.カード名|_.枠色|_.レアリティ|_.効果|_.勢力|_.カード評価|  
   %br
-  |=.[[#{card.name}]] |=. [[#{card.color_type}]] |=. [[#{card.rare}]] |=. #{card.description}| [[#{card.war_group}]] |=.#{card.review_rank} |  
+  |=.[[#{card.name}]] |=. [[#{card.color_type}]] |=. [[#{card.rare}]] |=. #{card.description}| [[#{card.war_group}]] |=.#{card.review_rank}|  

@@ -60,10 +60,12 @@
       %label.col-sm-2.control-label 種族：ドワーフ
       .col-sm-5
         = f.input_field :is_dwarf, class: 'form-control'
+  - if params[:type] == 'special' || action_name == "edit"
     .form-group
       %label.col-sm-2.control-label 天候
       .col-sm-5
         = f.input_field :is_weather, class: 'form-control'
+  - if params[:type] == 'unit' || action_name == "edit"
     .form-group
       %label.col-sm-2.control-label アビリティ：継戦
       .col-sm-5
