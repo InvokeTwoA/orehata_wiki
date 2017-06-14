@@ -1,4 +1,4 @@
-class AddGwents < ActiveRecord::Migration
+class AddWeatherToGwents < ActiveRecord::Migration
   def change
     add_column :gwents, :is_weather, :boolean
   end
