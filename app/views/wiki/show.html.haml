@@ -61,7 +61,7 @@
         %label.col-sm-2.control-label 内容
         .col
           = f.input_field :body, class: 'wiki_comment_text_area'
-      .form-group
+      .form-group{style: "text-align: center"}
         %label.col-sm-2.control-label 認証(スパム対策のためよろしくお願いします)
         .col
           = recaptcha_tags
