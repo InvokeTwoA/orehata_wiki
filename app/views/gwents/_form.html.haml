@@ -14,7 +14,7 @@
         = f.input_field :card_type, as: :select, collection: ['スペシャル'], include_blank: false
       - else
         = f.input_field :card_type, as: :select, collection: ['ユニット', 'スペシャル'], include_blank: false
-  - if params[:type] == 'unit'
+  - if params[:type] == 'unit' || action_name == 'edit'
     .form-group
       %label.col-sm-2.control-label 戦力
       .col-sm-5
