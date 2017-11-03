@@ -1,4 +1,6 @@
 class WikiController < ApplicationController
+  invisible_captcha only: [:update], honeypot: :subtitle, on_spam: :your_spam_callback_method
+
   default_search_scope :wiki_pages
   before_filter :find_wiki, :authorize, except: [:root]
   before_filter :find_existing_or_new_page, :only => [:show, :edit, :update]
@@ -170,7 +172,8 @@ class WikiController < ApplicationController
       @content.text = @text
     end
     @content.author = User.current
-    if (verify_recaptcha(model: @page) || User.current.admin?) && @page.save_with_content(@content)
+    #if (verify_recaptcha(model: @page) || User.current.admin?) && @page.save_with_content(@content)
+    if (User.current.admin?) && @page.save_with_content(@content)
       Attachment.attach_files(@page, params[:attachments])
       render_attachment_warning_if_needed(@page)
       call_hook(:controller_wiki_edit_after_save, { :params => params, :page => @page})
@@ -431,5 +434,9 @@ private
         }
       end
     end
+  end
+
+  def your_spam_callback_method
+    return redirect_to :back, alert: '認証に失敗しました。'
   end
 end

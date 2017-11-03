@@ -74,6 +74,8 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 4.2)
       responders (~> 1.0)
+    invisible_captcha (0.9.3)
+      rails (>= 3.2.0)
     jpmobile (4.2.3)
     jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
@@ -157,8 +159,6 @@ GEM
     rbpdf-font (1.19.0)
     rdoc (4.2.2)
       json (~> 1.4)
-    recaptcha (4.3.1)
-      json
     redcarpet (3.3.4)
     request_store (1.0.5)
     responders (1.1.2)
@@ -225,6 +225,7 @@ DEPENDENCIES
   haml
   heroku-deflater
   inherited_resources (~> 1.5.0)
+  invisible_captcha
   jpmobile
   jquery-rails (~> 3.1.4)
   jquery-ui-rails
@@ -248,7 +249,6 @@ DEPENDENCIES
   ransack
   rbpdf (~> 1.19.0)
   rdoc (>= 2.4.2)
-  recaptcha
   redcarpet (~> 3.3.2)
   request_store (= 1.0.5)
   rmagick (>= 2.14.0)

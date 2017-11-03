@@ -1,4 +1,5 @@
 class WikiCommentsController < ApplicationController
+  invisible_captcha only: [:create], honeypot: :subtitle, on_spam: :your_spam_callback_method
 
 #  before_filter :check_spam, only: [:create]
 
@@ -14,7 +15,7 @@ class WikiCommentsController < ApplicationController
     return redirect_to :back, alert: 'コメント内容が空です' if params[:wiki_comment][:body].blank?
     # return redirect_to :back, alert: '現在、スパムコメントを防ぐためコメント機能を停止中です'
     wiki_comment = WikiComment.new(wiki_comment_params)
-    return redirect_to :back, alert: '認証に失敗しました。' unless verify_recaptcha(model: wiki_comment)
+    #return redirect_to :back, alert: '認証に失敗しました。' unless verify_recaptcha(model: wiki_comment)
 
     if params[:wiki_comment][:page] == '' || params[:wiki_comment][:page] == 'Wiki'
       page = 'wiki'
@@ -66,4 +67,10 @@ class WikiCommentsController < ApplicationController
   def wiki_comment_params
     params.require(:wiki_comment).permit(:project_id, :title, :body)
   end
+
+
+  def your_spam_callback_method
+    return redirect_to :back, alert: '認証に失敗しました。'
+  end
+
 end

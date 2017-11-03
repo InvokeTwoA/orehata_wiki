@@ -23,9 +23,10 @@
     %p
       %label= l(:label_attachment_plural)
       = render :partial => 'attachments/form'
-  %p
-    .warn 本人認証（スパム対策のため、入力お願いします）
-    = recaptcha_tags
+  /%p
+  /  .warn 本人認証（スパム対策のため、入力お願いします）
+  /  = recaptcha_tags
+  = f.invisible_captcha :subtitle
   %p
     = submit_tag l(:button_save)
     = preview_link({:controller => 'wiki', :action => 'preview', :project_id => @project, :id => @page.title }, 'wiki_form')

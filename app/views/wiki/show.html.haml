@@ -61,10 +61,11 @@
         %label.col-sm-2.control-label 内容
         .col
           = f.input_field :body, class: 'wiki_comment_text_area'
-      .form-group{style: "text-align: center"}
-        %label.col-sm-2.control-label 認証(スパム対策のためよろしくお願いします)
-        .col
-          = recaptcha_tags
+      /.form-group{style: "text-align: center"}
+      /  %label.col-sm-2.control-label 認証(スパム対策のためよろしくお願いします)
+      /  .col
+      /    = recaptcha_tags
+      = f.invisible_captcha :subtitle
       .form-actions{style: "text-align: center"}
         = f.hidden_field :page, value: params[:id]
         = f.hidden_field :project_id, value: @project.identifier
