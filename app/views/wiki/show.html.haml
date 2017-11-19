@@ -94,9 +94,13 @@
 - html_title @page.pretty_title
 %br
 %br
-%h3
-  最近発売のゲームタイトル
-- releases = Release.active.recent.limit(3)
-- releases.each do |release|
-  = release.asin.html_safe if release.asin.present?
-  %br
+
+= link_to "https://itunes.apple.com/jp/app/%E3%81%8B%E3%81%A3%E3%81%B1%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88/id1070992487?mt=8&amp;uo=4&amp;at=10l8JW&amp;ct=hatenablog", rel: "nofollow", target: "_blank" do
+  = image_tag "https://cdn.image.st-hatena.com/image/scale/f4c49a432ee50cd988c7bbc0221baa164adaec6d/enlarge=0;height=200;version=1;width=200/http%3A%2F%2Fis5.mzstatic.com%2Fimage%2Fthumb%2FPurple128%2Fv4%2F15%2F16%2F1a%2F15161a95-0558-4ec5-ae36-cf6e5359840f%2Fsource%2F100x100bb.jpg", alt: "かっぱクエスト", title: "かっぱクエスト", class: "itunes-embed-image"
+
+/%h3
+/  最近発売のゲームタイトル
+/- releases = Release.active.recent.limit(3)
+/- releases.each do |release|
+/  = release.asin.html_safe if release.asin.present?
+/  %br
