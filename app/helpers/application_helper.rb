@@ -1346,6 +1346,7 @@ module ApplicationHelper
     return link_to "世界一長い５分間　徹底攻略wiki",         root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == '5min'
     return link_to "ハースストーン　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'hearth_stone'
     return link_to "かっぱクエスト　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'kappa_quest'
+    return link_to "血と闇のソウル　徹底攻略wiki",           root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'blood'
     return link_to "誰が勇者を殺したか　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'dare_yuusha'
     return link_to "エリエットクエスト　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'erietto'
     return link_to "元カノは友達だから問題ない　徹底攻略wiki",       root_project_wiki_page_index_path(project_id: params[:id]) if params[:id] == 'motokano'
@@ -1374,6 +1375,8 @@ module ApplicationHelper
       link_to "ハースストーン　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'kappa_quest' then
       link_to "かっぱクエスト　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
+    when 'blood' then
+      link_to "血と闇のソウル　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'dare_yuusha' then
       link_to "誰が勇者を殺したか　徹底攻略wiki", root_project_wiki_page_index_path(project_id: params[:project_id])
     when 'erietto' then
@@ -1465,6 +1468,8 @@ module ApplicationHelper
       ['ハースストーン', '攻略', 'wiki', '稼ぎ', 'hearth', 'stone', 'まとめ', 'カード', '評価','徹底', '徹底攻略']
     when 'kappa_quest' then
       ['かっぱクエスト', '攻略', 'wiki', '稼ぎ', 'かっぱ', 'クエスト', 'カッパクエスト', 'かっぱくえすと','まとめ', '徹底', '徹底攻略']
+    when 'blood' then
+      ['血と闇のソウル', '攻略', 'wiki', '稼ぎ', 'まとめ', '徹底', '徹底攻略']
     when 'erietto' then
       ['エリエットクエスト', '攻略', 'wiki', '稼ぎ', 'エリエット', 'エンディング', 'クリスタル','まとめ', '徹底', '徹底攻略']
     when 'dare_yuusha' then
@@ -1505,6 +1510,8 @@ module ApplicationHelper
       'ハースストーン　徹底攻略wiki'
     when 'kappa_quest' then
       'かっぱクエスト　徹底攻略wiki'
+    when 'blood' then
+      '血と闇のソウル　徹底攻略wiki'
     when 'dare_yuusha' then
       '誰が勇者を殺したか　徹底攻略wiki'
     when 'erietto' then
