@@ -158,10 +158,6 @@ class WikiController < ApplicationController
 
     @content.comments = content_params[:comments]
 
-    # スパム暫定対応
-    return redirect_to project_wiki_page_path(@page.project, @page.title)  if params[:comments].present?
-    return redirect_to project_wiki_page_path(@page.project, @page.title)  unless content_params[:text].match(/香川県ルー/).nil?
-
     @text = content_params[:text]
     if params[:section].present? && Redmine::WikiFormatting.supports_section_edit?
       @section = params[:section].to_i
@@ -199,7 +195,6 @@ class WikiController < ApplicationController
         format.api { render_validation_errors(@content) }
       end
     end
-
   rescue ActiveRecord::StaleObjectError, Redmine::WikiFormatting::StaleSectionError
     # Optimistic locking exception
     respond_to do |format|
