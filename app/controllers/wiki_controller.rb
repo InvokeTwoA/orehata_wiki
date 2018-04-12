@@ -169,7 +169,8 @@ class WikiController < ApplicationController
     end
     @content.author = User.current
     #if (verify_recaptcha(model: @page) || User.current.admin?) && @page.save_with_content(@content)
-    if (User.current.admin?) && @page.save_with_content(@content)
+    #if (User.current.admin?) && @page.save_with_content(@content)
+    if (verify_recaptcha(model: @page) && @page.save_with_content(@content)
       Attachment.attach_files(@page, params[:attachments])
       render_attachment_warning_if_needed(@page)
       call_hook(:controller_wiki_edit_after_save, { :params => params, :page => @page})
